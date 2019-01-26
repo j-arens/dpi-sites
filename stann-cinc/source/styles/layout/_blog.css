@@ -1,0 +1,24 @@
+body.blog {
+    & article:first-of-type {
+        margin-top: 2em;
+    }
+
+    & article {
+        max-width: 50.125em;
+        padding: 32px;
+        background-color: var(--color-neutral-lt);
+        margin: 0 auto;
+
+        & img {
+            margin: 1em 0;
+        }
+    }
+
+    & article + article {
+        margin-top: 2em;
+    }
+
+    & article:last-of-type {
+        margin-bottom: 2em;
+    }
+}

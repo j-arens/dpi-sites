@@ -1,0 +1,148 @@
+.home-calendar {
+    &__container {
+        padding-top: 95px;
+        padding-bottom: 80px;
+    }
+
+    &__error {
+        text-align: center;
+    }
+}
+
+.dpi-cal {
+    &__root {
+        color: $color-primary;
+        margin-bottom: 50px;
+
+        * {
+            line-height: initial;
+        }
+    }
+
+    &__title {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        margin: 0 0 50px 0;
+        line-height: 1;
+    }
+
+    &__divider {
+        display: block;
+        border: none;
+        width: 100%;
+        height: 1px;
+        background-color: $color-primary;
+        margin: 0 0 10px 0;
+    }
+
+    &__day-container {
+        flex: 1;
+        height: 225px;
+        padding: 32px 10px 0 20px;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent 10%, #fff);
+        }
+    }
+
+    &__day-container + &__day-container {
+        border-top: 1px solid $color-primary-lt;
+    }
+
+    &__day-heading {
+        display: flex;
+        margin-bottom: 45px;
+    }
+
+    &__day,
+    &__month,
+    &__day-numeral {
+        line-height: 1;
+    }
+
+    &__day-numeral {
+        font-size: 49px;
+        margin-right: 20px;
+    }
+
+    &__day,
+    &__month {
+        margin: 0;
+    }
+
+    &__day {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+
+    &__month {
+        font-size: 24px;
+    }
+
+    &__event-item + &__event-item {
+        margin-top: 32px;
+    }
+
+    &__event-heading {
+        font-size: 18px;
+        color: $color-primary-lt;
+        margin-bottom: 8px;
+    }
+
+    &__event-start {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+
+    &__event-time {
+        display: flex;
+        font-size: 14px;
+
+        .dpi-cal__event-start {
+            font-size: 14px;
+            margin-right: 4px;
+        }
+
+        .dpi-cal__event-end {
+            margin-left: 4px;
+        }
+    }
+
+    &__location {
+        font-size: 14px;
+        font-style: italic;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .dpi-cal {
+        &__week-container {
+            display: flex;
+        }
+
+        &__day-container {
+            padding: 0 10px 0 20px;
+            height: 465px;
+        }
+
+        &__day-container + &__day-container {
+            border-top: none;
+            border-left: 1px solid $color-primary-lt;
+        }
+
+        &__divider {
+            margin: 0 0 50px 0;
+        }
+    }
+}

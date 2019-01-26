@@ -1,0 +1,103 @@
+.mpa {
+    max-width: 43.75em;
+    margin-bottom: 4em;
+
+    &__messages-container {
+        box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    &__list {
+        &:last-of-type {
+            display: none;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        padding: 1.6em;
+
+        &:not(.mpa__promo) {
+            background-color: $color-white;
+            border-top: 4px solid transparent;
+            transition: all .2s ease;
+
+            &:hover {
+                position: relative;
+                z-index: 1;
+                border-top-color: $color-secondary;
+                transform: scale(1.03);
+                box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+
+    &__promo {
+        background: $color-primary;
+    }
+
+    &__promo-title {
+        font-size: 1.125em;
+        color: $color-accent;
+    }
+
+    &__promo-icon-link {
+        display: inline-block;
+        width: 2.375em;
+        height: 2.375em;
+
+        svg {
+            fill: $color-accent;
+        }
+
+        &:hover {
+            & svg {
+                fill: currentColor;
+            }
+        }
+    }
+
+    &__promo-icon-link + &__promo-icon-link {
+        margin-left: 1.5em;
+    }
+
+    &__promo-link {
+        font-size: 1.125em;
+    }
+
+    &__time {
+        color: $color-primary;
+        font-size: 1.125em;
+    }
+
+    &__link {
+        color: inherit;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .mpa {
+        &__list {
+            display: flex;
+            height: 12.5em;
+
+            &:last-of-type {
+                display: flex;
+            }
+        }
+
+        &__item {
+            align-items: initial;
+        }
+    }
+}
+
+@media screen and (min-width: 73.125em) {
+    .mpa {
+        margin-bottom: 0;
+        flex: 0 0 43.75em;
+    }
+}

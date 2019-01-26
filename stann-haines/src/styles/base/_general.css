@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+}
+
+.pagination-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+video[autoplay]:not([muted]) {
+  display: none;
+}
+
+img {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  height: auto;
+  line-height: 2;
+  position: relative;
+  text-align: center;
+}
+
+img:before {
+  content: "We're sorry, the image below is broken :(";
+  display: block;
+  margin-bottom: 10px;
+}
+
+img:after {
+  content: "(url: " attr(src) ")";
+  display: block;
+  font-size: 12px;
+}
+
+table {
+  width: 100%;
+}
+
+.screen-reader-response {
+  position: absolute;
+  left: -9999%;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 782px) {
+  :root {
+    margin-top: 0 !important;
+  }
+
+  #wpadminbar {
+    display: none;
+  }
+}

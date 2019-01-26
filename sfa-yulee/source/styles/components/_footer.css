@@ -1,0 +1,48 @@
+/*.site-footer {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.site-footer--content {
+    font-size: 1.55em;
+    font-family: 'Cookie', cursive;
+    text-align: center;
+    max-width: 73.75rem;
+    margin: 0 auto 1rem auto;
+}
+
+.site-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--colorWhite);
+    padding: 0.5em;
+
+    & p {
+        font-size: 0.75em;
+        margin: 0;
+    }
+}*/
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 4em;
+    background-color: #870d00;
+    padding: 0 3em;
+
+    & p,
+    & a {
+        color: var(--colorWhite);
+    }
+
+    & p {
+        margin: 0;
+        font-size: 0.875em;
+    }
+}

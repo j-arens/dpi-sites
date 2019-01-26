@@ -1,0 +1,56 @@
+@import '../variables/_colors';
+
+.site-header {
+    background: var(--colorWhite);
+    padding: 2em;
+
+    & .container {
+        padding: 0;
+        height: 100%;
+        max-width: 94.37em;
+        margin: 0 auto;
+    }
+
+    & .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.site-logo {
+    max-width: 24.375em;
+    margin-bottom: 2em;
+    height: 8em;
+}
+
+@media screen and (--breakpoint-lg) {
+    .site-header {
+        padding: 2em 2em 3em 2em;
+    }
+
+    .site-logo {
+        margin-bottom: 3em;
+        height: initial;
+    }
+}
+
+@media screen and (--breakpoint-xl) {
+    .site-header {
+        height: 8.75em;
+        padding: 0;
+
+        & .row {
+            height: 100%;
+            margin: 0;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .site-logo {
+        margin-bottom: 0;
+    }
+}

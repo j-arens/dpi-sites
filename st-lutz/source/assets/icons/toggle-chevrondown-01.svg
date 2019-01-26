@@ -1,0 +1,5 @@
+<svg class="svg-icon svg-icon__toggle-chevrondown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.2 43.2">
+    <circle cx="21.97" cy="21.57" r="20.85" style="fill:#fff;opacity:0.15"/>
+    <path d="M21.6,0A21.6,21.6,0,1,0,43.2,21.6,21.63,21.63,0,0,0,21.6,0Zm0,41.6a20,20,0,1,1,20-20,20,20,0,0,1-20,20Zm0,0" style="fill:#fff"/>
+    <path d="M29.43,18.52,21.6,26.36l-7.84-7.84a.8.8,0,0,0-1.13,1.13l8.4,8.4a.8.8,0,0,0,1.13,0l8.4-8.4a.8.8,0,0,0-1.13-1.13Zm0,0" style="fill:#fff"/>
+</svg>

@@ -1,0 +1,51 @@
+@import 'settings/_colors';
+
+body.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secondary-lt);
+
+    & div#login {
+        padding: 3em;
+        background-color: var(--color-white);
+        border-radius: 3px;
+        box-shadow: 1px 2px 5px 3px rgba(0,0, 0, 0.1);
+    }
+
+    & div#login h1 a {
+        background-image: url('/wp-content/themes/dpi-spine/assets/images/logo.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 12em;
+        height: 5em;
+        margin: 0 auto;
+    }
+
+    & div#login form#loginform {
+        box-shadow: none;
+
+        & input#user_login:focus,
+        & input#user_pass:focus,
+        & input#rememberme:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 2px rgba(58,91,169,.8);
+        }
+
+        & p.submit input#wp-submit {
+            border-color: var(--color-primary);
+            background: var(--color-primary);
+            box-shadow: 0 0 5px 1px rgba(30, 30, 30, 0.2);
+            text-shadow: none;
+        }
+    }
+
+    & div#login p#nav a {
+        color: var(--color-primary);
+    }
+
+    & div#login p#backtoblog a {
+        color: var(--color-primary);
+    }
+}

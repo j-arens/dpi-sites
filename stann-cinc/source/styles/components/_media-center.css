@@ -1,0 +1,126 @@
+.media-center {
+    @apply --flex-center;
+    padding: 70px 16px;
+    background-color: var(--color-white);
+    background-image: url(assets/images/st-ann-statue.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.media-center__ {
+    &wrap {
+        width: 100%;
+        height: 100%;
+    }
+
+    &video,
+    &links {
+        width: 100%;
+    }
+
+    &video {
+        height: 250px;
+        margin: 0 auto 32px auto;
+        background-color: #000;
+
+        & iframe {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+
+    &links {
+        margin: 0 auto;
+    }
+
+    &link-item {
+        position: relative;
+        background-image: url(assets/images/stained-glass-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: calc(33.3333% - 15px);
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-primary-dk);
+            opacity: 0.95;
+        }
+
+        &:hover {
+            &::after {
+                background-color: var(--color-secondary);
+            }
+        }
+    }
+
+    &link-item + &link-item {
+        margin-top: 16px;
+    }
+
+    &link {
+        position: relative;
+        z-index: 1;
+        @apply --flex-center;
+        width: 100%;
+        height: 100%;
+        color: var(--color-white);
+        font-size: 46px;
+
+        &:hover {
+            color: var(--color-white);
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .media-center__ {
+        &video {
+            height: 350px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .media-center__ {
+        &video,
+        &links {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .media-center__ {
+        &wrap {
+            display: flex;
+            justify-content: space-between;
+            width: 1020px;
+            height: 445px;
+        }
+
+        &video {
+            height: 100%;
+            width: initial;
+            flex: 0 0 625px;
+        }
+
+        &links {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            width: initial;
+            flex: 0 0 350px;
+        }
+
+        &link-item + &link-item {
+            margin-top: 0;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+body.page-template-template-full-width {
+  & .wrap {
+    gg: columns(100%) gutter(0);
+    padding: 5.625em 0;
+  }
+
+  & .main > article {
+    max-width: 75vw;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,41 @@
+.home-bulletins {
+  padding-top: 5.5em;
+  padding-bottom: 4.3em;
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #dpi-bulletins-row {
+    padding-top: 2em;
+  }
+
+  #dpi-bulletins-featured-row {
+    margin-top: 4em;
+    display: flex;
+
+    & article {
+      flex-basis: 50%;
+      margin-bottom: 2em;
+    }
+
+    & > div {
+      max-width: 65% !important;
+    }
+  }
+
+  .dpi-bulletins-featured-row-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-count: initial !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #dpi-bulletins-featured-row article {
+    flex-basis: 100%;
+  }
+}

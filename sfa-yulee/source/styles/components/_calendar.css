@@ -1,0 +1,89 @@
+body.home {
+    & .simcal-calendar {
+        position: relative;
+        /*height: 100%;*/
+        height: calc(100% - 2.5em);
+        box-shadow: -1px 2px 5px 2px rgba(0, 0, 0, .4);
+        background: var(--colorPrimaryLt);
+        padding: 1em;
+
+        & ul {
+            list-style: none;
+        }
+
+        & p {
+            margin: 0;
+        }
+
+        & .post-edit-link {
+            display: none;
+        }
+
+        & .simcal-calendar-grid {
+            position: absolute;
+            bottom: 0;
+            width: calc(100% - 2em);
+            max-height: 350px;
+            height: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+        }
+
+        & .simcal-nav h3 {
+            color: var(--colorBlack);
+            margin: 0 0 1rem 0;
+        }
+
+        & .simcal-week-day {
+            font-size: 0.875em;
+            border-bottom: 2px solid #d3cdc0;
+            padding-bottom: 0.6125rem;
+        }
+
+        & .simcal-day {
+            text-align: center;
+            font-size: 1.125em;
+        }
+
+        & .simcal-day-label {
+            font-weight: 500;
+            background-color: initial !important;
+            color: var(--colorBlack) !important;
+            line-height: 1.3;
+        }
+
+        & td[class*="simcal-day-"] > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: initial !important;
+            border: none !important;
+        }
+
+        & .simcal-day-has-events {
+            padding-top: 0.25em;
+        }
+
+        & .simcal-events {
+            display: flex !important;
+            flex-wrap: wrap;
+        }
+
+        & .simcal-event {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #97999c;
+        }
+
+        & .simcal-event + .simcal-event {
+            margin-left: 0.2em;
+        }
+
+        & .simcal-event * {
+            display: none !important;
+        }
+    }
+}
+

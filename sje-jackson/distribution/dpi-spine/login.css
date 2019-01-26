@@ -1,0 +1,15 @@
+:root{
+    /* Primary colors */
+
+    /* Secondary colors */
+
+    /* Accent colors */
+
+    /* Neutral colors */
+
+    /* Layout colors */
+
+    /* Typography colors */
+
+    /* Form colors */}body.login{background-color:#fff}body.login div#login h1 a{background-image:url(wp-content/themes/dpi-spine/assets/images/sje-logo.png);background-size:100%;background-position:50%;background-repeat:no-repeat;margin:0 auto;height:8em;width:14em}body.login div#login form#loginform{background-color:#dab451}body.login div#login form#loginform p label{color:#777;font-weight:700}body.login div#login form#loginform input#user_login,body.login div#login form#loginform input#user_pass{font-weight:400}body.login div#login form#loginform input#rememberme:focus,body.login div#login form#loginform input#user_login:focus,body.login div#login form#loginform input#user_pass:focus{border-color:#002a5c;box-shadow:0 0 2px rgba(0,42,92,.8)}body.login div#login form#loginform p.submit input#wp-submit{border-color:#002a5c;background:#002a5c;box-shadow:0 0 5px 1px rgba(30,30,30,.2);text-shadow:none}body.login div#login p#backtoblog a,body.login div#login p#nav a{color:#002a5c}
+/*# sourceMappingURL=login.css.map */

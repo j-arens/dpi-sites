@@ -1,0 +1,167 @@
+.site-footer {
+    background-color: $color-accent;
+
+    &__container {
+        padding: 75px 1em 90px 1em;
+    }
+
+    &__widget {
+        text-align: center;
+    }
+
+    &__widget-title {
+        color: $color-white;
+        font-size: 24px;
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+
+    &__widget-divider {
+        margin: 0;
+        border: none;
+        height: 1px;
+        background-color: $color-white;
+        margin-bottom: 25px;
+    }
+
+    &__widget + &__widget {
+        margin-top: 32px;
+    }
+}
+
+.footer {
+    &__social-branding {
+        display: block;
+        margin: 0 auto 40px auto;
+        width: 197px;
+        height: 155px;
+        // background-image: url(assets/images/all-saints-footer-logo-01.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+
+    &__social-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__social-link-item + &__social-link-item {
+        margin-left: 20px;
+    }
+
+    &__social-link {
+        display: block;
+        width: 30px;
+        height: 30px;
+
+        .svg-icon {
+            width: 100%;
+            height: 100%;
+            fill: $color-primary;
+            transition: fill .2s ease;
+        }
+
+        &:hover {
+            .svg-icon {
+                fill: $color-secondary;
+            }
+        }
+    }
+
+    &__links-link {
+        color: $color-primary;
+        font-size: 24px;
+        line-height: 1.25;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+
+    &__contact-item {
+        color: $color-primary;
+        font-size: 20px;
+    }
+
+    &__contact-item + &__contact-item {
+        margin-top: 4px;  
+    }
+}
+
+.site-info {
+    background-color: $color-white;
+    padding: 20px 1em;
+    text-align: center;
+
+    p,
+    a {
+        margin: 0;
+        line-height: 1;
+        font-size: 14px;
+    }
+
+    p.site-info__church {
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .site-info {
+        display: flex;
+        justify-content: space-around;
+        text-align: initial;
+
+        p.site-info__church {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .site-footer {
+        &__container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__widget {
+            text-align: initial;
+        }
+
+        &__social {
+            flex: 0 0 200px;
+        }
+
+        &__links {
+            flex: 0 0 565px;
+        }
+
+        &__contact {
+            flex: 0 0 325px;
+        }
+
+        &__widget + &__widget {
+            margin-top: 0;
+        }
+    }
+
+    .footer {
+        &__social-branding {
+            display: flex;
+            margin: 0 0 40px 0;
+            width: 99%;
+        }
+
+        &__social-links {
+            justify-content: initial;
+        }
+
+        &__links-flex-container {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 50px;
+        }
+    }
+}

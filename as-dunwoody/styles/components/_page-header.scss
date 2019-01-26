@@ -1,0 +1,49 @@
+.page-header {
+    &__title-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-accent;
+        padding: 1em;
+        overflow: hidden;
+    }
+
+    &__title {
+        color: darken($color-accent-dk, 10%);
+        font-size: 36px;
+        margin: 0;
+    }
+
+    &__image-container {
+        flex: 1;
+        background-color: $color-accent-lt;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 150px;
+    }
+
+    &__image-empty {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .page-header {
+        display: flex;
+        height: 200px;
+
+        &__title-container {
+            flex: 1;
+        }
+
+        &__image-container {
+            flex: 0 0 355px;
+            height: initial;
+        }
+
+        &__image-empty {
+            display: initial;
+        }
+    }
+}

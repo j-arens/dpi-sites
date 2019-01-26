@@ -1,0 +1,34 @@
+@import 'variables/_colors';
+
+body.login {
+    background-color: var(--colorPrimary);
+
+    & div#login h1 a {
+        background-image: url(wp-content/themes/dpi-spine/assets/images/oll-logo-white-01.svg);
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 5em;
+        margin: 0 auto;
+    }
+
+    & div#login form#loginform {
+        background: var(--colorPrimaryLt);
+
+        & p label {
+            color: var(--colorWhite);
+        }
+
+        & p.submit input#wp-submit {
+            background: var(--colorSecondary);
+            text-shadow: none;
+            color: var(--colorPrimaryLt);
+        }
+    }
+
+    & div#login p#nav a,
+    & div#login p#backtoblog a {
+        color: var(--colorSecondary);
+    }
+}

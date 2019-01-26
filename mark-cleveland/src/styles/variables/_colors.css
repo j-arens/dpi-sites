@@ -1,0 +1,14 @@
+:root {
+  --colorPrimary: #8b1d1e;
+  --colorPrimaryLt: #B54444;
+  --colorPrimaryDk: #620505;
+  --colorSecondary: #f4c141;
+  --colorSecondaryLt: #FFD466;
+  --colorSecondaryDk: #E2A814;
+  --colorWhite: #fff;
+  --colorBlack: #000;
+  --colorNeutral: #e3e3e3;
+  --colorText: #3b3b3b;
+  --primary-gradient: radial-gradient(ellipse at center, #8b1d1e 0%, #8b1d1e 44%,#6d0019 100%);
+  --secondary-gradient: radial-gradient(ellipse at center, #f4c141 0%, #f4c141 44%,#c5900a 100%);
+}

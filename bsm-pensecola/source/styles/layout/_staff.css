@@ -1,0 +1,5 @@
+body.staff {
+    & .tmm_photo {
+        background-position: center center !important;
+    }
+}

@@ -1,0 +1,278 @@
+/**** CONTENT ****/
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.home #content {
+	background: #ccc;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: calc(100vh - 511px);
+		background: url('http://mtctampa.diocesanweb.com/wp/parents/wp-content/themes/dpi-teresa/images/bascilica-large-bg3.jpg');
+    background-size: cover;
+}
+
+#primary {
+    flex: 0 0 50%;
+    background: white;
+    margin-bottom: 1em;
+    border-radius: 6px;
+		margin: 1em 2em 1em 0;
+		padding: 2em;
+		max-width: 900px;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+		a {
+			color: $primary !important;
+			text-decoration: none;
+
+			&:hover {
+				color: $secondary !important;
+			}
+		}
+}
+
+.post-edit-link {
+	margin: 0 .5em;
+}
+
+.single-testimonials article {
+	padding: 0 3em;
+}
+
+article.category-events {
+    padding: 0 3em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+@media screen and (max-width: 1600px) {
+    #primary {
+        flex: 0 0 70%;
+    }
+
+    #secondary {
+        flex: 0 0 25% !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #content {
+        flex-direction: column;
+        padding: 1em 1em 0 1em;
+        align-items: center;
+    }
+
+		.home #content {
+			padding: 0 !important;
+		}
+
+    #primary {
+        order: 1;
+        min-width: 100%;
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    #secondary {
+        min-width: 100%;
+        margin-bottom: 1em;
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .widget-title {
+            text-align: center;
+            margin-bottom: .5em !important;
+        }
+
+				.links {
+					flex-direction: row !important;
+					margin-bottom: 1em;
+					justify-content: space-around;
+
+					a {
+						width: auto !important;
+
+						&::after {
+							display: none;
+						}
+
+						&:hover {
+							background: none !important;
+							text-decoration: underline;
+							color: $primary !important;
+						}
+					}
+				}
+    }
+}

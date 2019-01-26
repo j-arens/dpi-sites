@@ -1,0 +1,33 @@
+.mass-times-feed {
+    & p {
+        line-height: 1;
+    }
+}
+
+.mass-times-feed__ {
+    &list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 19em;
+    }
+    
+    &item {
+        text-align: center;
+    }
+    
+    &title {
+        font-weight: 700;
+        font-size: 1.125em;
+        margin-bottom: 1rem;
+    }
+    
+    &text {
+        color: var(--color-neutral);
+        margin-bottom: 0;
+    }
+    
+    &text + &text {
+        margin-top: 0.5rem;
+    }
+}

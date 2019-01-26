@@ -1,0 +1,271 @@
+@import '../variables/_colors';
+
+.site-header {
+    width: 100%;
+    background: var(--colorPrimary);
+    padding: 0;
+
+    & .row {
+        margin: 0;
+    }
+}
+
+.header-topbar {
+    display: flex;
+    flex-direction: column;
+    height: 19em;
+    padding: 0 1em;
+}
+
+.site-branding,
+.site-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-branding {
+    flex-direction: column;
+    padding: 0;
+    height: 100%;
+}
+
+.site-search {
+    padding: 1em 0;
+}
+
+.site-logo {
+    width: 6.25em;
+    height: 100%;
+    position: relative;
+}
+
+.logo-img,
+.logo-diag-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.logo-diag-bg {
+    border: 3.15rem solid transparent;
+    border-top-color: var(--colorSecondary);
+    border-left-color: var(--colorSecondary);
+    border-right-color: var(--colorWhite);
+    border-bottom-color: var(--colorWhite);
+    z-index: 1;
+}
+
+.logo-img {
+    background-image: url(assets/images/site-logo-01.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 85%;
+    z-index: 2;
+}
+
+.site-logo-text {
+    color: var(--colorWhite);
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+}
+
+#search-btn {
+    padding: 0;
+
+    &:focus {
+        outline: 0;
+    }
+
+    & svg,
+    & p {
+        display: inline-block;
+    }
+
+    & svg {
+        fill: var(--colorWhite);
+        width: 2.5em;
+        margin-right: .5em;
+        pointer-events: none;
+        vertical-align: -45%;
+    }
+
+    & p {
+        color: var(--colorWhite);
+        font-size: 2.25em;
+        margin: 0;
+        pointer-events: none;
+    }
+}
+
+.search-overlay {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.95);
+    transition: opacity .2s ease;
+    padding: 0 2em;
+
+    & .search-wrap {
+        max-width: 800px;
+    }
+
+    & .search-wrap,
+    & .search-form,
+    & label,
+    & .search-field {
+        width: 100%;
+    }
+
+    & .search-form {
+        position: relative;
+        margin-bottom: .5em;
+    }
+
+    & .search-field {
+        border: 2px solid var(--colorPrimary);
+        font-size: 3em;
+        padding-left: .5em;
+        min-width: 0;
+        padding: 0 0 0 .5em;
+    }
+
+    & .search-submit {
+        height: 100%;
+        width: 4em;
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        transform: translateY(-50%);
+        color: transparent;
+        background-image: url('assets/icons/search.svg');
+        background-position: center center;
+        background-color: transparent;
+        background-size: 50%;
+        border: transparent;
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    & .quick-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    & a {
+        flex: 1;
+        text-align: center;
+        border: none;
+    }
+
+    & a + a {
+        margin: .25em 0 0 0;
+    }
+}
+
+.search-overlay.active {
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+}
+
+#close-site-search {
+    position: absolute;
+    top: 3em;
+    right: 4em;
+    padding: 0;
+
+    &:hover {
+        & p {
+            color: var(--colorSecondaryLt);
+        }
+
+        & svg {
+            fill: var(--colorSecondaryLt);
+        }
+    }
+
+    & p {
+        margin: 0;
+        font-size: 2em;
+        color: var(--colorPrimary);
+    }
+
+    & svg {
+        width: 5em;
+        fill: var(--colorPrimary);
+    }
+}
+
+@media screen and (min-width: 430px) {
+    .header-topbar {
+        height: 15em;
+    }
+}
+
+@media screen and (--breakpoint-sm) {
+    .header-topbar {
+        height: 10em;
+        padding: 0;
+    }
+
+    .site-branding {
+        flex-direction: row;
+    }
+
+    .site-logo-text {
+        margin: 0 0 0 .5em;
+        text-align: left;
+    }
+
+    .site-search {
+        padding: 0;
+    }
+
+    .search-overlay {
+        & .quick-links {
+            flex-direction: row;
+        }
+
+        & a + a {
+            margin: 0 0 0 .25em;
+        }
+    }
+}
+
+@media screen and (--breakpoint-lg) {
+    .header-topbar {
+        flex-direction: row;
+        height: 6.25em;
+    }
+
+    .site-branding {
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    .site-search {
+        justify-content: flex-end;
+        padding-right: 4em;
+    }
+}

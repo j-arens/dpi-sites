@@ -1,0 +1,60 @@
+.gce-feed {
+    & p {
+        line-height: 1;
+    }
+}
+
+.gce-feed__ {
+    &list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 19em;
+    }
+    
+    &item {
+        display: flex;
+    }
+    
+    &date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 5em;
+        background-color: var(--color-secondary);
+        border-radius: 3px;
+        padding: 0.75em;
+        color: var(--color-white);
+        margin-right: 1em;
+    }
+    
+    &month,
+    &day {
+        margin: 0;
+    }
+    
+    &day {
+        font-size: 1.875em;
+        font-weight: 700;
+    }
+    
+    &event-title {
+        font-weight: 700;
+        font-size: 1.125em;
+        margin: 0.5rem 0 0.5rem 0;
+    }
+    
+    &event-link {
+        color: var(--color-neutral);
+        
+        & .svg-icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            fill: currentColor;
+            margin: 0 0 0 0.25em;
+            vertical-align: middle;
+        }
+    }
+}

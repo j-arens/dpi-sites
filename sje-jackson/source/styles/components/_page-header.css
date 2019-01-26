@@ -1,0 +1,32 @@
+.page-header {
+    height: 23.75em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: var(--color-secondary);
+    padding: 0 1em;
+}
+
+.page-header__ {
+    &container {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &title {
+        font-family: var(--font-family-base);
+        text-transform: uppercase;
+        color: var(--color-white);
+        font-size: 2.875em;
+        margin: 0;
+        padding: 0 0 0 0.5em;
+    }
+}
+
+@media screen and (min-width: 68.75em) {
+    .page-header__ {
+        &title {
+            padding: 0 0 2em 0.5em;
+        }
+    }
+}

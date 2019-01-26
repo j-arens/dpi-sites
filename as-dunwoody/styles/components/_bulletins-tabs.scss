@@ -1,0 +1,54 @@
+.dpi-bulletins__ {
+    &tab-col:last-of-type {
+        margin-top: 2em;
+    }
+
+    &link {
+        display: block;
+    }
+
+    &link + &link {
+        margin-top: 1.5em;
+    }
+
+    &svg-icon {
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        vertical-align: middle;
+        fill: currentColor;
+        margin-right: 0.5rem;
+    }
+
+    &cover {
+        max-width: 19em;
+        max-height: 23em;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #ccc;
+    }
+}
+
+@media screen and (min-width: 81.25em) {
+    .dpi-bulletins__ {
+        &tab-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &tab-col {
+            flex: 0 0 45%;
+
+            &:first-of-type {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &:last-of-type {
+                margin-top: 0;
+            }
+        }
+    }
+}

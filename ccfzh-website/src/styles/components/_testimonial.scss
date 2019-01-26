@@ -1,0 +1,24 @@
+.testimonial {
+  width: 100%;
+  border-top: 2px solid $color-primary;
+  border-bottom: 2px solid $color-primary;
+  padding: .5em 0;
+  margin: 2em 0;
+
+  cite,
+  p {
+    font-size: 1.15em;
+    font-family: 'Droid Serif', serif;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  cite {
+    display: block;
+    margin-top: .5em;
+    text-align: center;
+    margin-top: 1em;
+  }
+}

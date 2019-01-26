@@ -1,0 +1,12 @@
+body:not(.home).page-template-full-width {
+  & .wrap {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 4em 0;
+  }
+
+  & .main {
+    padding: 0 4em;
+    width: 100%;
+  }
+}

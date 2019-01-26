@@ -1,0 +1,51 @@
+/* Primary colors */
+$color-primary:           #722221;
+$color-primary-lt:        #8A3B3B;
+$color-primary-dk:        #500C0C;
+
+/* Secondary colors */
+$color-secondary:         #283555;
+$color-secondary-lt:      #3E4B6C;
+$color-secondary-dk:      #182544;
+
+/* Accent colors */
+$color-accent:            #daad58;
+$color-accent-lt:         #FFD88D;
+$color-accent-dk:         #BE8E32;
+$color-accent-xdk:           #996C18;
+
+$color-accent-secondary:        #565a27;
+$color-accent-secondary-lt:     #6C6F44;
+$color-accent-secondary-dk:     #434715;
+
+$color-accent-tertiary: #f1e2c5;
+$color-accent-tertiary-lt: #FFF7E8;
+$color-accent-tertiary-dk: #CEB990;
+
+/* Neutral colors */
+$color-neutral:           #999;
+$color-neutral-lt:        #DDD;
+$color-neutral-dk:        #333;
+
+$color-white:             #fff;
+$color-black:             #000;
+
+/* Layout colors */
+$color-background-base:   #fff;
+$color-border-base:       $color-neutral-lt;
+
+/* Typography colors */
+$color-font-base:         #3b3b3b;
+$color-link-base:         $color-accent-dk;
+$color-link-hover:        $color-accent-xdk;
+$color-h1:                $color-primary;
+$color-h2:                $color-primary;
+$color-h3:                $color-primary;
+$color-h4:                $color-secondary;
+$color-h5:                $color-secondary;
+$color-h6:                $color-secondary;
+
+/* Form colors */
+$color-form-border:       $color-neutral-lt;
+$color-form-border-hover: $color-neutral;
+$color-form-border-focus: $color-accent;

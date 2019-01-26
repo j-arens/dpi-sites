@@ -1,0 +1,54 @@
+/**** TYPOGRAPHY ****/
+
+h1 {
+  font-size: 36px;
+  color: black;
+}
+
+h2 {
+  display: block;
+  font-size: 20px;
+  color: black;
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 1.25em;
+  line-height: 1.2
+}
+
+.divider-small {
+  width: 45px;
+  height: 3px;
+  background: $color-primary;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 3px;
+    background: white;
+    margin-left: 30px;
+  }
+}
+
+/**** BUTTON STYLES ****/
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: $color-primary;
+  color: $color-white;
+  font-size: 16px;
+  padding: 1em 2.5em;
+  border: 2px solid transparent;
+  transition: all .2s ease;
+
+  &:hover {
+    background: $color-white;
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+}

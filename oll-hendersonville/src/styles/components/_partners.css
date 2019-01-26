@@ -1,0 +1,159 @@
+.partners {
+    width: 100%;
+    background: var(--colorWhite);
+    padding: 5em 1em;
+}
+
+.partners--list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    list-style: none;
+    max-width: 80em;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.partners--list_item {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+}
+
+.partners--list_item + .partners--list_item {
+    margin-top: 6em;
+}
+
+.partners--list_link {
+    text-align: center;
+}
+
+.partners--svg {
+    width: 100%;
+    max-width: 19em;
+}
+
+.partners--svg_catholic_charities {
+    width: 50%;
+}
+
+/**
+* DON
+*/
+
+.partners--svg_don:hover {
+    & .svg-don-text {
+        fill: #000;
+    }
+
+    & .svg-don-shield {
+        fill: #D7BD28;
+    }
+}
+
+.svg-don-text,
+.svg-don-shield {
+    fill: #aaa;
+    transition: fill .2s ease;
+}
+
+.svg-don-shield {
+    fill-rule:evenodd;
+    clip-rule:evenodd;
+}
+
+/**
+* CC
+*/
+
+.partners--svg_catholic_charities:hover {
+    fill: #000;
+
+    & .svg-cc-text-1 {
+        fill: #aa1d38;
+    }
+}
+
+.partners--svg_catholic_charities,
+.svg-cc-text-1 {
+    fill: #aaa;
+    transition: fill .2s ease;
+}
+
+/**
+* VAT
+*/
+
+.partners--svg_vatican {
+    width: 80%;
+}
+
+.partners--svg_vatican:hover {
+    fill: #000;
+
+    & .svg-vat-shield {
+        fill: #DBBE12;
+    }
+}
+
+.partners--svg_vatican,
+.svg-vat-shield {
+    fill: #aaa;
+    transition: fill .2s ease;
+}
+
+/**
+* USCCB
+*/
+
+.partners--svg_usccb:hover {
+    fill: #000;
+
+    & .svg-usccb-green {
+        fill: #008061;
+    }
+}
+
+.partners--svg_usccb,
+.svg-usccb-green {
+    fill: #aaa;
+    transition: fill .2s ease;
+}
+
+@media screen and (--breakpoint-md) {
+    .partners {
+        padding: 3em 1em;
+    }
+    
+    .partners--list {
+        flex-direction: row;
+    }
+
+    .partners--list_item {
+        min-height: 10em;
+    }
+
+    .partners--list_item + .partners--list_item {
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .partners {
+        height: 18.125em;
+        padding: 0;
+    }
+
+    .partners--list_item {
+        min-width: 0;
+        min-height: 0;
+
+        &:nth-of-type(3) {
+            justify-content: flex-start;
+        }
+    }
+}

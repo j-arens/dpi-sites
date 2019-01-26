@@ -1,0 +1,47 @@
+.banner {
+    background-color: $color-primary;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 30px 0;
+
+    &__content {
+        color: $color-white;
+        font-size: 18px;
+    }
+
+    &__content,
+    &__btn-container {
+        text-align: center;
+    }
+
+    &__img {
+        margin: 0 auto 2em auto;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .banner {
+        padding: 70px 0;
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__img {
+            flex: 0 0 25%;
+            margin: 0;
+        }
+
+        &__content {
+            flex: 0 0 50%;
+            margin: 0;
+        }
+
+        &__content,
+        &__btn-container {
+            text-align: initial;
+        }
+    }
+}

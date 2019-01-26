@@ -1,0 +1,66 @@
+@import '../variables/_colors';
+
+.mass-times-featured {
+  background: var(--primary-gradient);
+  padding: 2em 0 1em 0;
+
+  & .row,
+  & ul {
+    height: 100%;
+  }
+
+  & ul {
+    max-width: 87.5em;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & li {
+    flex-basis: 100%;
+    text-align: center;
+    color: var(--colorSecondary);
+    font-size: 1.31em;
+    margin-bottom: 1em;
+  }
+
+  & .button {
+    font-size: 1.31rem;
+  }
+
+  & .button + .button {
+    margin-top: 1em;
+  }
+
+  @media screen and (min-width: 352px) {
+    & .button + .button {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (--breakpoint-md) {
+    & li {
+      flex-basis: 50%;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    padding: 2em 0;
+
+    & ul {
+      max-width: 87.5em;
+    }
+
+    & li {
+      flex: 1;
+      margin-bottom: 0;
+    }
+
+    & .button + .button {
+      margin-top: 1em;
+    }
+  }
+}

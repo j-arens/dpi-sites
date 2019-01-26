@@ -1,0 +1,29 @@
+/**** COLORS ****/
+
+//primary - blue
+$primary: rgb(0, 37, 123);
+$primary-xlt: lighten($primary, 10%);
+$primary-lt: lighten($primary, 5%);
+$primary-dk: darken($primary, 5%);
+$primary-xdk: darken($primary, 10%);
+
+//complementary - green
+$comp: #00AF64;
+$comp-xlt: #4CC390;
+$comp-lt: #28B478;
+$comp-dk: #00874D;
+$comp-xdk: #006A3D;
+
+//secondary - yellow
+$secondary: #FF9200;
+$secondary-xlt: #FFBC63;
+$secondary-lt: #FFAA39;
+$secondary-dk: #C57100;
+$secondary-xdk: #9B5900;
+
+//accent - orange
+$accent: #FF4900;
+$accent-xlt: #FF8F63;
+$accent-lt: #FF7139;
+$accent-dk: #C53800;
+$accent-xdk: #9B2C00;

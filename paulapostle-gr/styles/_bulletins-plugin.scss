@@ -1,0 +1,23 @@
+#bulletin-columns {
+  margin: 0 auto;
+  border: 2px solid $color-primary;
+  border-radius: 5px 30px 5px 30px;
+  padding: 20px;
+  padding-top: 1em !important;
+  width: 90%;
+  list-style: none;
+  lost-utility: clearfix;
+
+  li {
+    text-align: center;
+    lost-column: 1/4 4;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  a {
+    display: block;
+  }
+}

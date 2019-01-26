@@ -1,0 +1,85 @@
+/**** SIDEBAR ****/
+
+#sidebar {
+  margin: 1rem 0;
+  flex: 0 0 calc(30% - 2rem);
+  margin-left: 2rem;
+  border-left: 1px solid $color-neutral;
+  padding-left: 2rem;
+  overflow: hidden;
+
+  ol,
+  ul {
+    list-style: none;
+  }
+
+  .sidebar-main-links {
+    margin-bottom: 2rem;
+  }
+
+  .link {
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: .5rem 0;
+
+    &:first-child {
+      background: $color-primary;
+    }
+
+    &:nth-child(2) {
+      background: $color-primary-dark;
+    }
+
+    &:last-child {
+      background: $color-primary-xdark;
+    }
+  }
+
+  .calendar {
+    margin-bottom: 2rem;
+
+    .btn {
+      margin-left: 50%;
+      transform: translate(-50%);
+    }
+  }
+
+  .simcal-calendar {
+    margin-bottom: 1em;
+  }
+
+  .mass-times {
+
+    h1,
+    span {
+      display: block;
+    }
+
+    span {
+      font-size: 18px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      padding-left: 1rem;
+      margin-bottom: .5rem;
+    }
+
+    hr {
+      width: 30px;
+      height: 3px;
+      background: $color-primary;
+      border: none;
+      margin: 1.25rem 0;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,13 @@
+.envira-album-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute !important;
+    top: -4px;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: var(--color-white);
+    pointer-events: none;
+}

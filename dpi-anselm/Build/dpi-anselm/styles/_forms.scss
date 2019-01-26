@@ -1,0 +1,74 @@
+/* ============================================================ */
+
+
+/*                            Forms                             */
+
+
+/* ============================================================ */
+
+//search icon
+.search-field {
+    background-color: transparent;
+    background-image: url("images/icons/active-search-icon.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    margin: 5px 0;
+    padding: 0 5px 0 40px;
+    position: relative;
+    -webkit-transition: width 400ms ease, background 400ms ease;
+    transition: width 400ms ease, background 400ms ease;
+    width: 0;
+}
+
+.search-field:focus {
+    background-color: #fff;
+    border: 1px solid #333;
+    cursor: text;
+    outline: 0;
+    width: 230px;
+}
+
+.search-submit {
+    display: none;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+//contact form 7 form
+
+.wpcf7 {
+    display: inline-block;
+    width: 50%;
+}
+
+.wpcf7-form {
+    padding: 1em;
+}
+
+.wpcf7-submit {
+    padding: .5em 2em;
+}
+
+span.wpcf7-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .25em 0;
+}
+
+.wpcf7-textarea,
+.wpcf7-text {
+    width: 70%;
+}
+
+@media screen and (max-width: 1025px) {
+    .wpcf7 {
+        width: 100%;
+    }
+}

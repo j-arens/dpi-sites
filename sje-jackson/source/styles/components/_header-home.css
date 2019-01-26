@@ -1,0 +1,115 @@
+.site-header__home {
+    background-color: var(--color-white);
+}
+
+.header-home__ {
+    &info-bar {
+        background-color: var(--color-neutral);
+        padding: 0.625em 0;
+
+        & .svg-icon {
+            max-width: 1.25em;
+            max-height: 1.25em;
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        & .svg-icon + * {
+            margin-left: 1rem;
+        }
+
+        & p {
+            margin: 0;
+        }
+    }
+
+    &info-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 1em;
+    }
+
+    &info-link {
+        display: flex;
+        align-items: center;
+        color: var(--color-neutral-dk);
+
+        & .svg-icon {
+            fill: currentColor;
+        }
+    }
+
+    &info-link + &info-link {
+        margin-left: 1em;
+    }
+
+    &search-toggle {
+        background-color: transparent;
+        padding: 0;
+        width: 2em;
+        height: 2em;
+        margin-left: 0.5em;
+
+        &:hover {
+            background-color: transparent;
+
+            & .svg-icon {
+                fill: var(--color-secondary);
+            }
+        }
+
+        &:focus {
+            outline: 0;
+            background-color: transparent;
+        }
+
+        & .svg-icon {
+            max-height: initial;
+            max-width: initial;
+            height: 1.5em;
+            width: 1.5em;
+            fill: var(--color-neutral-dk);
+        }
+    }
+
+    &logo {
+        display: inline-block;
+        min-width: 14em;
+        width: calc((3 / 12) * 100%);
+        height: 5.9375em;
+        margin: 0.5em 0 2em 0;
+        background-size: contain;
+        background-position: left center;
+        background-repeat: no-repeat;
+    }
+
+    &menu-container {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1em 1em 1em;
+    }
+
+    &nav-placeholder {
+        width: calc((9 / 12) * 100%);
+        height: 4em;
+        background: var(--color-primary);
+    }
+}
+
+@media screen and (min-width: 68.75em) {
+    .header-home__ {
+        &logo {
+            margin: 0.5em 0;
+        }
+
+        &menu-container {
+            flex-direction: row;
+            padding: 0 1em;
+        }
+    }
+}

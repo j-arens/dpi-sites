@@ -1,0 +1,38 @@
+body.page-template-searchpage {
+
+}
+
+body.search-results {
+
+}
+
+body.search-no-results {
+    & .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+
+        & .no-posts {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        & .search-field,
+        & .search-submit {
+            max-width: 22em;
+            width: 100%;
+        }
+
+        & .search-field {
+            margin-bottom: 1em;
+        }
+
+        & p {
+            font-weight: 500;
+            font-size: 1.5em;
+        }
+    }
+}

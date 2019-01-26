@@ -1,0 +1,71 @@
+.search-overlay {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.98);
+    transition: opacity .3s ease-in-out;
+}
+
+.search-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.search-overlay__ {
+    &toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        padding: 0;
+        border: 0;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 600;
+    }
+
+    &toggle-x {
+        font-size: 2rem;
+        margin-bottom: -.5rem;
+    }
+
+    &form {
+        & input:not([type="submit"]) {
+            border: 2px solid var(--colorSecondary);
+            box-shadow: 0 0 5px 1px rgba(30, 30, 30, 0.2);
+            margin-bottom: 1em;
+        }
+
+        & input[type="submit"] {
+            font-weight: 600;
+            border: 2px solid var(--colorPrimary);
+            box-shadow: 0 0 5px 1px rgba(30, 30, 30, 0.2);
+
+            &:hover {
+                border-color: var(--colorPrimaryLt);
+                background: var(--colorPrimaryLt);
+            }
+        }
+    }
+}
+
+@media screen and (--breakpoint-md) {
+    .search-overlay__ {
+        &toggle {
+            top: 4rem;
+            right: 4rem;
+        }
+    }
+}

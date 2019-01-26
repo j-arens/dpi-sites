@@ -1,0 +1,118 @@
+.linkbanner__ {
+    &half {
+        position: relative;
+        height: 18.75em;
+        padding: 1em 6.25em;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        color: var(--color-white);
+        text-align: center;
+    }
+
+    &title {
+        margin: 0 0 2rem 0;
+        font-size: 2.375em;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    &link {
+        display: block;
+        width: 3.43em;
+        height: 3.43em;
+        color: var(--color-white);
+
+        & .svg-icon {
+            width: 100%;
+            height: 100%;
+            fill: currentColor;
+            stroke: currentColor;
+        }
+    }
+
+    &social-link {
+        float: left;
+    }
+
+    &social-link + &social-link {
+        margin-left: 1.875em;
+    }
+
+    &link-btn {
+        display: inline-block;
+        margin: 0 auto 0 0;
+        background-color: transparent;
+        border: 3px solid var(--color-white);
+        color: var(--color-white);
+        padding: 0.5rem 1.5rem;
+        font-size: 1.43em;
+
+        &:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+    }
+}
+
+@media screen and (min-width: 28.125em) {
+    .linkbanner__ {
+        &social-links {
+            display: flex;
+            justify-content: center;
+        }
+
+        &social-link {
+            float: none;
+        }
+    }
+}
+
+@media screen and (min-width: 37.5em) {
+    .linkbanner__ {
+        &half {
+                &:first-of-type {
+                & .linkbanner__content {
+                    align-items: flex-end;
+                }
+            }
+        }
+
+        &content {
+            position: static;
+            top: initial;
+            left: initial;
+            transform: translate(0, 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: initial;
+            height: 100%;
+        }
+
+        &social-links {
+            justify-content: flex-end;
+        }
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .linkbanner {
+        display: flex;
+    }
+
+    .linkbanner__ {
+        &half {
+            flex: 0 0 50%;
+        }
+    }
+}

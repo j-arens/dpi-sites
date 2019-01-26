@@ -1,0 +1,173 @@
+/* ============================================================ */
+/*                          Responsive                          */
+/* ============================================================ */
+
+@media (max-width: 1025px) {
+    #menu-toggle {
+        display: block;
+        cursor: pointer;
+        background: #fff;
+        border: 0;
+        outline: 0;
+        padding: 10px 0 10px 0;
+        margin: 0 0 0 5%;
+    }
+
+    .dropdown-toggle {
+        display: block;
+        float: right;
+        margin-right: 5%;
+        width: 24px;
+        height: 24px;
+        border: 0;
+        outline: 0;
+        background: url(images/expand.png) no-repeat;
+        background-size: 17px 17px;
+        margin-top: -25px;
+        cursor: pointer;
+        padding: 7px;
+    }
+
+    .primary-menu a:hover {
+        color: #333;
+        background: #fff;
+    }
+
+    #site-navigation ul.sub-menu a {
+        padding-left: 25px;
+    }
+
+    ul.sub-menu {
+        display: none;
+        margin-left: 5% !important;
+    }
+
+    .current_page_item ul.sub-menu, .current-menu-parent ul.sub-menu {
+        display: block;
+    }
+
+    .current_page_item .dropdown-toggle, .current-menu-ancestor .dropdown-toggle.toggled-on {
+        -ms-transform: rotate(180deg); /* IE 9 */
+        -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+        transform: rotate(180deg);
+        margin-right: 6.5%;
+        margin-top: -32px;
+    }
+
+    .current_page_item .dropdown-toggle.toggled-on {
+        -ms-transform: rotate(0); /* IE 9 */
+        -webkit-transform: rotate(0); /* Chrome, Safari, Opera */
+        transform: rotate(0);
+        margin-right: 5%;
+        margin-top: -25px;
+    }
+
+    .dropdown-toggle.toggled-on {
+        -ms-transform: rotate(180deg); /* IE 9 */
+        -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+        transform: rotate(180deg);
+        margin-right: 6.5%;
+        margin-top: -32px;
+    }
+
+    #menu-toggle .hamburger {
+        width: 30px;
+        height: 26px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .hamburger .top-line, .hamburger .middle-line, .hamburger .bottom-line {
+        display: block;
+        height: 5px;
+        background: #333;
+    }
+
+    .toggled-on .hamburger .middle-line {
+        display: none;
+    }
+
+    #menu-toggle.toggled-on .hamburger {
+        justify-content: center;
+    }
+
+    .toggled-on .hamburger .top-line {
+        -ms-transform: rotate(-45deg); /* IE 9 */
+        -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+        transform: rotate(-45deg);
+        width: 27px;
+        margin-bottom: -2px;
+        border-radius: 3px;
+    }
+
+    .toggled-on .hamburger .bottom-line {
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+        transform: rotate(45deg);
+        width: 27px;
+        margin-top: -3px;
+        border-radius: 3px;
+    }
+
+    .menu-primary-container {
+        display: none;
+        background: #777;
+        padding: 5% 0 5% 0;
+    }
+
+    ul.primary-menu {
+        list-style-type: none;
+        display: block;
+        margin: 0 auto;
+        text-align: left;
+        width: 100%;
+    }
+
+    ul.primary-menu li {
+        display: block;
+    }
+
+    ul.primary-menu a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 5% 10px 5%;
+    }
+
+    .search-form {
+        position: absolute;
+        top: 135px;
+        right: 5%;
+    }
+}
+
+@media (max-width: 800px) {
+    #content {
+        flex-direction: column;
+    }
+
+    .footer-widget-area-wrap {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    #masthead .header-wrap {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .site-branding {
+        margin-bottom: 20px;
+    }
+
+    .search-form {
+        top: 168px;
+    }
+
+    p {
+        line-height: 25px;
+    }
+}

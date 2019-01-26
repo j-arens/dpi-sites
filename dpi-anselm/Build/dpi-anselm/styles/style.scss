@@ -1,0 +1,33 @@
+/*
+
+ Theme Name:     dpi-anselm
+
+ Description:    Twenty Sixteen Child Theme Diocesan Publications Client Sites
+
+ Author:         Diocesan Publications
+
+ Author URI:     http://diocesan.com/
+
+ Template:       twentysixteen
+
+ Version:        1.0.0
+
+*/
+
+@import '_reset.scss';
+@import '_typography.scss';
+@import '_index.scss';
+@import '_header.scss';
+@import '_navigation.scss';
+@import '_homepage.scss';
+@import '_content-page.scss';
+@import '_pastor-widget.scss';
+@import '_staff-page.scss';
+@import '_forms.scss';
+@import '_content.scss';
+@import '_footer.scss';
+@import '_not-found.scss';
+//google calendar
+@import '_simcal-calendar-grid.scss';
+@import '_simcal-calendar-list.scss';
+@import '_simcal-calendar-qtip.scss';

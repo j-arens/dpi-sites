@@ -1,0 +1,55 @@
+body.error404 {
+
+    .main {
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+        border-left: 2px solid $color-neutral-lt;
+        border-right: 2px solid $color-neutral-lt;
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .content {
+        background-color: #f9f4ee;
+    }
+    
+    .not-found {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 6em 1em;
+
+        form {
+            max-width: 25em;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+        }
+    }
+
+    .not-found__message {
+        font-size: 1.675em;
+    }
+}
+
+body.blog {
+    .not-found {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 6em 1em;
+
+        form {
+            max-width: 25em;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@import '_base';
+
+#dpi-forms__root {
+    height: 100%;
+}
+
+/**
+* Success Page
+*/
+:--namespace\ {
+    &wrapper {
+        max-width: 60em;
+        width: 100%;
+        margin: 4em auto;
+        padding: 2em;
+        border-radius: var(--defaultRadius);
+        background: var(--colorWrapperBg);
+    }
+
+    &success-page_logo {
+        max-width: 10em;
+        max-height: 10em;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto 2.5em auto;
+        display: block;
+    }
+
+    &success-page_title {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 2rem;
+    }
+
+    &success-page_redirect {
+        text-align: center;
+        font-size: 1.1em;
+    }
+
+    &succes-page_redirect-counter {
+        margin-right: .4em;
+    }
+}

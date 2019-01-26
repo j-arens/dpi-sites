@@ -1,0 +1,397 @@
+/**** HOMEPAGE ****/
+
+.home {
+    
+    #content {
+        background-image: url('../dpi-teresa-parents/images/school-supplies-bg-5.jpg');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        z-index: 1;
+        
+        &::after {
+            content: '';
+            display: block;
+            background: $primary;
+            opacity: 0.4;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+    
+    #homepage-video {
+        height: 50vh;
+        width: 100%;
+        background: white;
+        
+        .homepage-video-widget {
+            width: 50%;
+            height: 50%;
+        }
+    }
+    
+    #important-links {
+        background: white;
+        width: 100%;
+        padding: 0 0 2em 0;
+        
+        h1 {
+            padding-left: 2em;
+            line-height: 2;
+            background: $primary;
+            color: white;
+            margin: 0 0 .5em 0;
+        }
+        
+        ul {
+            margin: 0;
+        }
+        
+        a {
+            display: inline-block;
+            padding: .25em 0;
+            vertical-align: top;
+            color: $primary;
+            text-decoration: none;
+            
+            &:hover {
+                color: $secondary;
+                text-decoration: underline;
+            }
+        }
+        
+        .impt-links-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .impt-links-widget {
+            margin-right: 4em;
+            max-width: 300px;
+            
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    
+    #links {
+    width: 100%;
+    height: auto;
+    background: white;
+    padding: 4em 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: url('http://mtctampa.diocesanweb.com/wp/parents/wp-content/themes/dpi-teresa-parents/images/mother-teresa-bw-tall.jpg');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    }
+    
+    .links-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 70%;
+        margin-left: 4em;
+    }
+    
+    .link-container {
+        width: calc(50% - .5em);
+        
+        &:first-child {
+            margin-right: 1em;
+        }
+    }
+    
+
+    a[class*="link-"] {
+        display: block;
+        position: relative;
+        padding: 3rem;
+        color: white;
+        margin: 0 1rem 1rem 0;
+        text-decoration: none;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+
+        .title {
+            display: block;
+            font-size: 2em;
+            margin-bottom: .5rem;
+        }
+
+        p {
+            text-indent: .25rem;
+            font-size: 1rem;
+        }
+
+        i {
+            position: absolute;
+            right: .5rem;
+            bottom: .0;
+            color: white;
+            font-size: 7rem;
+            opacity: 0.2;
+        }
+
+        .fa-newspaper-o {
+            bottom: -10px;
+        }
+    }
+    
+    .link-icon {
+        position: absolute;
+        right: 1em;
+        bottom: 1em;
+        opacity: 0.3;
+        width: 90px;
+    }
+
+    .link-large {
+        lost-column: 1/1;
+        height: calc(50vh + 1rem);
+        background: $primary;
+    }
+
+    .link-medium {
+        lost-column: 1/1;
+        height: 25vh;
+        background: $secondary-lt;
+    }
+
+    .link-small {
+        lost-column: 1/2;
+        height: 25vh;
+        background: $comp;
+    }
+
+    .link-small:nth-child(2n + 1) {
+        clear: none;
+    }
+}
+
+
+
+/**** Testimonials ****/
+
+#testimonials {
+    width: 100%;
+    height: 50vh;
+    background: $primary;
+    display: flex;
+    align-items: center;
+    .testimonial-wrap {
+        width: 70%;
+        margin: 0 auto;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .content {
+        flex: 0 0 35%;
+        height: auto;
+        h1 {
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+        p {
+            line-height: 1.25;
+            margin-bottom: 2em;
+        }
+    }
+    .faces-container {
+        display: flex;
+        flex-direction: row;
+    }
+    .inner-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .view-more {
+        margin: -4.5em 0 0 0;
+        text-decoration: none;
+        color: white;
+        font-style: italic;
+    }
+    .face {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 100%;
+        height: auto;
+        padding: 0 1.5em;
+        text-decoration: none;
+        &:hover img {
+            transform: scale(1.02);
+        }
+        img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            background: white;
+            border-radius: 100%;
+        }
+        .name {
+            color: white;
+            margin: 1em 0;
+        }
+    }
+}
+
+
+/**** Discover module ****/
+
+#learning-module {
+    height: 50vh;
+    width: 100%;
+    background: url('http://mtctampa.diocesanweb.com/wp/parents/wp-content/uploads/sites/2/2016/07/MTC-2.jpg') top center no-repeat;
+    background-size: cover;
+    position: relative;
+    .content {
+        //    width: 30%;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        display: inline-block;
+        padding: 2em;
+        height: 75%;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(0, -50%);
+    }
+    h1 {
+        font-size: 2em;
+        margin-bottom: .5em;
+    }
+    p {
+        line-height: 1.25;
+    }
+    a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        border: 2px solid $secondary;
+        background: $secondary;
+        padding: .5em 1em;
+        margin-top: 1.5em;
+        
+        &:hover {
+            background: transparent;
+        }
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    #testimonials {
+        height: auto;
+        .testimonial-wrap {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2em;
+            width: 100%;
+            .view-more {
+                margin: -1em 0 0 0;
+            }
+        }
+        .content {
+            flex: 0;
+            width: 50%;
+            margin-bottom: 2em;
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .home{
+        
+        .links-wrap {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #links {
+        position: relative;
+        margin: -1rem 0 0 0;
+        height: auto;
+    }
+    .home .links-wrap {
+        width: 100%;
+        margin: 0 1em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .home {
+        .link-container {
+            width: 100%;
+            
+            &:first-child {
+                margin-right: 0;
+            }
+        }
+    }
+    #learning-module .content {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #testimonials {
+        .testimonial-wrap {
+            padding: 0;
+            .view-more {
+                margin: -4.5em 0 2em 0;
+            }
+        }
+        .content {
+            width: 80%;
+        }
+        .faces-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .face {
+            margin-bottom: 4em;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #rev_slider_1_1_wrapper {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home {
+        
+        .link-small {
+            lost-column: 1/1;
+        }
+    }
+}

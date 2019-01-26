@@ -1,0 +1,38 @@
+body:not(.home).page,
+body.single,
+body.archive {
+
+  & .main article {
+    max-width: 90em;
+    margin: 6.25em auto;
+    padding: 0 1em;
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    & img {
+      margin: 2em 0;
+    }
+    
+    & ul,
+    & dl,
+    & ol {
+      padding-left: 2rem;
+      margin-bottom: 1em;
+
+      & ul,
+      & ol {
+        list-style: lower-alpha;
+      }
+
+      & li,
+      & dt,
+      & dd {
+        margin-bottom: initial;
+      }
+    }
+  }
+}

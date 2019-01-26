@@ -1,0 +1,19 @@
+.home {
+
+  section {
+    background: $color-white;
+    width: 100%;
+
+    .section-title {
+      margin-bottom: 3.125rem;
+      text-align: center;
+    }
+  }
+
+  @import '../components/_home-slider';
+  @import '../components/_home-about';
+  @import '../components/_home-video';
+  @import '../components/_home-news';
+  @import '../components/_home-donate';
+  @import '../components/_home-contact';
+}

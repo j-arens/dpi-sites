@@ -1,0 +1,74 @@
+body.search {
+  & .wrap {
+    min-height: 50vh;
+  }
+
+  & main {
+    padding: 5.625em 0;
+  }
+}
+
+body.search-results {
+  & .wrap {
+    gg: columns(66.6% 33.4%) gutter(0);
+  }
+
+  & article[class*="post-"] {
+    max-width: 50em;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 1220px) {
+    & .wrap {
+      gg: columns(100%);
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    & main {
+      padding: 5.625em 2em;
+    }
+  }
+}
+
+body.search-no-results {
+  & main {
+    padding-left: 25vw;
+
+    & .no-posts p {
+      font-size: 1.25em;
+    }
+
+    & input:not([type="submit"]) {
+      min-width: 20vw;
+      padding: 0.625rem 0 0.625rem 0.9375rem;
+      border: 2px solid var(--colorNeutral);
+
+      &::placeholder {
+        font-style: italic;
+        opacity: 0.7;
+      }
+    }
+
+    & input[type="submit"] {
+      border: 1px solid transparent;
+      background: var(--colorSecondary);
+      color: var(--colorWhite);
+      transition: all .2s ease;
+      padding: 0.625rem 2.5rem;
+
+      &:hover {
+        border-color: var(--colorPrimary);
+        background: var(--colorPrimary);
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    & main {
+      padding-left: 2em;
+      padding-right: 2em;
+      text-align: center;
+    }
+  }
+}

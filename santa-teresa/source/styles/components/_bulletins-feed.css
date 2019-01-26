@@ -1,0 +1,91 @@
+.bulletins-feed {
+    
+}
+
+.bulletins-feed__ {
+    &current {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    &cover {
+        display: block;
+        width: 10em;
+        height: 13em;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+        margin: 0 auto;
+    }
+    
+    &text {
+        font-weight: 700;
+        text-align: center;
+        font-size: 1.125em;
+        
+        &:first-of-type {
+            padding-top: 1.5rem;
+        }
+    }
+    
+    &current-info {
+        text-align: center;
+    }
+    
+    &current-date {
+        display: block;
+        margin: 0 auto;
+        font-size: 1.875em;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+    
+    &button {
+        background-color: var(--color-secondary);
+        padding: 0.5em 1em;
+        color: var(--color-font-base);
+        border-radius: 3px;
+        box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+        transition: box-shadow .2s ease-in-out;
+        
+        &:hover {
+            box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+        }
+    }
+    
+    &archive {
+        text-align: center;
+    }
+    
+    &archive-link {
+        color: var(--color-neutral);
+    }
+    
+    &archive-link + &archive-link {
+        margin-left: 1em;
+        
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 1px;
+            background-color: var(--color-neutral);
+            margin-left: -1em;
+            vertical-align: middle;
+        }
+    }
+}
+
+@media screen and (min-width: 28.75em) {
+    .bulletins-feed__ {
+        &current {
+            flex-direction: row;
+        }
+        
+        &cover {
+            margin: 0;
+        }
+    }
+}

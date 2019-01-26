@@ -1,0 +1,210 @@
+.welcome-locations {
+    margin-bottom: 4em;
+}
+
+.welcome-locations__ {
+    &nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 2em;
+        padding: 0 1em;
+    }
+
+    &btn {
+        width: 100%;
+        border-top: 5px solid transparent;
+        background-color: var(--color-neutral);
+        font-weight: 700;
+        font-size: 1.125em;
+        color: var(--color-neutral-dk);
+        padding: 1.5rem 1rem;
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+        transition: all .2s ease;
+        margin-bottom: 1em;
+
+        &:hover {
+            color: var(--color-white);
+        }
+
+        &:active {
+            transform: scale(0.98);
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+
+        }
+
+        &:focus {
+            outline: 0;
+            color: var(--color-neutral-dk);
+            background-color: var(--color-neutral);
+        }
+    }
+
+    &btn--is-active {
+        border-top-color: var(--color-secondary);
+    }
+
+    &list {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        min-height: 45em;
+        padding-left: 0 !important;
+        max-width: 95%;
+        width: 100%;
+    }
+
+    &item {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+    }
+
+    &item--is-active {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    &map-container {
+        padding: 0.625em;
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+        height: 18.75em;
+        background-color: var(--color-secondary);
+        margin-bottom: 1.875em;
+    }
+
+    &title {
+        color: var(--color-primary);
+        font-size: 1.75em;
+        font-weight: 700;
+        line-height: 1;
+        margin: 0 0 1.5625rem 0;
+    }
+
+    &content {
+        display: flex;
+        padding: 0 1em;
+    }
+
+    &church-meta {
+        width: 100%;
+        text-align: center;
+    }
+
+    &info {
+        list-style: none !important;
+        padding-left: 0 !important;
+    }
+
+    &info-item {
+        font-size: 1.125em;
+        color: var(--color-neutral-dk);
+
+        & .svg-icon {
+            display: block;
+            width: 3.125rem;
+            height: 3.125rem;
+            margin: 0 auto 1em auto;
+
+            & circle {
+                stroke: #787878; 
+            }
+
+            & path {
+                fill: #787878;
+            }
+        }
+    }
+
+    &info-item + &info-item {
+        margin-top: 1em;
+    }
+
+    &link {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 56.25em) {
+    .welcome-locations__ {
+        &btn {
+            width: initial;
+        }
+
+        &list {
+            min-height: 36.5625em;
+        }
+
+        &info-item {
+            & .svg-icon {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 1.25rem 0 0;
+            }
+        }
+
+        &church-meta {
+            width: initial;
+            text-align: left;
+        }
+
+        &link {
+            display: block;
+            align-self: center;
+            background: var(--color-secondary);
+            padding: 1em 2em;
+            color: var(--color-white);
+            text-transform: uppercase;
+            position: relative;
+            left: 25%;
+            transform: translateX(-25%);
+
+            &:hover {
+                color: var(--color-primary);
+            }
+
+            &:focus {
+                color: var(--color-white);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 82.5em) {
+    .welcome-locations {
+        display: flex;
+    }
+
+    .welcome-locations__ {
+        &nav {
+            flex-direction: column;
+            flex: 0 0 14em;
+            justify-content: initial;
+            align-items: initial;
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        &btn {
+            margin: 0;
+        }
+
+        &btn + &btn {
+            margin: 0.8rem 0 0 0;
+        }
+
+        &list {
+            left: initial;
+            transform: translateX(0);
+            margin-left: 2.8125em;
+            max-width: initial;
+            overflow: hidden;
+        }
+    }
+}

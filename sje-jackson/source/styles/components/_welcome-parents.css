@@ -1,0 +1,48 @@
+.welcome-parents {
+    width: calc(100% + 2em);
+    margin-left: -1em;
+    background-color: var(--color-primary);
+    padding: 1.875em 1em 0 1em;
+    color: var(--color-white);
+}
+
+.welcome-parents__ {
+    &container {
+        max-width: calc(78.125em + 2em);
+    }
+
+    &col {
+        margin: 0 2em;
+    }
+
+    &title {
+        line-height: 1;
+        font-size: 2em;
+    }
+
+    &list {
+        padding: 0 0 0 1em !important;
+        list-style: initial;
+        margin-bottom: 1.875em !important;
+    }
+
+    &item {
+        font-size: 1.1em;
+    }
+
+    &item + &item {
+        margin-top: 1.875rem;
+    }
+}
+
+@media screen and (min-width: 56.25em) {
+    .welcome-parents__ {
+        &container {
+            display: flex;
+        }
+
+        &col {
+            flex: 1;
+        }
+    }
+}

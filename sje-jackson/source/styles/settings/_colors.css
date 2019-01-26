@@ -1,0 +1,43 @@
+:root {
+    /* Primary colors */
+    --color-primary:           #002a5c;
+    --color-primary-lt:        #003778;
+    --color-primary-dk:        #001C3D;
+
+    /* Secondary colors */
+    --color-secondary:         #dab451;
+    --color-secondary-lt:      #FDDB82;
+    --color-secondary-dk:      #C0972C;
+
+    /* Accent colors */
+    --color-accent:            var(--color-secondary);
+    --color-accent-lt:         var(--color-secondary-lt);
+    --color-accent-dk:         var(--color-secondary-dk);
+
+    /* Neutral colors */
+    --color-neutral:           #f4f4f4;
+    --color-neutral-lt:        #DDD;
+    --color-neutral-dk:        #777777; 
+    --color-white:             #fff;
+    --color-black:             #000;
+
+    /* Layout colors */
+    --color-background-base:   #fff;
+    --color-border-base:       var(--color-neutral-lt);
+
+    /* Typography colors */
+    --color-font-base:         #777777;
+    --color-link-base:         var(--color-accent);
+    --color-link-hover:        var(--color-accent-dk);
+    --color-h1:                var(--color-primary);
+    --color-h2:                var(--color-primary);
+    --color-h3:                var(--color-primary);
+    --color-h4:                var(--color-secondary);
+    --color-h5:                var(--color-secondary);
+    --color-h6:                var(--color-secondary);
+
+    /* Form colors */
+    --color-form-border:       var(--color-neutral-lt);
+    --color-form-border-hover: var(--color-neutral);
+    --color-form-border-focus: var(--color-accent);
+}

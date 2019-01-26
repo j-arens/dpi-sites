@@ -1,0 +1,64 @@
+body.page-template-searchpage,
+body.search-results,
+body.search-no-results {
+  & .wrap {
+    padding: 5em 1em;
+  }
+}
+
+body.page-template-searchpage {
+  & .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .new-search-message {
+    & p {
+      font-weight: 500;
+      font-size: 1.5em;
+    }
+  }
+}
+
+body.search-results {
+  & .main {
+    padding: 8.3em 1em;
+  }
+
+  & .page-header h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2.75em;
+    margin-bottom: 2em;
+  }
+
+  & .main > article,
+  & .posts-navigation {
+    max-width: 77.8em;
+    margin: 0 auto;
+
+    & * {
+      font-weight: 400;
+    }
+  }
+
+  & .posts-navigation {
+    margin-top: 4em;
+  }
+}
+
+body.search-no-results {
+  & .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .no-posts {
+    & p {
+      font-weight: 500;
+      font-size: 1.5em;
+    }
+  }
+}

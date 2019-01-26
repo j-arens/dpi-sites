@@ -1,0 +1,63 @@
+/**** LAYOUT ****/
+
+.container {
+  // max-width: 1200px;
+  max-width: calc(75em + 1em);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  lost-utility: clearfix;
+  padding: 0 1em;
+}
+
+.image-container {
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: $color-primary;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+#content {
+    width: 100%;
+
+    article {
+
+      ul,
+      ol {
+        margin-top: 1em;
+        margin-left: 2em;
+        padding: 0 2em 2em 2em;
+
+        li {
+          margin-bottom: .25em;
+        }
+      }
+
+      hr {
+        margin-bottom: 1em;
+      }
+    }
+}
+
+body:not(.home) #content {
+  max-width: calc(75em + 1em);
+  padding: 2em 1em;
+  margin: 0 auto;
+  lost-utility: clearfix;
+}
+
+#primary {
+    lost-column: 3/4 2;
+    padding-right: 2em;
+}
+
+#sidebar {
+    lost-column: 1/4 2;
+}

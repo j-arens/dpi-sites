@@ -1,0 +1,110 @@
+.page-header {
+    position: relative;
+    height: 24.25em;
+    padding-top: 3.25em;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+}
+
+.page-header__ {
+    &title,
+    &branding,
+    &menu-toggle {
+        z-index: 1;
+    }
+
+    &title {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translateX(-50%);
+        color: var(--color-white);
+        font-size: 2.875em;
+    }
+
+    &branding {
+        display: block;
+        height: 8.125em;
+        width: 18.75em;
+        position: absolute;
+        top: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &menu-toggle {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (min-width: 25em) {
+    .page-header {
+        height: 36.25em;
+    }
+
+    .page-header__ {
+        &branding {
+            top: 11.75em;
+        }
+
+        &menu-toggle {
+            top: 56%;
+        }
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .page-header__ {
+        &title {
+            top: 60%;
+        }
+
+        &branding,
+        &menu-toggle {
+            transform: translateX(0);
+        }
+        
+        &branding {
+            left: 2em;
+            top: 5.75em;
+        }
+
+        &menu-toggle {
+            top: 5em;
+            left: initial;
+            right: 2em;
+        }
+    }
+}
+
+@media screen and (min-width: 93.75em) {
+    .page-header__ {
+        &branding {
+            left: 15%;
+        }
+
+        &menu-toggle {
+            right: 10.5%;
+        }
+    }
+}

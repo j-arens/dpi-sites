@@ -1,0 +1,31 @@
+.subpage__ {
+    &item {
+        display: flex;
+        flex-direction: column;
+        min-height: 20em;
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    &thumbnail {
+        height: 10em;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: var(--color-neutral-lt);
+        margin-bottom: 1.5em;
+    }
+
+    &link {
+        text-align: center;
+        color: var(--color-white);
+        background-color: var(--color-secondary);
+        text-transform: uppercase;
+        padding: 0.75em 2em;
+        margin: 0 auto;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}

@@ -1,0 +1,186 @@
+@import '../variables/_colors';
+
+.site-footer {
+    padding: 0;
+
+    & .row {
+        margin: 0;
+    }
+}
+
+.footer-info,
+.footer-contact,
+.footer-map {
+    height: 17.18em;
+}
+
+.footer-info,
+.footer-contact {
+    padding: 2.5em 0;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--colorSecondary);
+
+    & .footer-logo-img {
+        display: block;
+        margin: 0 auto;
+        width: 5.6rem;
+        height: 5.6rem;
+        background-image: url(assets/images/site-logo-01.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    & a {
+        color: var(--colorWhite);
+        font-size: 2.6rem;
+        vertical-align: top;
+        line-height: 1;
+        margin-bottom: .5em;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    & .footer-form-container {
+        margin-top: auto;
+
+        & p {
+            color: var(--colorWhite);
+            font-size: 1.875em;
+            margin: 0;
+        }
+
+        & form {
+            position: relative;
+            max-width: 17.8rem;
+        }
+
+        & input[type="text"] {
+            background: var(--colorWhite);
+            width: 100%;
+            line-height: 2;
+            padding-left: 1rem;
+            color: var(--colorSecondary);
+            font-size: 1.125em;
+            padding: 0 0 0 1rem;
+            min-width: 0;
+            border: none;
+        }
+
+        & input[type="submit"] {
+            position: absolute;
+            height: 100%;
+            width: 2.5em;
+            padding: 0;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-image: url(assets/icons/email.svg);
+            background-repeat: no-repeat;
+            background-size: 70%;
+            background-position: left center;
+            color: transparent;
+            background-color: transparent;
+            border: none;
+        }
+    }
+}
+
+.footer-contact {
+    text-align: center;
+    background: var(--colorSecondaryLt);
+
+    & .footer-parish:first-child {
+        margin-bottom: 2.5em;
+    }
+
+    & p {
+        color: var(--colorWhite);
+        margin: 0;
+    }
+
+    & .footer-parish-name {
+        font-size: 2.25em;
+    }
+
+    & .footer-parish-address {
+        font-size: 1.25em;
+    }
+}
+
+.footer-map {
+    background: var(--colorSecondaryXlt);
+    padding: 0;
+}
+
+.site-info {
+    background: var(--colorWhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+
+    & p {
+        margin: 0;
+        line-height: 1;
+    }
+
+    & p + p {
+        margin: 1em 0 0 0;
+    }
+
+    & p,
+    & a {
+        color: var(--colorPrimary);
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (--breakpoint-md) {
+    .site-info {
+        height: 3.43em;
+        flex-direction: row;
+        padding: 0 1em;
+
+        & p + p {
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (--breakpoint-lg) {
+    .footer-info {
+        justify-content: initial;
+        align-items: initial;
+        padding-left: 1em;
+
+        & a {
+            margin-bottom: 0;
+        }
+
+        & .footer-logo-img {
+            float: left;
+            margin-right: 1.25rem;
+            display: inline-block;
+        }
+
+        & .footer-form-container {
+            padding-left: 3.125em;
+        }
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .footer-info {
+        padding-left: 12.5em;
+    }
+}

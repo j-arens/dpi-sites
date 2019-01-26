@@ -1,0 +1,45 @@
+@import '../variables/_index';
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 2.5rem;
+  transition: all .2s ease;
+  font-size: 1.125em;
+  padding: 0 1.25rem;
+  font-family: 'Maven Pro', sans-serif;
+  border: 2px solid var(--colorPrimary);
+  color: var(--colorWhite);
+  background: var(--colorPrimaryXlt);
+
+  &:hover {
+    color: var(--colorWhite);
+    border-color: var(--colorSecondaryLt);
+    background: var(--colorSecondaryXlt);
+    text-decoration: none;
+  }
+}
+
+.button-primary {
+  line-height: 3.75rem;
+  font-size: 1.25em;
+  color: var(--colorWhite);
+  border: 2px solid var(--colorWhite);
+  background: var(--colorPrimaryLt);
+
+  &:hover {
+    background: var(--colorSecondaryLt);
+    border-color: var(--colorWhite);
+    color: var(--colorWhite);
+  }
+}
+
+.button-secondary {
+  color: var(--colorSecondary);
+  border: 2px solid var(--colorSecondary);
+
+  &:hover {
+    background: var(--colorSecondary);
+    color: var(--colorSecondary);
+  }
+}

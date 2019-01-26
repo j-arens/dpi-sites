@@ -1,0 +1,16 @@
+.home-slider {
+    /*height: 43.125em;*/
+    background: var(--colorSecondary);
+    /*background-image: url(assets/images/virgin-mary-pic.jpg);*/
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.slider-placeholder {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

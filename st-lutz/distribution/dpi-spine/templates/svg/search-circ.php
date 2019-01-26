@@ -1,0 +1,3 @@
+<svg class="svg-icon svg-icon__search-circ" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 331 331">
+    <circle cx="165.5" cy="165.5" r="160.5" style="fill:none;stroke-miterlimit:10;stroke-width:10px"/><path d="M235.88,218.39l-32.15-32.15c-.17-.17-.37-.29-.55-.45a60.87,60.87,0,1,0-17.39,17.39c.16.18.28.38.45.55l32.15,32.15a12.37,12.37,0,0,0,17.49-17.49ZM152.35,192.1a39.75,39.75,0,1,1,39.75-39.75,39.75,39.75,0,0,1-39.75,39.75Zm0,0" style="fill-rule:evenodd"/>
+</svg>

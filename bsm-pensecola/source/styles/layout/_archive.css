@@ -1,0 +1,9 @@
+body.archive {
+    & .mw-container +  .mw-container {
+        margin-top: 2em;
+    }
+
+    & .post-thumbnail {
+        margin-bottom: 1em;
+    }
+}

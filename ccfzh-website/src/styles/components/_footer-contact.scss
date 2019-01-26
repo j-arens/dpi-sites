@@ -1,0 +1,25 @@
+.contact {
+
+  li {
+    margin-bottom: 1.25em;
+
+    &:not(:first-child) a {
+      vertical-align: 50%;
+    }
+  }
+
+  .icon {
+    fill: $color-primary;
+    width: 2em;
+    height: 2em;
+    margin-right: 1.25em;
+    stroke: $color-primary;
+    stroke-width: 20;
+    stroke-miterlimit: 10;
+  }
+
+  a {
+    display: inline-block;
+    color: $color-white;
+  }
+}

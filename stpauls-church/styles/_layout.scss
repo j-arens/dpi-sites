@@ -1,0 +1,141 @@
+/**** LAYOUT ****/
+
+#page {
+  background-image: url(/wp-content/themes/stpauls-church/images/scenic-bg.png);
+  background-position: bottom center;
+  background-size: 102%;
+  background-position: 35% 95%;
+}
+
+
+#content {
+  text-align: center;
+  width: 100%;
+}
+
+#sidebar {
+  display: inline-block;
+  width: 300px;
+  background: $color-white;
+  border: 2px solid tan;
+  text-align: left;
+  padding: 1em;
+  margin-top: 2em;
+  // margin-left: calc(400px - 40%);
+  margin-right: calc(400px - 40%);
+  // margin-right: 1.6%;
+  margin-left: 1.6%;
+  margin-bottom: 2em;
+
+  .widget {
+    margin-bottom: 2em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+#primary {
+  display: inline-block;
+  max-width: 60%;
+  width: 60%;
+  min-height: 100vh;
+  vertical-align: top;
+  background: $color-white;
+  text-align: left;
+  padding: 1.5em 1em 1em 1em;
+
+  article {
+
+    ol,
+    ul {
+      padding-left: 1em;
+      margin-left: 1em;
+      margin-bottom: 2em;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// full width and contact page layout
+.page-template-contact-page,
+.page.page-template-page_full-width {
+
+  #primary {
+    // width: 100%;
+    // max-width: none;
+  }
+
+  #sidebar {
+    display: none;
+  }
+}
+
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  position: relative;
+}
+
+// cards
+.card {
+  padding: 2em;
+  background: $color-white;
+  position: relative;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.card-md {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em;
+  width: calc(50% - 1.13em);
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #sidebar {
+    display: none;
+  }
+
+  #primary {
+    width: 100%;
+    max-width: none;
+    min-height: initial;
+  }
+}

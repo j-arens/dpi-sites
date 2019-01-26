@@ -1,0 +1,2274 @@
+@charset "UTF-8";
+/*
+
+ Theme Name:     dpi-anselm
+
+ Description:    Twenty Sixteen Child Theme Diocesan Publications Client Sites
+
+ Author:         Diocesan Publications
+
+ Author URI:     http://diocesan.com/
+
+ Template:       twentysixteen
+
+ Version:        1.0.0
+
+*/
+/* ============================================================ */
+/*                           Reset                              */
+/* ============================================================ */
+/*!
+
+ * ress.css • v1.0.1
+
+ * MIT License
+
+ * github.com/filipelinhares/ress
+
+ */
+/* # =================================================================
+
+   # Global selectors
+
+   # ================================================================= */
+@import url(https://fonts.googleapis.com/css?family=Cuprum:400,700|Work+Sans:400,500,700);
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%;
+  /* iOS 8+ */ }
+
+*,
+::before,
+::after {
+  box-sizing: inherit; }
+
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit; }
+
+/* Remove margin, padding of all elements and set background-no-repeat as default */
+* {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements */
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0; }
+
+/* # =================================================================
+
+   # General elements
+
+   # ================================================================= */
+/* Add the correct display in iOS 4-7.*/
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */ }
+
+/*
+
+* Correct `block` display not defined for any HTML5 element in IE 8/9
+
+* Correct `block` display not defined for `details` or `summary` in IE 10/11
+
+* and Firefox
+
+* Correct `block` display not defined for `main` in IE 11
+
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+  position: relative; }
+
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */ }
+
+[hidden],
+template {
+  display: none;
+  /* Add the correct display in IE */ }
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  /* Add a bordered underline effect in all browsers */
+  text-decoration: none;
+  /* Remove text decoration in Firefox 40+ */ }
+
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+  -webkit-text-decoration-skip: objects;
+  /* Remove gaps in links underline in iOS 8+ and Safari 8+ */ }
+
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */ }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */ }
+
+b,
+strong {
+  font-weight: bolder;
+  /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */ }
+
+dfn {
+  font-style: italic;
+  /* Address styling not present in Safari and Chrome */ }
+
+/* Address styling not present in IE 8/9 */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* # =================================================================
+
+   # Forms
+
+   # ================================================================= */
+input {
+  border-radius: 0; }
+
+[type="number"] {
+  width: auto;
+  /* Firefox 36+ */ }
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Safari 8+ */ }
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Safari 8 */ }
+
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */ }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */ }
+
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule. */ }
+
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */ }
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: 0;
+  padding: 0; }
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  outline: 1px dotted ButtonText; }
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */ }
+
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */ }
+
+/* Remove the default button styling in all browsers */
+/* Style select like a standard input */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */ }
+
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */ }
+
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */ }
+
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */ }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS and Safari */
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */ }
+
+/* Correct the text style of placeholders in Chrome, Edge, and Safari */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  /* Correct the outline style in Safari */ }
+
+/* # =================================================================
+
+   # Specify media element style
+
+   # ================================================================= */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */ }
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline; }
+
+svg:not(:root) {
+  /* Internet Explorer 11- */ }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* Internet Explorer 11+, Windows Phone 8.1+ */ }
+
+/* # =================================================================
+
+   # Acessibility
+
+   # ================================================================= */
+/* Hide content from screens but not screenreaders */
+@media screen {
+  [hidden~="screen"] {
+    display: inherit; }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important; } }
+
+/* Specify the progress cursor of updating elements */
+[aria-busy="true"] {
+  cursor: progress; }
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer; }
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled] {
+  cursor: default; }
+
+/* # =================================================================
+
+   # Selection
+
+   # ================================================================= */
+/* Specify text selection background color and omit drop shadow */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #fff;
+  text-shadow: none; }
+
+a {
+  text-decoration: none; }
+
+ol,
+ul {
+  margin: 0; }
+
+li {
+  list-style: none;
+  margin: 0; }
+
+.screen-reader-text {
+  display: none;
+  text-indent: -10000px; }
+
+/* ============================================================ */
+/*                         Typography                           */
+/* ============================================================ */
+h1 {
+  font-size: 200%;
+  margin: 20px 0; }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 30px 0 10px; }
+
+h2 {
+  font-size: 175%; }
+
+h3 {
+  font-size: 150%; }
+
+h4 {
+  font-size: 125%; }
+
+h5 {
+  font-size: 120%;
+  font-weight: bold; }
+
+h6 {
+  font-size: 100%;
+  font-weight: bold; }
+
+p {
+  font-size: 100%;
+  line-height: 1.75rem;
+  margin: 10px 0 24px; }
+
+@media (min-width: 1000px) {
+  .full-width p {
+    line-height: 1.875rem; } }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ol,
+ul {
+  margin: 0 0 24px 32px; }
+
+li {
+  margin: 0 0 5px; }
+
+blockquote {
+  margin: 10px 24px 24px;
+  padding: 0 0 0 52px;
+  background: url("images/left-quote.png") top left no-repeat;
+  background-size: 32px 32px; }
+
+a.button {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid;
+  text-decoration: none; }
+
+a.button:hover {
+  background: #333;
+  color: #fff; }
+
+/* ============================================================ */
+/*                           General                            */
+/* ============================================================ */
+::-moz-selection {
+  background-color: #777;
+  color: #fff; }
+
+::selection {
+  background-color: #777;
+  color: #fff; }
+
+body {
+  font-family: 'Cuprum', Helvetica, Arial, sans-serif;
+  color: #333; }
+
+.button,
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.skip-link {
+  display: none; }
+
+.alignleft {
+  float: left; }
+
+.alignright {
+  float: right; }
+
+.aligncenter {
+  text-align: center; }
+
+img.alignright {
+  float: right;
+  margin-left: 20px; }
+
+img.alignleft {
+  margin-right: 20px; }
+
+img.aligncenter {
+  display: block;
+  margin: 0 auto; }
+
+.page-wrap {
+  min-height: calc(100vh - 120px); }
+
+.dpi-column-75 {
+  width: 75%;
+  float: right; }
+
+.dpi-column-50 {
+  width: 25%; }
+
+.dpi-column-25 {
+  width: 25%; }
+
+/* ============================================================ */
+/*                            Header                            */
+/* ============================================================ */
+#site-header {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 1em 0 0 0; }
+
+.header-social {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: flex;
+  flex-direction: row; }
+
+.header-social a {
+  margin: 5px; }
+
+.header-social a img {
+  max-width: 32px;
+  max-height: 32px; }
+
+.site-logo {
+  display: block;
+  max-width: 340px;
+  max-height: 100px;
+  margin: 0 auto .5em;
+  background: white;
+  padding: 0 20px; }
+
+.site-logo::before {
+  content: '';
+  width: 100%;
+  height: 5px;
+  background: #54140f;
+  position: absolute;
+  left: 0;
+  top: 67px;
+  z-index: -1; }
+
+.site-logo img {
+  width: 100%;
+  height: 100%; }
+
+@media screen and (max-width: 727px) {
+  .header-social {
+    right: auto;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  .site-logo {
+    margin-top: 3.5em; }
+  .site-logo::before {
+    top: 125px; } }
+
+/* ============================================================ */
+/*                          Navigation                          */
+/* ============================================================ */
+/*nav*/
+#site-navigation {
+  width: 100%;
+  height: auto;
+  background: #18425e;
+  display: flex;
+  flex-direction: column; }
+
+#site-navigation form {
+  display: flex;
+  justify-content: center; }
+
+/*top level menu*/
+#site-navigation .menu {
+  display: none;
+  padding-top: .5em; }
+
+#site-navigation ul {
+  margin: 0; }
+
+#site-navigation li {
+  position: relative; }
+
+#site-navigation a {
+  background: #18425e;
+  display: block;
+  padding: .75em 2em;
+  color: white;
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 3px; }
+
+#site-navigation a:hover {
+  background: #54140f; }
+
+/*sub level menus*/
+#site-navigation .sub-menu {
+  display: none;
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  background: #18425e;
+  z-index: 9999; }
+
+#site-navigation .sub-menu li a {
+  padding-left: 4em; }
+
+#site-navigation .sub-menu .sub-menu {
+  top: 0;
+  left: 0; }
+
+#site-navigation .sub-menu .sub-menu li a {
+  padding-left: 6em; }
+
+/*responsive menu toggle  */
+.menu-toggle {
+  width: 100%;
+  height: 100%;
+  padding: .5em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+
+.menu-toggle:hover {
+  cursor: pointer; }
+
+.menu-toggle span {
+  width: 32px;
+  height: 5px;
+  background: white;
+  margin-bottom: 5px;
+  border-radius: 3px; }
+
+.menu-toggle span:last-child {
+  margin-bottom: 0; }
+
+.top-line-exit {
+  transform: rotate(-45deg);
+  position: relative;
+  top: 9px;
+  margin-top: 5px; }
+
+.middle-line-exit {
+  display: none; }
+
+.bottom-line-exit {
+  transform: rotate(45deg);
+  position: relative;
+  top: -1px; }
+
+/*dropdown button*/
+.dropdown-toggle {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  border-top: none;
+  border-right: none;
+  position: absolute;
+  right: 3em;
+  top: 7px;
+  transform: rotate(-45deg); }
+
+.dropdown-toggle:hover {
+  cursor: pointer;
+  transform: rotate(-45deg) scale(1.25); }
+
+.dropdown-toggle:focus {
+  outline: none; }
+
+/*large screen sizes*/
+@media screen and (min-width: 1025px) {
+  /*nav*/
+  #site-navigation {
+    width: 100%;
+    height: auto;
+    background: #18425e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  #site-navigation ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0; }
+  #site-navigation li {
+    text-align: center;
+    margin: 0;
+    position: relative; }
+  #site-navigation a {
+    display: block;
+    padding: .75em 2em;
+    color: white;
+    width: 180px; }
+  #site-navigation form {
+    display: inline; }
+  /*    top level menu*/
+  #site-navigation .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0; }
+  #site-navigation .menu-item:hover > ul.sub-menu {
+    display: block; }
+  /*    sub menus*/
+  #site-navigation ul.sub-menu {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    /*        border: 1px solid #333;*/
+    border-top: none;
+    background: #18425e;
+    z-index: 9999; }
+  #site-navigation ul.sub-menu li a {
+    padding-left: 0;
+    padding-right: 0; }
+  /*  sub sub menus  */
+  #site-navigation ul.sub-menu ul.sub-menu {
+    border-left: none;
+    left: 100%; }
+  #site-navigation ul.sub-menu ul.sub-menu li a {
+    padding-left: 0; }
+  /*nav buttons*/
+  #site-navigation .menu-toggle {
+    display: none; }
+  .dropdown-toggle {
+    display: none !important; } }
+
+@media screen and (max-width: 1650px) and (min-width: 1025px) {
+  #site-navigation ul.sub-menu ul.sub-menu {
+    top: 100%;
+    left: 0; } }
+
+/* ============================================================ */
+/*                           Homepage                           */
+/* ============================================================ */
+/*links grid*/
+.featured-links {
+  width: calc(100% + 5em);
+  height: auto;
+  max-width: calc(1400px + 5em);
+  padding-left: 2.5em;
+  margin: 1em auto 2em auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.link-container {
+  height: 200px;
+  flex: 1 1 300px;
+  margin: 2.5em 2.5em 0 0; }
+
+.link-container:first-child {
+  background: url("images/links/pray-link.jpg") center center no-repeat;
+  background-size: cover; }
+
+.link-container:nth-child(2) {
+  background: url("images/links/serve-link.jpg") center center no-repeat;
+  background-size: cover; }
+
+.link-container:nth-child(3) {
+  background: url("images/links/learn-link.jpg") center center no-repeat;
+  background-size: cover; }
+
+.link-container:nth-child(4) {
+  background: url("images/links/give-link.jpg") center center no-repeat;
+  background-size: cover; }
+
+.link-container:nth-child(5) {
+  background: url("images/links/register-link.jpg") center center no-repeat;
+  background-size: cover; }
+
+.link-container:nth-child(6) {
+  background: url("images/links/bulletins-link.jpg") center center no-repeat;
+  background-size: cover; }
+
+.link-container:nth-child(7) {
+  background: url("images/links/homilies-link.jpg") center center no-repeat;
+  background-size: cover; }
+
+.link-container:last-child {
+  background: url("images/links/contact-link.jpg") center center no-repeat;
+  background-size: cover; }
+
+.link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; }
+
+.link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  background: rgba(101, 49, 42, 0.9);
+  transition: all .3s ease-out;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 20px; }
+
+.link a:hover {
+  height: 100%; }
+
+/*makes link grid repsonsive*/
+@media screen and (max-width: 1480px) {
+  .featured-links {
+    max-width: 1400px;
+    width: 100%; }
+  .link-container {
+    max-width: 300px; } }
+
+@media screen and (max-width: 782px) {
+  .link a {
+    height: 100%; } }
+
+@media screen and (max-width: 563px) {
+  .link-container {
+    max-width: 80%; }
+  .slider {
+    display: none; } }
+
+/* ============================================================ */
+/*                          Page Template                       */
+/* ============================================================ */
+header[class*="page-"] {
+  width: 100%;
+  height: 60px;
+  background: url("images/anselm-church.jpg") top center no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 4em; }
+
+header[class*="page-"]::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: white;
+  opacity: 0.5;
+  z-index: 1; }
+
+header .title-wrap {
+  width: 90%;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: white; }
+
+header .title-wrap h2 {
+  display: inline-flex;
+  height: 100%;
+  background: #c3ac80;
+  margin: 0;
+  padding: 0 1em;
+  align-items: center;
+  position: relative;
+  z-index: 10; }
+
+.page-about article figure {
+  margin: .5em 0 .5em 2em; }
+
+.wp-caption-text {
+  font-size: 12px; }
+
+/*from the pastor widget*/
+.pastor-notes-widget {
+  max-width: 100%;
+  margin: 2em auto;
+  position: relative;
+  overflow: hidden; }
+
+.pastor-notes-widget .textwidget img {
+  margin: 0 0 0 2em; }
+
+.pastor-notes-widget-title {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  background: white;
+  margin-bottom: 1em;
+  position: relative;
+  color: #18425e;
+  font-size: 200%;
+  margin: 20px 0; }
+
+.pastor-notes-widget-title::after {
+  content: '';
+  width: 100%;
+  height: 15px;
+  background: #c3ac80;
+  position: absolute;
+  top: 10px;
+  margin-left: 30px; }
+
+.pastor-notes-widget .textwidget {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em 2em;
+  color: white;
+  background: url("images/anselm-church.jpg") bottom center no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.pastor-notes-widget .textwidget::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(101, 49, 42, 0.9); }
+
+.pastor-notes-widget .textwidget p {
+  z-index: 100;
+  margin: 0; }
+
+@media screen and (max-width: 1025px) {
+  .pastor-notes-widget {
+    width: 100%; }
+  .pastor-notes-widget .textwidget {
+    flex-direction: column-reverse;
+    align-items: center; }
+  .pastor-notes-widget .textwidget img {
+    margin: 0 0 1em 0; } }
+
+/* ============================================================ */
+/*                          Staff Page                          */
+/* ============================================================ */
+.staff_member {
+  display: inline-block;
+  max-width: 275px;
+  min-width: 200px;
+  margin: 0 25px 30px 0; }
+
+.staff_member h5.staff_name {
+  color: #2075c4;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 20px 0 5px; }
+
+p.staff_position {
+  font-size: 1rem;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+  margin-bottom: 20px; }
+
+.staff_email {
+  display: inline-block;
+  margin-right: 25px; }
+
+.staff_phone {
+  display: inline-block; }
+
+.staff_email img {
+  max-width: 35px;
+  max-height: 35px; }
+
+.staff_phone img {
+  max-width: 35px;
+  max-height: 35px; }
+
+img.staff_photo {
+  width: 200px;
+  height: 250px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: top;
+  object-position: top; }
+
+/* ============================================================ */
+/*                            Forms                             */
+/* ============================================================ */
+.search-field {
+  background-color: transparent;
+  background-image: url("images/icons/active-search-icon.png");
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  border: none;
+  cursor: pointer;
+  height: 32px;
+  margin: 5px 0;
+  padding: 0 5px 0 40px;
+  position: relative;
+  -webkit-transition: width 400ms ease, background 400ms ease;
+  transition: width 400ms ease, background 400ms ease;
+  width: 0; }
+
+.search-field:focus {
+  background-color: #fff;
+  border: 1px solid #333;
+  cursor: text;
+  outline: 0;
+  width: 230px; }
+
+.search-submit {
+  display: none; }
+
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+.wpcf7 {
+  display: inline-block;
+  width: 50%; }
+
+.wpcf7-form {
+  padding: 1em; }
+
+.wpcf7-submit {
+  padding: .5em 2em; }
+
+span.wpcf7-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: .25em 0; }
+
+.wpcf7-textarea,
+.wpcf7-text {
+  width: 70%; }
+
+@media screen and (max-width: 1025px) {
+  .wpcf7 {
+    width: 100%; } }
+
+/* ============================================================ */
+/*                           Content                            */
+/* ============================================================ */
+#content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto; }
+
+.entry-header {
+  position: relative; }
+
+.entry-content {
+  display: table;
+  width: 100%;
+  position: relative; }
+
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+  color: #17435e;
+  display: inline-block;
+  height: auto;
+  background: white;
+  padding-right: 30px; }
+
+.entry-content li {
+  font-family: 'Work Sans', sans-serif;
+  color: #18425e;
+  font-size: 17px;
+  list-style-type: circle; }
+
+.entry-content p {
+  font-family: 'Work Sans', sans-serif;
+  color: #18425e;
+  font-size: 17px; }
+
+.entry-content a {
+  font-family: 'Work Sans', sans-serif;
+  color: #18425e;
+  font-size: 17px; }
+
+/*post titles*/
+.entry-title {
+  display: inline-block;
+  height: 100%;
+  background: white;
+  padding-right: 30px;
+  color: #19435c; }
+
+.entry-title::after {
+  content: '';
+  width: 100%;
+  height: 15px;
+  background: #c3ac80;
+  position: absolute;
+  margin: 15px 0 0 30px; }
+
+.search-page .page-title {
+  display: inline-flex;
+  height: 100%;
+  background: white;
+  padding-right: 30px;
+  color: #19435c;
+  background: #c3ac80;
+  margin-top: 0;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+  padding-left: 1em; }
+
+search-page .page-title::after {
+  content: '';
+  width: 100%;
+  height: 15px;
+  background: #c3ac80;
+  position: absolute;
+  margin: 15px 0 0 30px; }
+
+#primary {
+  flex: 1 1 55%;
+  overflow: hidden; }
+
+.sidebar {
+  min-width: 300px;
+  margin: 0 0 0 4em;
+  flex: 1 1 25%; }
+
+@media screen and (max-width: 898px) {
+  #content {
+    flex-direction: column; }
+  #primary {
+    margin-right: 0; }
+  .sidebar {
+    margin-left: 0; }
+  .sidebar section[id*="black-studio-tinymce-"]:nth-child(2) .textwidget {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between; } }
+
+/*Tiny MCE titles*/
+.textwidget {
+  font-family: 'Work Sans', sans-serif; }
+
+.textwidget p {
+  font-family: 'Work Sans', sans-serif; }
+
+.sidebar section[id*="black-studio-tinymce-"] {
+  position: relative;
+  color: #19435c;
+  overflow: hidden; }
+
+.sidebar section[id*="black-studio-tinymce-"] .widget-title {
+  /*    color: #19435c;*/
+  display: inline-block;
+  margin: 20px 0 0 0;
+  /*    position: relative;*/
+  height: 100%;
+  width: auto;
+  background: white;
+  padding-right: 30px; }
+
+.sidebar section[id*="black-studio-tinymce-"] .widget-title::after {
+  content: '';
+  height: 15px;
+  width: 100%;
+  background: #c3ac80;
+  position: absolute;
+  top: 32px;
+  z-index: -1; }
+
+.sidebar section[id*="black-studio-tinymce-"] .textwidget {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.sidebar section[id*="black-studio-tinymce-"] .textwidget a {
+  color: #19435c;
+  text-decoration: underline; }
+
+.textwidget h1, .textwidget h2, .textwidget h3, .textwidget h4, .textwidget h5, .textwidget h6 {
+  margin: 0;
+  width: 50%;
+  font-weight: 400; }
+
+.sidebar section[id*="black-studio-tinymce-"] ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 30px 0;
+  width: 50%; }
+
+.sidebar section[id*="black-studio-tinymce-"] li {
+  list-style: none;
+  line-height: 1.5;
+  align-self: flex-start; }
+
+.sidebar section[id*="black-studio-tinymce-"] li:nth-child(2n) {
+  margin-bottom: 1em; }
+
+/*----BULLETINS----------*/
+#bulletin-columns {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  border: 1px solid #ccc;
+  border-radius: 5px 30px 5px 30px;
+  padding: 20px;
+  margin: 40px auto auto;
+  width: 80%;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  line-height: 1.875rem; }
+
+.embed-container {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  max-width: 50%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  float: right;
+  vertical-align: top;
+  height: 0; }
+
+@media screen and (max-width: 1025px) {
+  .embed-container {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; } }
+
+.my-subpages {
+  display: table-cell;
+  width: 25%;
+  height: 100%; }
+  .my-subpages ul {
+    margin-left: 1em; }
+  .my-subpages li {
+    list-style-type: none; }
+  .my-subpages li::before {
+    content: '\2771';
+    color: #54140f;
+    display: inline-block;
+    margin-right: 1em; }
+  .my-subpages h2 {
+    margin-top: 0; }
+  .my-subpages a {
+    text-decoration: none; }
+
+@media screen and (max-width: 1025px) {
+  .my-subpages {
+    display: block;
+    width: 100%; } }
+
+/* ============================================================ */
+/*                            Footer                            */
+/* ============================================================ */
+.site-footer {
+  height: 120px;
+  background: #19425e;
+  color: white;
+  font-size: .85em; }
+
+.footer-widget-area-wrap {
+  width: 90%;
+  height: 100%;
+  max-width: 1400px;
+  /*    padding: 0 0 20px 0;*/
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.site-footer p {
+  font-size: 1em;
+  line-height: normal;
+  margin: 0; }
+
+.site-footer a {
+  color: white;
+  text-decoration: underline; }
+
+.footer-button {
+  display: flex;
+  order: 2;
+  height: 40px;
+  width: 40px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  transition: all .2s ease-out; }
+
+.footer-button:hover {
+  background: #19425e; }
+
+.footer-button:hover .arrow {
+  border-left: 4px solid white;
+  border-top: 4px solid white; }
+
+.arrow {
+  border-left: 4px solid #19425e;
+  border-top: 4px solid #19425e;
+  width: 40%;
+  height: 40%;
+  transform: rotate(45deg);
+  margin-top: 3px; }
+
+.site-info {
+  order: 0; }
+
+.site-footer .footer-widget:first-child {
+  order: 2; }
+
+.site-footer .footer-widget:last-child {
+  order: 3; }
+
+@media screen and (max-width: 1200px) {
+  .site-footer {
+    height: auto; }
+  .footer-widget-area-wrap {
+    flex-direction: column;
+    padding: 1em 0; }
+  .footer-widget-area-wrap div {
+    margin: .5em 0; }
+  .footer-button {
+    order: 0; }
+  .site-footer .footer-widget:first-child {
+    order: 1; }
+  .site-info {
+    order: 2; }
+  .site-footer .footer-widget:last-child {
+    order: 4; } }
+
+#not-found-page h1 {
+  margin: 0; }
+
+/*! Simple Calendar - 3.1.1
+ * https://simplecalendar.io
+ * Copyright (c) Moonstone Media 2016
+ * Licensed GPLv2+ */
+.simcal-default-calendar .simcal-nav-button,
+.simcal-default-calendar .simcal-nav-button:focus,
+.simcal-default-calendar .simcal-nav-button:hover {
+  background: 0 0;
+  border: 0;
+  box-shadow: none;
+  outline: 0; }
+
+@font-face {
+  font-family: simple-calendar;
+  src: url(../fonts/simple-calendar.eot?43976014);
+  src: url(../fonts/simple-calendar.eot?43976014#iefix) format("embedded-opentype"), url(../fonts/simple-calendar.woff?43976014) format("woff"), url(../fonts/simple-calendar.ttf?43976014) format("truetype"), url(../fonts/simple-calendar.svg?43976014#simple-calendar) format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+[class*=" simcal-icon-"]:before,
+[class^=simcal-icon-]:before {
+  display: inline-block;
+  font-family: simple-calendar;
+  font-style: normal;
+  font-weight: 400;
+  margin-right: .2em;
+  speak: none;
+  text-decoration: inherit;
+  text-align: center;
+  width: 1em;
+  font-variant: normal;
+  text-transform: none;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.simcal-icon-spin {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+.simcal-icon-animate:before {
+  transition: all .2s ease-in-out; }
+
+.simcal-icon-rotate-180:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.simcal-icon-calendar-empty:before {
+  content: '\e800'; }
+
+.simcal-icon-calendar:before {
+  content: '\e801'; }
+
+.simcal-icon-calendar-logo:before {
+  content: '\e802'; }
+
+.simcal-icon-settings:before {
+  content: '\e804'; }
+
+.simcal-icon-toggles:before {
+  content: '\e805'; }
+
+.simcal-icon-list:before {
+  content: '\e806'; }
+
+.simcal-icon-event:before {
+  content: '\e807'; }
+
+.simcal-icon-help:before {
+  content: '\e808'; }
+
+.simcal-icon-panel:before {
+  content: '\e80a'; }
+
+.simcal-icon-grid:before {
+  content: '\e80b'; }
+
+.simcal-icon-google:before {
+  content: '\e80c'; }
+
+.simcal-icon-docs:before {
+  content: '\e80f'; }
+
+.simcal-icon-hourglass:before {
+  content: '\e811'; }
+
+.simcal-icon-globe:before {
+  content: '\e812'; }
+
+.simcal-icon-timezones:before {
+  content: '\e813'; }
+
+.simcal-icon-warning:before {
+  content: '\e815'; }
+
+.simcal-icon-wordpress:before {
+  content: '\e814'; }
+
+.simcal-icon-up:before {
+  content: '\e80e'; }
+
+.simcal-icon-right:before {
+  content: '\e809'; }
+
+.simcal-icon-down:before {
+  content: '\e80d'; }
+
+.simcal-icon-left:before {
+  content: '\e803'; }
+
+.simcal-icon-spinner:before {
+  content: '\e810'; }
+
+.simcal-calendar {
+  position: relative; }
+
+.simcal-powered {
+  display: block;
+  margin: -10px 0 20px; }
+
+.simcal-align-left {
+  text-align: left; }
+
+.simcal-align-right {
+  text-align: right; }
+
+.simcal-default-calendar .simcal-current h3 {
+  margin: 0;
+  padding: 0; }
+
+.simcal-default-calendar .simcal-nav {
+  vertical-align: middle; }
+
+.simcal-default-calendar .simcal-nav-button {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  transition: margin .2s ease-out;
+  width: 100%; }
+
+.simcal-default-calendar .simcal-nav-button.simcal-prev:hover {
+  margin-left: -10px; }
+
+.simcal-default-calendar .simcal-nav-button.simcal-next:hover {
+  margin-right: -10px; }
+
+.simcal-default-calendar .simcal-nav-button:disabled:hover,
+.simcal-default-calendar ul.simcal-attachments,
+.simcal-default-calendar ul.simcal-attendees {
+  margin: 0;
+  padding: 0; }
+
+.simcal-default-calendar .simcal-nav-button:disabled {
+  cursor: default; }
+
+.simcal-default-calendar .simcal-events {
+  list-style: none;
+  margin-left: 0; }
+
+.simcal-default-calendar .simcal-events-toggle {
+  border: 0;
+  box-shadow: none;
+  text-align: center;
+  width: 100%; }
+
+.simcal-default-calendar .simcal-events-toggle:active,
+.simcal-default-calendar .simcal-events-toggle:focus,
+.simcal-default-calendar .simcal-events-toggle:hover {
+  border: 0;
+  box-shadow: none;
+  outline: 0; }
+
+.simcal-default-calendar li.simcal-attachment,
+.simcal-default-calendar li.simcal-attendee {
+  list-style: none;
+  margin-bottom: 4px; }
+
+.simcal-default-calendar li.simcal-attachment:last-child,
+.simcal-default-calendar li.simcal-attendee:last-child {
+  margin-bottom: 0; }
+
+.simcal-default-calendar li.simcal-attachment small,
+.simcal-default-calendar li.simcal-attendee small {
+  opacity: .9;
+  text-transform: lowercase; }
+
+.simcal-default-calendar .simcal-organizer a,
+.simcal-default-calendar li.simcal-attachment a,
+.simcal-default-calendar li.simcal-attendee a {
+  border-bottom: 0;
+  text-decoration: none; }
+
+.simcal-default-calendar .simcal-organizer img,
+.simcal-default-calendar li.simcal-attachment img,
+.simcal-default-calendar li.simcal-attendee img {
+  display: inline-block;
+  margin: 0 4px;
+  max-height: 24px;
+  max-width: 24px; }
+
+.simcal-default-calendar .simcal-tooltip-content {
+  font-size: 1.2em;
+  line-height: 1.4;
+  padding: 5px; }
+
+.simcal-default-calendar .simcal-ajax-loader {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.simcal-default-calendar .simcal-ajax-loader > i {
+  font-size: 48px;
+  left: 50%;
+  line-height: 1;
+  margin: -36px 0 0 -36px;
+  position: absolute;
+  top: 50%; }
+
+.simcal-default-calendar .simcal-ajax-loader.simcal-spinner-top > i {
+  top: 20%; }
+
+.simcal-default-calendar .simcal-ajax-loader.simcal-spinner-bottom > i {
+  bottom: 20%;
+  top: auto; }
+
+.simcal-default-calendar-light .simcal-nav-button {
+  color: rgba(0, 0, 0, 0.6); }
+
+.simcal-default-calendar-light .simcal-nav-button:disabled,
+.simcal-default-calendar-light .simcal-nav-button:disabled:hover {
+  color: rgba(255, 255, 255, 0.9) !important; }
+
+.simcal-default-calendar-light .simcal-nav-button:focus,
+.simcal-default-calendar-light .simcal-nav-button:hover {
+  color: rgba(0, 0, 0, 0.9); }
+
+.simcal-default-calendar-light .simcal-events-toggle {
+  color: rgba(0, 0, 0, 0.6); }
+
+.simcal-default-calendar-light .simcal-events-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff; }
+
+.simcal-default-calendar-light .simcal-ajax-loader {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.simcal-default-calendar-light .simcal-ajax-loader > i {
+  color: rgba(0, 0, 0, 0.3); }
+
+.simcal-default-calendar-dark .simcal-nav-button {
+  color: rgba(255, 255, 255, 0.6); }
+
+.simcal-default-calendar-dark .simcal-nav-button:disabled,
+.simcal-default-calendar-dark .simcal-nav-button:disabled:hover {
+  color: rgba(0, 0, 0, 0.9) !important; }
+
+.simcal-default-calendar-dark .simcal-nav-button:focus,
+.simcal-default-calendar-dark .simcal-nav-button:hover {
+  color: rgba(255, 255, 255, 0.9); }
+
+.simcal-default-calendar-dark .simcal-events-toggle {
+  color: rgba(255, 255, 255, 0.6); }
+
+.simcal-default-calendar-dark .simcal-events-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #000; }
+
+.simcal-default-calendar-dark .simcal-ajax-loader {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.simcal-default-calendar-dark .simcal-ajax-loader > i {
+  color: rgba(255, 255, 255, 0.3); }
+
+.simcal-default-calendar-grid > table {
+  table-layout: fixed;
+  width: 100%; }
+
+.simcal-default-calendar-grid > table tbody td,
+.simcal-default-calendar-grid > table thead th {
+  text-align: center;
+  vertical-align: top; }
+
+.simcal-default-calendar-grid > table tbody td {
+  padding: 0 !important; }
+
+.simcal-default-calendar-grid .simcal-calendar-head .simcal-nav {
+  padding: 10px 0;
+  vertical-align: middle; }
+
+.simcal-default-calendar-grid .simcal-calendar-head .simcal-nav.simcal-current,
+.simcal-default-calendar-grid .simcal-calendar-head .simcal-nav.simcal-prev-wrapper {
+  border-right: 0; }
+
+.simcal-default-calendar-grid .simcal-day > div {
+  box-sizing: content-box;
+  display: block;
+  height: 100%; }
+
+.simcal-default-calendar-grid .simcal-day-void {
+  border-width: 0 0 1px;
+  height: 100%;
+  min-height: 32px; }
+
+.simcal-default-calendar-grid .simcal-day-void.simcal-day-void-last {
+  border-right-width: 1px; }
+
+.simcal-default-calendar-grid .simcal-day-number {
+  display: block;
+  line-height: 1;
+  padding: 2px 4px 3px;
+  vertical-align: middle; }
+
+.simcal-default-calendar-grid .simcal-no-events {
+  display: block;
+  min-height: 32px; }
+
+.simcal-default-calendar-grid.simcal-default-calendar-light .simcal-day:hover {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.simcal-default-calendar-grid.simcal-default-calendar-light .simcal-day-void,
+.simcal-default-calendar-grid.simcal-default-calendar-light .simcal-day-void:hover {
+  background-color: rgba(0, 0, 0, 0.04); }
+
+.simcal-default-calendar-grid.simcal-default-calendar-light .simcal-day-number {
+  background: rgba(0, 0, 0, 0.1); }
+
+.simcal-default-calendar-grid.simcal-default-calendar-dark .simcal-day:hover {
+  background-color: rgba(255, 255, 255, 0.18); }
+
+.simcal-default-calendar-grid.simcal-default-calendar-dark .simcal-day-void,
+.simcal-default-calendar-grid.simcal-default-calendar-dark .simcal-day-void:hover {
+  background-color: rgba(255, 255, 255, 0.05); }
+
+.simcal-default-calendar-grid.simcal-default-calendar-dark .simcal-day-number {
+  background: rgba(255, 255, 255, 0.1); }
+
+.simcal-default-calendar-grid .simcal-events {
+  font-size: .68em;
+  line-height: 1.4;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left; }
+
+.simcal-default-calendar-grid .simcal-events > .simcal-event {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  cursor: pointer;
+  list-style: none;
+  margin: 0 0 2px;
+  padding: 4px; }
+
+.simcal-default-calendar-grid .simcal-events > .simcal-event:hover {
+  text-decoration: underline; }
+
+.simcal-default-calendar-grid .simcal-events > .simcal-event:last-child {
+  border-bottom: 0;
+  margin-bottom: 0; }
+
+.simcal-default-calendar-grid.simcal-default-calendar-light .simcal-event {
+  border-bottom-color: rgba(0, 0, 0, 0.1); }
+
+.simcal-default-calendar-grid.simcal-default-calendar-dark .simcal-event {
+  border-bottom-color: rgba(255, 255, 255, 0.1); }
+
+.simcal-default-calendar-grid .simcal-events-dots {
+  cursor: pointer;
+  display: block;
+  line-height: .7;
+  margin: 3px 0;
+  text-align: center; }
+
+.simcal-default-calendar-grid .simcal-events-toggle {
+  background: 0 0;
+  display: block;
+  font-size: 10px;
+  padding: 2px 0; }
+
+.simcal-event-bubble {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+.simcal-event-bubble .simcal-event-details .simcal-event-description,
+.simcal-event-bubble .simcal-event-details p {
+  margin: 0 0 1em; }
+
+.simcal-calendar > * {
+  border-collapse: collapse; }
+
+.simcal-calendar-head {
+  height: 70px; }
+
+.simcal-calendar-head,
+.simcal-current-month,
+.simcal-current-year {
+  background: #541510;
+  color: white; }
+
+.simcal-calendar-head tr:first-child {
+  height: 70px; }
+
+.simcal-calendar-head th {
+  padding: .5em 0; }
+
+.simcal-nav h3 span:last-child {
+  margin-left: -7px; }
+
+.simcal-nav h3 span:first-child {
+  padding-right: 6px; }
+
+.simcal-default-calendar-grid.simcal-default-calendar-light .simcal-day-void {
+  color: white; }
+
+.simcal-default-calendar-grid.simcal-default-calendar-light .simcal-day-number {
+  background: #c2ab7f;
+  color: white;
+  padding: .35em 0; }
+
+.simcal-month td {
+  min-height: 140px; }
+
+.simcal-event-title {
+  font-size: 12px; }
+
+.simcal-day-has-events .simcal-day-label {
+  background: #c2ab7f !important; }
+
+.simcal-day div {
+  min-height: 140px !important; }
+
+/*! Simple Calendar - 3.1.1
+ * https://simplecalendar.io
+ * Copyright (c) Moonstone Media 2016
+ * Licensed GPLv2+ */
+.simcal-default-calendar .simcal-nav-button,
+.simcal-default-calendar .simcal-nav-button:focus,
+.simcal-default-calendar .simcal-nav-button:hover {
+  background: 0 0;
+  border: 0;
+  box-shadow: none;
+  outline: 0; }
+
+@font-face {
+  font-family: simple-calendar;
+  src: url(../fonts/simple-calendar.eot?43976014);
+  src: url(../fonts/simple-calendar.eot?43976014#iefix) format("embedded-opentype"), url(../fonts/simple-calendar.woff?43976014) format("woff"), url(../fonts/simple-calendar.ttf?43976014) format("truetype"), url(../fonts/simple-calendar.svg?43976014#simple-calendar) format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+[class*=" simcal-icon-"]:before,
+[class^=simcal-icon-]:before {
+  display: inline-block;
+  font-family: simple-calendar;
+  font-style: normal;
+  font-weight: 400;
+  margin-right: .2em;
+  speak: none;
+  text-decoration: inherit;
+  text-align: center;
+  width: 1em;
+  font-variant: normal;
+  text-transform: none;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.simcal-icon-spin {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+.simcal-icon-animate:before {
+  transition: all .2s ease-in-out; }
+
+.simcal-icon-rotate-180:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.simcal-icon-calendar-empty:before {
+  content: '\e800'; }
+
+.simcal-icon-calendar:before {
+  content: '\e801'; }
+
+.simcal-icon-calendar-logo:before {
+  content: '\e802'; }
+
+.simcal-icon-settings:before {
+  content: '\e804'; }
+
+.simcal-icon-toggles:before {
+  content: '\e805'; }
+
+.simcal-icon-list:before {
+  content: '\e806'; }
+
+.simcal-icon-event:before {
+  content: '\e807'; }
+
+.simcal-icon-help:before {
+  content: '\e808'; }
+
+.simcal-icon-panel:before {
+  content: '\e80a'; }
+
+.simcal-icon-grid:before {
+  content: '\e80b'; }
+
+.simcal-icon-google:before {
+  content: '\e80c'; }
+
+.simcal-icon-docs:before {
+  content: '\e80f'; }
+
+.simcal-icon-hourglass:before {
+  content: '\e811'; }
+
+.simcal-icon-globe:before {
+  content: '\e812'; }
+
+.simcal-icon-timezones:before {
+  content: '\e813'; }
+
+.simcal-icon-warning:before {
+  content: '\e815'; }
+
+.simcal-icon-wordpress:before {
+  content: '\e814'; }
+
+.simcal-icon-up:before {
+  content: '\e80e'; }
+
+.simcal-icon-right:before {
+  content: '\2771'; }
+
+.simcal-icon-down:before {
+  content: '\e80d'; }
+
+.simcal-icon-left:before {
+  content: '\2770'; }
+
+.simcal-icon-spinner:before {
+  content: '\e810'; }
+
+.simcal-calendar {
+  position: relative; }
+
+.simcal-powered {
+  display: block;
+  margin: -10px 0 20px; }
+
+.simcal-align-left {
+  text-align: left; }
+
+.simcal-align-right {
+  text-align: right; }
+
+.simcal-default-calendar .simcal-current h3 {
+  margin: 0;
+  padding: 0; }
+
+.simcal-default-calendar .simcal-nav {
+  vertical-align: middle; }
+
+.simcal-default-calendar .simcal-nav-button {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  transition: margin .2s ease-out;
+  width: 100%; }
+
+.simcal-default-calendar .simcal-nav-button.simcal-prev:hover {
+  margin-left: -10px; }
+
+.simcal-default-calendar .simcal-nav-button.simcal-next:hover {
+  margin-right: -10px; }
+
+.simcal-default-calendar .simcal-nav-button:disabled:hover,
+.simcal-default-calendar ul.simcal-attachments,
+.simcal-default-calendar ul.simcal-attendees {
+  margin: 0;
+  padding: 0; }
+
+.simcal-default-calendar .simcal-nav-button:disabled {
+  cursor: default; }
+
+.simcal-default-calendar .simcal-events {
+  list-style: none;
+  margin-left: 0; }
+
+.simcal-default-calendar .simcal-events-toggle {
+  border: 0;
+  box-shadow: none;
+  text-align: center;
+  width: 100%; }
+
+.simcal-default-calendar .simcal-events-toggle:active,
+.simcal-default-calendar .simcal-events-toggle:focus,
+.simcal-default-calendar .simcal-events-toggle:hover {
+  border: 0;
+  box-shadow: none;
+  outline: 0; }
+
+.simcal-default-calendar li.simcal-attachment,
+.simcal-default-calendar li.simcal-attendee {
+  list-style: none;
+  margin-bottom: 4px; }
+
+.simcal-default-calendar li.simcal-attachment:last-child,
+.simcal-default-calendar li.simcal-attendee:last-child {
+  margin-bottom: 0; }
+
+.simcal-default-calendar li.simcal-attachment small,
+.simcal-default-calendar li.simcal-attendee small {
+  opacity: .9;
+  text-transform: lowercase; }
+
+.simcal-default-calendar .simcal-organizer a,
+.simcal-default-calendar li.simcal-attachment a,
+.simcal-default-calendar li.simcal-attendee a {
+  border-bottom: 0;
+  text-decoration: none; }
+
+.simcal-default-calendar .simcal-organizer img,
+.simcal-default-calendar li.simcal-attachment img,
+.simcal-default-calendar li.simcal-attendee img {
+  display: inline-block;
+  margin: 0 4px;
+  max-height: 24px;
+  max-width: 24px; }
+
+.simcal-default-calendar .simcal-tooltip-content {
+  font-size: 1.2em;
+  line-height: 1.4;
+  padding: 5px; }
+
+.simcal-default-calendar .simcal-ajax-loader {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.simcal-default-calendar .simcal-ajax-loader > i {
+  font-size: 48px;
+  left: 50%;
+  line-height: 1;
+  margin: -36px 0 0 -36px;
+  position: absolute;
+  top: 50%; }
+
+.simcal-default-calendar .simcal-ajax-loader.simcal-spinner-top > i {
+  top: 20%; }
+
+.simcal-default-calendar .simcal-ajax-loader.simcal-spinner-bottom > i {
+  bottom: 20%;
+  top: auto; }
+
+.simcal-default-calendar-light .simcal-nav-button {
+  color: rgba(0, 0, 0, 0.6); }
+
+.simcal-default-calendar-light .simcal-nav-button:disabled,
+.simcal-default-calendar-light .simcal-nav-button:disabled:hover {
+  color: rgba(255, 255, 255, 0.9) !important; }
+
+.simcal-default-calendar-light .simcal-nav-button:focus,
+.simcal-default-calendar-light .simcal-nav-button:hover {
+  color: rgba(0, 0, 0, 0.9); }
+
+.simcal-default-calendar-light .simcal-events-toggle {
+  color: rgba(0, 0, 0, 0.6); }
+
+.simcal-default-calendar-light .simcal-events-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff; }
+
+.simcal-default-calendar-light .simcal-ajax-loader {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.simcal-default-calendar-light .simcal-ajax-loader > i {
+  color: rgba(0, 0, 0, 0.3); }
+
+.simcal-default-calendar-dark .simcal-nav-button {
+  color: rgba(255, 255, 255, 0.6); }
+
+.simcal-default-calendar-dark .simcal-nav-button:disabled,
+.simcal-default-calendar-dark .simcal-nav-button:disabled:hover {
+  color: rgba(0, 0, 0, 0.9) !important; }
+
+.simcal-default-calendar-dark .simcal-nav-button:focus,
+.simcal-default-calendar-dark .simcal-nav-button:hover {
+  color: rgba(255, 255, 255, 0.9); }
+
+.simcal-default-calendar-dark .simcal-events-toggle {
+  color: rgba(255, 255, 255, 0.6); }
+
+.simcal-default-calendar-dark .simcal-events-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #000; }
+
+.simcal-default-calendar-dark .simcal-ajax-loader {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.simcal-default-calendar-dark .simcal-ajax-loader > i {
+  color: rgba(255, 255, 255, 0.3); }
+
+.simcal-default-calendar-list {
+  min-height: 100px;
+  padding: 10px 0;
+  text-align: left; }
+
+.simcal-default-calendar-list .simcal-calendar-head {
+  display: table;
+  padding-bottom: 10px;
+  width: 100%; }
+
+.simcal-default-calendar-list .simcal-calendar-head .simcal-nav {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 20%; }
+
+.simcal-default-calendar-list .simcal-calendar-head .simcal-nav:nth-child(2) {
+  width: 60%; }
+
+.simcal-default-calendar-list .simcal-calendar-head .simcal-current span {
+  display: inline-block; }
+
+.simcal-default-calendar-list .simcal-calendar-head .simcal-hide-header {
+  visibility: hidden; }
+
+.simcal-default-calendar-list dl.simcal-month {
+  margin-bottom: 10px;
+  padding: 0 10px 10px; }
+
+.simcal-default-calendar-list dd.simcal-day {
+  list-style: none;
+  margin: 0; }
+
+.simcal-default-calendar-list dt.simcal-day-label {
+  font-size: .9em;
+  list-style: none;
+  margin: 20px 0 10px; }
+
+.simcal-default-calendar-list dt.simcal-day-label > span {
+  display: inline-block;
+  padding: 4px 8px; }
+
+.simcal-default-calendar-list ul.simcal-events {
+  margin: 10px 14px 0; }
+
+.simcal-default-calendar-list ul.simcal-events li.simcal-event {
+  list-style-type: none;
+  margin-bottom: 10px;
+  word-wrap: break-word; }
+
+.simcal-default-calendar-list .simcal-event-details {
+  font-size: .84em;
+  line-height: 1.5;
+  overflow: hidden; }
+
+.simcal-default-calendar-list .simcal-event-details .simcal-event-description,
+.simcal-default-calendar-list .simcal-event-details p {
+  margin: 0 0 1em; }
+
+.simcal-default-calendar-list .simcal-events-toggle {
+  display: inline-block;
+  padding: 0; }
+
+.simcal-default-calendar-list.simcal-default-calendar-light .simcal-events-toggle {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.simcal-default-calendar-list.simcal-default-calendar-dark .simcal-events-toggle {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.simcal-default-calendar-list .simcal-calendar-list-compact .simcal-calendar-head .simcal-nav h3 {
+  font-size: 1em; }
+
+.simcal-default-calendar-grid.simcal-default-calendar-light .simcal-day-void {
+  background: white; }
+
+/* qTip2 v2.2.1 | Plugins: tips viewport | Styles: core | qtip2.com | Licensed MIT | Wed Aug 12 2015 16:16:42 */
+.qtip {
+  position: absolute;
+  left: -28000px;
+  top: -28000px;
+  display: none;
+  max-width: 280px;
+  min-width: 50px;
+  font-size: 10.5px;
+  line-height: 12px;
+  direction: ltr;
+  box-shadow: none;
+  padding: 0; }
+
+.qtip-content {
+  position: relative;
+  padding: 5px 9px;
+  overflow: hidden;
+  text-align: left;
+  word-wrap: break-word; }
+
+.qtip-titlebar {
+  position: relative;
+  padding: 5px 35px 5px 10px;
+  overflow: hidden;
+  border-width: 0 0 1px;
+  font-weight: 700; }
+
+.qtip-titlebar + .qtip-content {
+  border-top-width: 0 !important; }
+
+.qtip-close {
+  position: absolute;
+  right: -9px;
+  top: -9px;
+  z-index: 11;
+  cursor: pointer;
+  outline: 0;
+  border: 1px solid transparent; }
+
+.qtip-titlebar .qtip-close {
+  right: 4px;
+  top: 50%;
+  margin-top: -9px; }
+
+* html .qtip-titlebar .qtip-close {
+  top: 16px; }
+
+.qtip-icon .ui-icon,
+.qtip-titlebar .ui-icon {
+  display: block;
+  text-indent: -1000em;
+  direction: ltr; }
+
+.qtip-icon,
+.qtip-icon .ui-icon {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-decoration: none; }
+
+.qtip-icon .ui-icon {
+  width: 18px;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-indent: 0;
+  font: 400 bold 10px/13px Tahoma, sans-serif;
+  color: inherit;
+  background: -100em -100em no-repeat; }
+
+.qtip-default {
+  border: 1px solid #F1D031;
+  background-color: #FFFFA3;
+  color: #555; }
+
+.qtip-default .qtip-titlebar {
+  background-color: #FFEF93; }
+
+.qtip-default .qtip-icon {
+  border-color: #CCC;
+  background: #F1F1F1;
+  color: #777; }
+
+.qtip-default .qtip-titlebar .qtip-close {
+  border-color: #AAA;
+  color: #111; }
+
+.qtip .qtip-tip {
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 10; }
+
+.qtip .qtip-tip,
+x:-o-prefocus {
+  visibility: hidden; }
+
+.qtip .qtip-tip,
+.qtip .qtip-tip .qtip-vml,
+.qtip .qtip-tip canvas {
+  position: absolute;
+  color: #123456;
+  background: 0 0;
+  border: 0 dashed transparent; }
+
+.qtip .qtip-tip canvas {
+  top: 0;
+  left: 0; }
+
+.qtip .qtip-tip .qtip-vml {
+  behavior: url(#default#VML);
+  display: inline-block;
+  visibility: visible; }
+
+/*# sourceMappingURL=style.css.map */

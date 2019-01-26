@@ -1,0 +1,48 @@
+@import '../variables/_index';
+
+body.error404 {
+  & .wrap {
+    min-height: 50vh;
+  }
+
+  & main {
+    padding-top: 5.625em;
+    padding-left: 25vw;
+
+    & p {
+      font-size: 1.25em;
+    }
+
+    & input:not([type="submit"]) {
+      min-width: 20vw;
+      padding: 0.625rem 0 0.625rem 0.9375rem;
+      border: 2px solid var(--colorNeutral);
+
+      &::placeholder {
+        font-style: italic;
+        opacity: 0.7;
+      }
+    }
+
+    & input[type="submit"] {
+      border: 1px solid transparent;
+      background: var(--colorSecondary);
+      color: var(--colorWhite);
+      transition: all .2s ease;
+      padding: 0.625rem 2.5rem;
+
+      &:hover {
+        border-color: var(--colorPrimary);
+        background: var(--colorPrimary);
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    & main {
+      padding-left: 2em;
+      padding-right: 2em;
+      text-align: center;
+    }
+  }
+}

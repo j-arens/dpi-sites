@@ -1,0 +1,156 @@
+.gce {
+    background-color: #eaeaea;
+    padding: 50px 16px;
+}
+
+.gce__ {
+    &list {
+        text-align: center;
+    }
+
+    &event {
+        overflow: hidden;
+    }
+
+    &event + &event {
+        margin-top: 32px;
+    }
+
+    &link {
+        display: inline-block;
+        color: var(--color-font-base);
+
+        &:hover {
+            color: var(--color-font-base);
+        }
+    }
+
+    &date {
+        height: 100%;
+        margin-right: 20px;
+    }
+
+    &day,
+    &month {
+        @apply --flex-center;
+    }
+
+    &day {
+        height: 50px;
+        background-image: url(assets/icons/gce-cal-01.svg);
+        background-size: 45px 50px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        font-size: 18px;
+        color: var(--color-secondary);
+        padding-top: 13px;
+    }
+
+    &month {
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
+    &event-details {
+        height: 100%;
+        flex: 0 0 150px;
+    }
+
+    &title,
+    &time {
+        line-height: 1;
+    }
+
+    &title {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: var(--color-secondary);
+        font-size: 18px;
+        margin: 0 0 10px 0;
+    }
+
+    &time {
+        font-size: 13px;
+    }
+
+    &full-cal-link {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.1;
+        color: var(--color-font-base);
+        font-size: 14px;
+        margin-top: 32px;
+
+        & .svg-icon {
+            display: block;
+            margin: 0 auto 9px auto;
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 820px) {
+    .gce__ {
+        &container {
+            @apply --flex-center;
+        }
+
+        &list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex: 0 0 calc(100% - 115px);
+            text-align: initial;
+        }
+
+        &event {
+            flex: 0 0 50%;
+
+            &:nth-of-type(-n+2) {
+                margin-bottom: 32px;
+            }
+        }
+
+        &event + &event {
+            margin-top: 0;
+        }
+
+        &link {
+            display: flex;
+        }
+
+        &date {
+            flex: 0 0 50px;
+        }
+
+        &full-cal-link {
+            flex: 0 0 70px;
+            left: initial;
+            transform: translateX(0);
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1130px) {
+    .gce__ {
+        &container {
+            justify-content: space-between;
+            align-items: initial;
+        }
+
+        &event {
+            flex: 0 0 220px;
+
+            &:nth-of-type(-n+2) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

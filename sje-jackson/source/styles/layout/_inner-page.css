@@ -1,0 +1,58 @@
+body:not(.home).page,
+body.single,
+body.archive {
+
+  & .page-header {
+    width: calc(100% + 2em);
+    margin-left: -1em;
+  }
+
+  & .main article {
+    max-width: 78.125em;
+    margin: 0 auto;
+    padding: 1em;
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    & .entry-content img {
+      margin: 1em;
+    }
+    
+    & ul,
+    & dl,
+    & ol {
+      padding-left: 2rem;
+      margin-bottom: 1em;
+      list-style: initial;
+
+      & ul,
+      & ol {
+        list-style: lower-alpha;
+      }
+
+      & li,
+      & dt,
+      & dd {
+        margin-bottom: initial;
+      }
+    }
+  }
+
+  & .single__footer {
+    margin-top: 5em;
+  }
+}
+
+@media screen and (min-width: 56.25em) {
+  body:not(.home).page,
+  body.single,
+  body.archive {
+    & .main article {
+      padding: 4em 1em;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.mass-times {
+  height: 9.25em;
+  background: $primary-gradient;
+
+  .container {
+    height: 100%;
+    max-width: 88.43em;
+    margin: 0 auto;
+  }
+
+  ul {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: table;
+  }
+
+  li {
+    list-style: none;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 2.34em;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: $color-secondary;
+    font-size: 1.31em;
+  }
+}

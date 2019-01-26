@@ -1,0 +1,28 @@
+{
+  "name": "dpi-wp-workflow",
+  "version": "1.0.0",
+  "description": "Simple gulp workflow for building wordpress themes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josh Arens",
+  "license": "ISC",
+  "dependencies": {
+    "css-mqpacker": "^5.0.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-php-minify": "^0.1.2",
+    "gulp-postcss": "^6.1.1",
+    "gulp-remove-html-comments": "^1.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "lost": "^7.0.4",
+    "postcss-pxtorem": "^3.3.1"
+  }
+}

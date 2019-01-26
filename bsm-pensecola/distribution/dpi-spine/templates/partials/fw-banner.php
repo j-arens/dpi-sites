@@ -1,0 +1,1 @@
+<section class="fw-banner" style="background-image: url(<?= $bgImage ?>)"></section>

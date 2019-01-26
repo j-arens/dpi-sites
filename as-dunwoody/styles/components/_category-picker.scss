@@ -1,0 +1,10 @@
+.cat-filter {
+    text-align: center;
+    padding: 50px 40px 0 40px;
+
+    &__dropdown {
+        min-width: 300px;
+        padding: 4px 0;
+        margin: 0 auto;
+    }
+}

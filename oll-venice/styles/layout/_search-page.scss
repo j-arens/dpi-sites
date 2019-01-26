@@ -1,0 +1,66 @@
+body.search {
+    .main {
+        max-width: 1250px;
+        margin: 0 auto;
+        padding: 2em 1em;
+        background-color: $color-white;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+    }
+}
+
+body.search-results {
+    article:first-of-type {
+        margin-top: 2em;
+    }
+
+    article {
+        max-width: 50.125em;
+        padding: 2em;
+        background-color: #eeebe7;
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+        margin: 0 auto;
+
+        img {
+            margin: 1em 0;
+        }
+    }
+
+    article + article {
+        margin-top: 2em;
+    }
+
+    article:last-of-type {
+        margin-bottom: 2em;
+    }
+}
+
+body.search-no-results {
+    .no-posts {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 6em 1em;
+
+      form {
+          max-width: 25em;
+          width: 100%;
+      }
+
+      input[type="submit"] {
+          width: 100%;
+      }
+  }
+
+  .no-posts__message {
+      font-size: 1.675em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+    body.search {
+        .main {
+            padding: 80px 60px;
+        }
+    }
+}

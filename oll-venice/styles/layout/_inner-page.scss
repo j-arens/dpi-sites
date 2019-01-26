@@ -1,0 +1,78 @@
+body:not(.home) {
+    background-color: #eeebe7;
+    background-image: url(assets/images/inner-page-texture.png);
+    background-repeat: repeat;
+}
+
+body:not(.home).page,
+body.single,
+body.archive {
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1250px;
+        padding: 2em 1em;
+        background-color: $color-white;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .main {
+        width: 100%;
+        flex: 1;
+    }
+
+    .main { 
+        article {
+            &::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+
+            ul,
+            dl,
+            ol {
+                padding-left: 2rem;
+                margin-bottom: 1em;
+
+                li + li {
+                    margin-top: 1em;
+                }
+            }
+
+            ul {
+                list-style: disc;
+
+                ul {
+                    list-style: square;
+                }
+            }
+
+            ol {
+                list-style: upper-roman;
+
+                ol {
+                    list-style: lower-alpha;
+                }
+            }
+
+            li,
+            dt,
+            dd {
+                margin-bottom: initial;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body:not(.home).page,
+    body.single,
+    body.archive {
+        .wrap {
+            padding: 80px 60px;
+        }
+    }
+}

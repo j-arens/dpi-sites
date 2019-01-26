@@ -1,0 +1,12 @@
+:root {
+  --colorPrimary: #000067;
+  --colorPrimaryLt: #000085;
+  --colorPrimaryDk: #000047;
+  --colorSecondary: #424141;
+  --colorSecondaryLt: #777575;
+  --colorSecondaryDk: #060505;
+  --colorWhite: #fff;
+  --colorBlack: #000;
+  --colorNeutral: #f2f2f2;
+  --colorGrayOverlay: #393939;
+}

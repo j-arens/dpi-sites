@@ -1,0 +1,29 @@
+.footer-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .crest,
+  .logo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .crest {
+    background-image: url('assets/icons/logo-crest-yellow-01.svg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-width: 4.375em;
+    min-height: 5em;
+    margin-bottom: 1.25em;
+  }
+
+  .text {
+    background-image: url('assets/images/logo-text-no-meta-yellow-01.svg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-width: 10em;
+    min-height: 1.56em;
+  }
+}

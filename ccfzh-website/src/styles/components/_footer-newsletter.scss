@@ -1,0 +1,64 @@
+.newsletter {
+
+  .wpcf7 {
+    position: relative;
+    margin-bottom: 1.25em;
+    max-width: 41.5em;
+  }
+
+  input {
+    font-family: 'Droid Serif', serif;
+  }
+
+  input[type="email"] {
+    border: 2px solid $color-white;
+    width: 100%;
+    height: 3.125em;
+    background: $color-input-gray;
+    padding-left: 0.75em;
+    color: $color-placeholder;
+
+    &::placeholder {
+      font-style: italic;
+      font-weight: 700;
+      color: $color-placeholder;
+    }
+  }
+
+  input[type="submit"] {
+    background-image: url('assets/icons/mail.svg');
+    background-size: 60%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 5.31em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: $color-primary;
+    border: 2px solid $color-white;
+    color: transparent;
+  }
+
+  .wpcf7-not-valid-tip {
+    display: none;
+  }
+
+  .wpcf7-validation-errors {
+    position: absolute;
+    top: -2em;
+    left: 0;
+    padding: .25em;
+    color: #fff;
+    background: $color-error;
+  }
+
+  .wpcf7-mail-sent-ok {
+    position: absolute;
+    top: -2em;
+    left: 0;
+    padding: .25em;
+    color: #fff;
+    background: $color-success;
+  }
+}

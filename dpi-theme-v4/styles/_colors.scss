@@ -1,0 +1,21 @@
+/**** COLORS ****/
+
+// primary
+
+$color-primary: #37591d;
+$color-primary-dk: #3C7113;
+$color-primary-lt: #87BC5E;
+
+// secondary
+
+$color-secondary: #277455;
+$color-secondary-dk: #0E573A;
+$color-secondary-lt: #489174;
+
+// neutrals
+
+$color-neutral: #efefef;
+$color-neutral-md: darken($color-neutral, 50%);
+$color-neutral-dk: #222;
+$color-white: #fff;
+$color-black: lighten(black, 30%);

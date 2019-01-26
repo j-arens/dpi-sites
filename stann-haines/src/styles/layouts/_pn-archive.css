@@ -1,0 +1,6 @@
+body.page-template-pastors-notes-archive {
+    & .archive-no-posts {
+        width: 100%;
+        text-align: center;
+    }
+}

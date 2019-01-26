@@ -1,0 +1,122 @@
+/**** FOOTER ****/
+
+#colophon {
+  background: $color-neutral-dk;
+  padding-top: 2em;
+  background-image: url(/wp-content/themes/dpi-theme-v4/images/tweed.png);
+  background-repeat: repeat;
+  background-position: top left;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-neutral-dk;
+    opacity: 0.6;
+  }
+
+  ul {
+    list-style: none;
+    lost-utility: clearfix;
+    margin-bottom: 2em;
+  }
+
+  li {
+    lost-column: 1/3 3;
+  }
+
+  hr {
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    color: $color-white;
+  }
+
+  p,
+  a {
+    color: $color-gray;
+    margin-bottom: .5em;
+  }
+
+  a {
+    display: block;
+  }
+
+  .footer-contact {
+
+    p {
+      color: $color-primary-lt;
+    }
+
+    a {
+      color: $color-white;
+    }
+  }
+
+  .geo {
+    margin-bottom: 1em;
+  }
+
+  .social-icon {
+    width: 1.5em;
+    vertical-align: -.35em;
+    margin-right: .5em;
+  }
+
+  .site-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    background: $color-white;
+    padding: .5em 0;
+    position: relative;
+    z-index: 1;
+
+    a {
+      display: inline;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    p:first-child {
+      margin-right: 2em;
+    }
+
+    p:last-child {
+      margin-left: 2em;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    li {
+      lost-column: 1/1 0;
+    }
+  }
+
+  @media screen and (max-width: 660px) {
+    .site-info {
+      text-align: center;
+      flex-direction: column;
+
+      p {
+        margin-bottom: inherit;
+      }
+
+      p:first-child {
+        margin-right: 0;
+      }
+
+      p:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+body:not(.home) {
+    & #myparishapp__root {
+        margin-bottom: 2em;
+    }
+
+    & .myparishapp__messages {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    & .myparishapp__control:hover {
+        background-color: var(--color-white);
+    }
+}
+
+.mpa__ {
+    &list {
+        border: 3px solid var(--color-primary);
+    }
+
+    &item {
+        height: 12.5em;
+        padding: 1.6em;
+
+        &:not(.mpa__promo) {
+            background-color: var(--color-white);
+            border-top: 4px solid transparent;
+            transition: all .2s ease;
+
+            &:hover {
+                position: relative;
+                z-index: 1;
+                border-top-color: var(--color-secondary);
+                transform: scale(1.03);
+                box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        &:not(:last-of-type) {
+            border-bottom: 3px solid var(--color-primary);
+        }
+    }
+
+    &promo {
+        background: var(--color-primary);
+    }
+
+    &promo-title {
+        font-size: 1.125em;
+        color: var(--color-white);
+    }
+
+    &link-icon {
+        width: 2.375em;
+        height: 2.375em;
+        fill: var(--color-white);
+    }
+
+    &promo-icon-link {
+        display: inline-block;
+
+        &:hover {
+            color: var(--color-secondary);
+
+            & svg {
+                fill: currentColor;
+            }
+        }
+    }
+
+    &promo-icon-link + &promo-icon-link {
+        margin-left: 1.5em;
+    }
+
+    &promo-link {
+        color: var(--color-white);
+        font-size: 1.125em;
+
+        &:hover {
+            color: var(--color-secondary);
+        }
+    }
+
+    &time {
+        color: var(--color-primary);
+        font-size: 1.125em;
+    }
+
+    &link {
+        color: var(--color-secondary);
+    }
+}
+
+@media screen and (min-width: 37.5em) {
+    .mpa__ {
+        &list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex: 0 0 50%;
+
+            &:not(:last-of-type) {
+                border-bottom: none;
+            }
+        }
+    }
+}

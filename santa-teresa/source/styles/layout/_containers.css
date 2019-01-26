@@ -1,0 +1,11 @@
+.mw-container {
+    max-width: 82.5em;
+    margin: 0 auto;
+    height: 100%;
+    
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

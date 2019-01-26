@@ -1,0 +1,47 @@
+.donate {
+  position: relative;
+  z-index: 2;
+  height: 31.25em;
+  background-color: $color-primary;
+  background-image: url('assets/images/donate-placeholder.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .container {
+    padding-top: 5.437em;
+  }
+
+  .content {
+    font-size: 1rem;
+    background: rgba($color-theme-purple, 0.55);
+    width: 40.937em;
+    max-height: 90%;
+    text-align: center;
+    padding: 2.812em 0;
+
+    p {
+      font-size: 3.375em;
+      font-weight: 700;
+      color: $color-white;
+      margin-bottom: 2.81rem;
+      line-height: initial;
+    }
+  }
+
+  .content.in-view {
+    animation: .75s ease-in .0s fadeInRight;
+  }
+
+  @media screen and (max-width: 1120px) {
+    .content {
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    .content {
+      width: 100%;
+    }
+  }
+}

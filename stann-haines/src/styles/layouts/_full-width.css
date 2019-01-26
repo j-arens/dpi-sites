@@ -1,0 +1,5 @@
+body.page-template-template_full_width {
+    & .page-article {
+        max-width: none;
+    }
+}

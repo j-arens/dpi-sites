@@ -1,0 +1,457 @@
+@import '../variables/_index';
+
+body.admin-bar {
+  & #slider-menu.fixed {
+    padding-top: 32px;
+  }
+
+  & #slider-menu.fixed #nav-toggle-close {
+    top: 3em;
+  }
+
+  & #slider-menu.active #nav-toggle-close {
+    top: calc(6em + 32px);
+  }
+
+  & #slider-menu.active.fixed #nav-toggle-close {
+    top: 6.4em;
+  }
+
+  & #site-nav {
+    padding-top: calc(32px + 3em);
+  }
+
+  @media screen and (max-width: 782px) {
+    & #slider-menu.fixed #nav-toggle-close {
+      top: 4em;
+    }
+
+    & #slider-menu.active.fixed #nav-toggle-close {
+      top: 4em;
+    }
+
+    & #slider-menu.fixed {
+      padding-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    & #slider-menu.active #nav-toggle-close {
+      top: 3.8em;
+    }
+
+    & #slider-menu.active.fixed #nav-toggle-close {
+      top: 3.8em;
+    }
+
+    & #site-nav {
+      padding-top: 3em;
+    }
+  }
+}
+
+#slider-menu {
+  width: 100%;
+
+  & .body-click {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 0;
+    background: #000;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+  }
+
+  & .container {
+    max-width: 81.25em;
+    width: 100%;
+    padding-top: 2.5em;
+    position: relative;
+  }
+
+  & .logo {
+    display: block;
+    height: 10.75em;
+    width: 16.25em;
+    background: url(assets/images/ctk-logo-white-01.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 99;
+  }
+
+  & #nav-toggle-open {
+    position: absolute;
+    z-index: 99;
+    padding: .5em;
+    right: 0;
+    top: 2.5em;
+    transition: none;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: -.8em;
+      left: 0;
+      background: url(assets/icons/hamburger.svg);
+      background-size: 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  & #nav-toggle-open.hide,
+  & #nav-toggle-close.hide {
+    display: none;
+  }
+
+  & #nav-toggle-close {
+    position: absolute;
+    z-index: 99;
+    padding: .5em;
+    top: 5em;
+    left: -7em;
+    transition: none;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: -.8em;
+      left: 0;
+      background: url(assets/icons/chevron-right.svg);
+      background-size: 60%;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    & .logo {
+      width: 8.25em;
+      height: 5.5em;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    & #nav-toggle-close {
+      left: initial;
+      right: 2em;
+      top: 4em;
+      color: var(--colorBlack);
+
+      &::before {
+        background: rgba(0, 0, 0, 0.2);
+        border-color: var(--colorBlack);
+      }
+
+      &::after {
+        background-image: url(assets/icons/chevron-right-blk.svg);
+      }
+    }
+  }
+}
+
+#slider-menu.active {
+  & .body-click {
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  & #nav-toggle-close {
+    top: 6em
+  }
+
+  @media screen and (max-width: 900px) {
+    & .logo {
+      visibility: hidden;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    & #nav-toggle-close {
+      top: 3.8em;
+    }
+  }
+}
+
+#slider-menu.fixed {
+  position: fixed;
+  top: 3em;
+  left: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  transition: background .2s ease-in;
+
+  & .container {
+    padding: .5em 0;
+  }
+
+  & .logo {
+    width: 8em;
+    height: 5em;
+  }
+
+  & #nav-toggle-open {
+    top: 0.45em;
+  }
+
+  & #nav-toggle-close {
+    top: 3.8em;
+  }
+
+  @media screen and (max-width: 1190px) {
+    & .container {
+      padding: .5em 2em;
+    }
+
+    & #nav-toggle-open {
+      right: 2em;
+    }
+  }
+}
+
+#site-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  height: 100%;
+  width: 31em;
+  visibility: hidden;
+  background: var(--colorWhite);
+  opacity: 0.95;
+  padding-top: 3em;
+
+  & li {
+    list-style: none;
+  }
+
+  & .nav-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  & .nav-topbar {
+    width: 100%;
+    height: 6em;
+    background: var(--colorWhite);
+    padding-left: 2.5em;
+
+    &::after {
+      display: table;
+      clear: both;
+    }
+
+    & li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      float: left;
+      height: 100%;
+      &:not(:last-of-type) {
+        margin-right: 1.875rem;
+      }
+
+      & .icon-link {
+        display: block;
+        width: 26px;
+        height: 26px;
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      & a.glink {
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+      }
+
+      & a.glink + a.glink {
+        margin-left: 1.875em;
+      }
+
+      & a.glink img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      & li:not(:last-of-type) {
+        margin-right: .5em;
+      }
+
+      & li a.glink + a.glink {
+        margin-left: .5em;
+      }
+    }
+  }
+
+  & .nav-search {
+    height: 3.125em;
+    width: 100%;
+    background: var(--colorNeutralLt);
+
+    & form,
+    & input[type="search"] {
+      height: 100%;
+      width: 100%;
+    }
+
+    & form {
+      position: relative;
+    }
+
+    & input[type="search"] {
+      padding-left: 2.5em;
+      color: #000;
+
+      &::placeholder {
+        color: #222;
+      }
+    }
+
+    & input[type="submit"] {
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      right: 5em;
+      transform: translateY(-50%);
+      color: transparent;
+      background-image: url(assets/icons/search.svg);
+      background-repeat: no-repeat;
+      background-size: 60%;
+      background-position: center center;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+  }
+}
+
+#site-nav.active {
+  visibility: visible;
+  right: 0;
+  animation: slideInMenu;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+}
+
+#menu-primary-navigation {
+  width: 100%;
+  padding: 2.87em 0 0 2.5em;
+
+  & li {
+    position: relative;
+    cursor: pointer;
+  }
+
+  & a:hover {
+    text-decoration: none;
+  }
+
+  & li a,
+  & li span {
+    font-size: 1.1rem;
+    color: var(--colorTextDark);
+    font-weight: 500;
+    line-height: 2;
+  }
+
+  & .tpl-title,
+  & .tpl-link {
+    display: block;
+    width: 100%;
+    background: var(--colorWhite);
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+  }
+
+  & .tpl-title {
+    cursor: pointer;
+  }
+
+  & .menu-item {
+    max-height: 2.187em;
+    overflow: hidden;
+
+    & .item-has-children {
+      &::after {
+        content: '';
+        display: inline-block;
+        vertical-align: -.55em;
+        margin-left: .5em;
+        height: 2em;
+        width: 2em;
+        background-image: url(assets/icons/chevron-down-red.svg);
+        background-repeat: no-repeat;
+        transition: transform .3s ease;
+        transform-origin: center center;
+        backface-visibility: hidden;
+      }
+    }
+
+    & ul[class*="sub-menu-depth-"] {
+      padding-left: 1em;
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform .3s ease;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  & .menu-item.active {
+    max-height: none;
+
+    & > .item-has-children {
+      &::after {
+        transform: rotate(180deg);
+        margin-left: .55em;
+      }
+    }
+
+    & > ul[class*="sub-menu-depth-"] {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #slider-menu.fixed #nav-toggle-close {
+    top: 3.8em;
+  }
+}
+
+@keyframes slideInMenu {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

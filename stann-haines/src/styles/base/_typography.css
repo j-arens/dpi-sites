@@ -1,0 +1,110 @@
+@import '../variables/_index';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900,900i');
+
+:root {
+  --colorHeadings: #3b3b3b;
+  --colorBody: #3b3b3b;
+  --colorBodyLt: #8c8c8c;
+  --colorLink: #26b2ed;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--colorBody);
+}
+
+.font-light {
+  font-weight: 300; 
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.font-black-italic {
+  font-weight: 900;
+  font-style: italic;
+}
+
+p,
+article li {
+  margin-bottom: 1.3em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--colorLink);
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--colorPrimaryLt);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.414em 0 0.5em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--colorPrimaryLt);
+}
+
+h4,
+h5,
+h6 {
+  color: var(--colorSecondary);
+}
+
+h1,
+h4 {
+  margin-top: 0;
+  font-size: 2.074em;
+}
+
+h2,
+h5 {
+  font-size: 1.728em;
+}
+
+h3,
+h6 {
+  font-size: 1.44em;
+}
+
+blockquote {
+  padding-left: 1.75em;
+  width: 100%;
+  margin: 2em 0;
+  margin-left: 4px;
+  border-left: 5px solid var(--colorPrimaryLt);
+
+  & p:first-child::before,
+  & p:last-child::after {
+   content: '"';
+ }
+}
+
+em {
+  font-size: 1.125em;
+}
+
+hr {
+  border-color: var(--colorPrimaryLt);
+  margin: 1em 0;
+}
+
+small,
+.font_small {
+  font-size: 0.8em;
+}
+
+.entry-title {
+  margin-bottom: 1em;
+}

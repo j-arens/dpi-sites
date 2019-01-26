@@ -1,0 +1,201 @@
+/**** HEADER ****/
+
+#masthead {
+  background: $color-secondary;
+  position: relative;
+
+  .dove-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .dove {
+    width: 100%;
+    position: absolute;
+    transition: all .3s ease;
+  }
+
+  .dove-fl {
+    max-width: 225px;
+    top: 10px;
+  }
+
+  .dove-l {
+    max-width: 500px;
+    left: 15%;
+    top: 5%;
+  }
+
+  .dove-c {
+    max-width: 220px;
+    left: 42%;
+    top: 5%;
+  }
+
+  .dove-r {
+    max-width: 500px;
+    right: 18%;
+    top: -20%;
+  }
+
+  .dove-fr {
+    max-width: 400px;
+    right: 0;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5em 0;
+    width: 100%;
+    background: white;
+    border-bottom: 2px solid $color-neutral;
+    position: relative;
+    z-index: 10;
+
+    li {
+      display: inline-block;
+    }
+
+    img {
+      width: 20px;
+      vertical-align: bottom;
+      margin-right: .25em;
+    }
+
+    a,
+    p {
+      display: inline-block;
+      text-decoration: none;
+      color: $color-neutral;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .container-half {
+    padding-top: 2em;
+    height: 100%;
+    width: 50%;
+    float: left;
+    lost-utility: clearfix;
+    position: relative;
+    z-index: 10;
+  }
+
+  .logo {
+    text-align: right;
+    padding-right: 4em;
+
+    .site-logo {
+      display: inline-block;
+
+      img {
+        max-width: 550px;
+        // width: 100%;
+      }
+    }
+  }
+
+  .church-info {
+    padding-left: 4em;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: .25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  #masthead {
+
+    .dove-fl {
+      top: 247px;
+      left: 0px;
+    }
+
+    .dove-l {
+      left: 0;
+      top: -7%;
+    }
+
+    .dove-c {
+      left: 72%;
+      top: -10%;
+    }
+
+    .dove-r {
+      display: none;
+    }
+
+    .dove-fr {
+      right: 0;
+      top: 254px;
+    }
+
+    .container-half {
+      width: 100%;
+      float: none;
+      padding: 0;
+    }
+
+    .logo {
+      padding: 0;
+      text-align: center;
+      margin-bottom: 2em;
+
+      .site-logo {
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .church-info ul {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #masthead {
+    .social-links {
+      flex-wrap: wrap;
+      padding: .5em 1em;
+
+      li {
+        padding: .5em 0;
+        flex: 0 0 50%;
+        text-align: center;
+        margin-bottom: .5em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #masthead {
+    .social-links {
+      flex-direction: column;
+
+      li {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}

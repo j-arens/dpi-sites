@@ -1,0 +1,34 @@
+/* ============================================================ */
+/*                            Footer                            */
+/* ============================================================ */
+
+.footer-widget-area {
+    background: #777;
+    color: #fff;
+}
+
+.footer-widget-area-wrap {
+    width: 90%;
+    max-width: 1200px;
+    padding: 0 0 20px 0;
+    margin: 0 auto;
+    display: flex;
+}
+
+.footer-widget {
+    margin: 24px;
+}
+
+.site-footer .site-info {
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+.site-footer a.button {
+    color: #fff;
+    border-color: #fff;
+}
+
+.site-footer a.button:hover {
+    border-color: #333;
+}

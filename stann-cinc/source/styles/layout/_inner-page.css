@@ -1,0 +1,40 @@
+body:not(.home).page,
+body.single,
+body.archive {
+
+  & .main {
+    padding-bottom: 70px;
+  }
+
+  & .main article {
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    & img.alignleft:first-of-type,
+    & img.alignright:first-of-type {
+      margin-top: 0;
+    }
+    
+    & ul,
+    & dl,
+    & ol {
+      padding-left: 2rem;
+      margin-bottom: 1em;
+      list-style: disc;
+
+      & ul,
+      & ol {
+        list-style: lower-alpha;
+      }
+
+      & li,
+      & dt,
+      & dd {
+        margin-bottom: initial;
+      }
+    }
+  }
+}

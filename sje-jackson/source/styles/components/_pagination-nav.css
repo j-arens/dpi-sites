@@ -1,0 +1,32 @@
+.pagination-nav,
+.posts-navigation .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 50.125em;
+    margin: 0 auto;
+    height: 4em;
+    padding-bottom: 2em;
+
+    & .svg-icon {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: top;
+        fill: var(--color-secondary);
+    }
+
+    & .svg-icon__arrow-left {
+        margin-right: 1em;
+    }
+
+    & .svg-icon__arrow-right {
+        margin-left: 1em;
+    }
+
+    & a:hover {
+        & .svg-icon {
+            fill: currentColor;
+        }
+    }
+}

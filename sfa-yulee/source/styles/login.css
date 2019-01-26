@@ -1,0 +1,53 @@
+html body.login {
+    background-color: #e4decf;
+
+    & div#login h1 a {
+        background-image: url(wp-content/themes/dpi-spine/assets/images/father-approved-logo.png);
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        width: 100%;
+        height: 7em;
+    }
+
+    & div#login form#loginform {
+        background-color: #4B2C14;
+
+        & p label {
+            color: #e4decf;
+        }
+
+        & input#user_login {
+            background-color: #e4decf;
+        }
+
+        & input#user_pass {
+            background-color: #e4decf;
+        }
+
+        & input#user_login:focus,
+        & input#user_pass:focus,
+        & input#user_login:focus,
+        & input#user_pass:focus {
+            border-color: #8b0000;
+            box-shadow-color: rgba(139, 0, 0, 0.6);
+        }
+
+        & input#rememberme {
+            background-color: #e4decf;
+        }
+
+        & p.submit input#wp-submit {
+            border-color: #8b0000;
+            background-color: #8b0000;
+            box-shadow: 0 1px 0 rgba(139, 0, 0, 0.2);
+            text-shadow: 0 -1px 1px rgba(139, 0, 0, 0.2), 1px 0 1px rgba(139, 0, 0, 0.2), 0 1px 1px rgba(139, 0, 0, 0.2), -1px 0 1px rgba(139, 0, 0, 0.2);
+        }
+    }
+
+    & div#login p#nav a:hover,
+    & div#login p#backtoblog a:hover {
+        color: #8b0000;
+    }
+}

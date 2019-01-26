@@ -1,0 +1,91 @@
+/**** CONTENT ****/
+
+// contains styles for templates that populate pages with content
+
+#page {
+  position: relative;
+}
+
+body:not(.home) {
+  #content {
+      position: relative;
+      padding-top: calc(40px + 2em);
+      display: flex;
+      flex-direction: row;
+      margin-left: calc(-46em + 50%);
+
+      p {
+        line-height: 1.5;
+      }
+  }
+
+  #primary {
+      max-width: 67%;
+  }
+
+  #sidebar {
+    max-width: 320px;
+    margin-right: 5em;
+  }
+}
+
+@media screen and (max-width: 1535px) {
+  body:not(.home) {
+    #content {
+      padding-left: 2em;
+      max-width: 95%;
+      margin-left: 0;
+    }
+    #primary {
+      max-width: none;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  body:not(.home) {
+
+    #content {
+      padding: 4em 0 0 0;
+      max-width: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #sidebar {
+      order: 1;
+      max-width: none;
+      margin: 0;
+      width: 100%;
+
+      section {
+        width: 100%;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+
+        .widget_search {
+          width: 100%;
+        }
+      }
+
+      .sidebar-nav,
+      .event-posts {
+        flex-direction: column;
+      }
+    }
+
+    #primary {
+      width: 95%;
+    }
+  }
+}

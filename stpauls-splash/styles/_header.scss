@@ -1,0 +1,16 @@
+/**** HEADER ****/
+
+#masthead {
+  width: 100%;
+  text-align: center;
+
+  .site-logo {
+    display: inline-block;
+    margin: 1em auto 0 auto;
+
+    img {
+      max-width: 500px;
+      width: 90%;
+    }
+  }
+}

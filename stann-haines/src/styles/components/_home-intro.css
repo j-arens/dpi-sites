@@ -1,0 +1,43 @@
+@import '../variables/_colors';
+@import '../base/_typography';
+
+.home-intro-header {
+    border-bottom: 3px solid var(--colorPrimaryLt);
+    margin-bottom: 1.875em;
+}
+
+.home-intro-header--title {
+    font-size: 4em;
+    margin: 0 0 .25rem 0;
+    line-height: 1;
+    color: var(--colorHeadings);
+}
+
+.home-intro-header--link {
+    color: var(--colorBodyLt);
+    font-size: 1.5em;
+    align-self: flex-end;
+    margin-bottom: .25rem;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: .2rem;
+        margin-right: .425rem;
+        width: .5rem;
+        height: .5rem;
+        border: .35rem solid transparent;
+        border-left-color: var(--colorSecondary);
+    }
+}
+
+.home-intro-content {
+    font-size: 1.125em;
+}
+
+@media screen and (--breakpoint-md) {
+    .home-intro-header {
+        display: flex;
+        justify-content: space-between;
+    }
+}

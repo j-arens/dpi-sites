@@ -1,0 +1,37 @@
+/**** BUTTON STYLE ****/
+
+.btn-large {
+  display: inline-block;
+  border: 2px solid $primary;
+  font-size: 20px;
+  padding: .5em 1.5em;
+}
+
+.btn-medium {
+  display: inline-block;
+  border: 2px solid $primary;
+  font-size: 18px;
+  padding: .5em 2em;
+}
+
+.btn-link {
+  text-align: center;
+  text-decoration: none;
+  color: $primary;
+}
+
+.btn-link:hover {
+  background: $primary;
+  color: $white;
+  transition: all .3s ease;
+}
+
+.btn-white {
+  border: 2px solid $white;
+  color: $white;
+}
+
+.btn-white:hover {
+  background: $white;
+  color: $primary;
+}

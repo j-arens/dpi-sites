@@ -1,0 +1,23 @@
+/**** SIDEBAR ****/
+
+#sidebar {
+  border-left: 1px solid $color-black;
+  padding-left: 2em;
+
+  h3:first-child {
+    margin-top: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 1em;
+
+    li {
+      padding: .1em 0;
+    }
+  }
+
+  .children {
+    margin: .5em 0;
+  }
+}

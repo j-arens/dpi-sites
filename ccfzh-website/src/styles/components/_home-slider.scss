@@ -1,0 +1,44 @@
+.slider {
+  // display: none;
+  position: relative;
+  // z-index: 2;
+  overflow: hidden;
+  max-width: 96.25em;
+  width: 100%;
+  margin: 0 auto;
+
+  .flexslider {
+    margin: 0 0 1em 0 !important;
+  }
+
+  .caption-wrap {
+    font-size: 1.3em;
+    height: 4em;
+    padding-top: .5em;
+    text-align: center;
+  }
+
+  .caption {
+    position: relative;
+    top: .75em;
+  }
+
+  .flex-control-nav {
+    bottom: 3.75em;
+  }
+
+  .flex-control-paging li a {
+    background: $color-white;
+    border-radius: 50%;
+    position: relative;
+    z-index: 10;
+  }
+
+  @media screen and (max-width: 1540px) {
+    max-width: 72em;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}

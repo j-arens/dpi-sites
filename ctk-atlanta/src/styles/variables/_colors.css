@@ -1,0 +1,21 @@
+/* colors */
+:root {
+  --colorPrimary: #9c1519;
+  --colorPrimaryLt: #C12C30;
+  --colorPrimaryDk: #780003;
+  --colorSecondary: #c49a65;
+  --colorSecondaryLt: #EBC99D;
+  --colorSecondaryDk: #A1753E;
+  --colorWhite: #fff;
+  --colorBlack: #000;
+  --colorNeutral: #e6e6e6;
+  --colorNeutralLt: #cfcfce;
+  --colorNeutralDk: #cbcbcb;
+  --colorNeutralXtDk: #575759;
+  --colorText: #323232;
+  --colorTextLt: #fffefe;
+  --colorHeadings: #3b3b3b;
+  --colorBody: #3b3b3b;
+  --colorLink: #9E733B;
+  --colorTextDark: #323232;
+}

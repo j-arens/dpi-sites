@@ -1,0 +1,17 @@
+.inner-header {
+  width: 100%;
+  height: 6.25em;
+  background: $secondary-gradient;
+  position: relative;
+
+  .brand {
+    background: url(assets/images/logo-horizontal-red-01.svg);
+    background-repeat: no-repeat;
+    height: 3.5em;
+    width: 18.875em;
+    position: absolute;
+    top: 50%;
+    left: 1.43em;
+    transform: translateY(-50%);
+  }
+}

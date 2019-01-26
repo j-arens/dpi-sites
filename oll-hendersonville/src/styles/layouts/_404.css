@@ -1,0 +1,13 @@
+body.error404 {
+  & .not-found {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 20em;
+
+      & p {
+          font-size: 1.25em;
+      }
+  }
+}

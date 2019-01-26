@@ -1,0 +1,153 @@
+/**** SITE HEADER ****/
+
+.branding-container {
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: calc(-40.5em + 50%);
+    margin-bottom: 1em;
+    
+    .site-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 1em;
+    }
+    
+    h1,
+    h2 {
+        color: $primary;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+    
+    h1 {
+        font-size: 4em;
+    }
+    
+    h2 {
+        font-size: 2em;
+        letter-spacing: 1.5px;
+    }
+}
+
+.quick-links {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 13em;
+    
+    .divider {
+        height: 15px;
+        width: 2px;
+        vertical-align: middle;
+        background: black;
+        display: inline-block;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+    
+    a {
+        color: black;
+        text-decoration: none;
+        padding: 0 .5em;
+        font-weight: 700;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+        
+        &:visited {
+            color: black;
+        }
+    }
+    
+    .search-field {
+        background: url('../dpi-teresa-parents/images/icons/search-circular-button.svg');
+        background-position: 5px center;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        border: none;
+        cursor: pointer;
+        height: 20px;
+        width: 0;
+        margin-top: -1rem;
+        padding: 0 5px 0 38px;
+        position: relative;
+        transition: width 400ms ease, background 400ms ease;
+        margin-left: .25em;
+    
+    
+    &:focus {
+        background-color: white;
+        border: 1px solid #333;
+        cursor: text;
+        outline: 0;
+        width: 230px;
+    }
+}
+
+.search-submit {
+    display: none;
+}
+}
+
+#masthead {
+    display: flex;
+    height: 230px;
+    width: 100%;
+    background: white;
+    position: relative;
+    z-index: 2;
+    
+    .site-logo {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background: #ccc;
+        border-radius: 100%;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+#site-navigation {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+    #masthead {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    
+    #site-navigation {
+        position: static;
+    }
+    
+    .quick-links {
+        margin: 0 0 1em 0;
+    }
+    
+    .branding-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 1em 0 0 0;
+        
+        .site-name {
+            width: 100%;
+            margin: 1em 0;
+        }
+    }
+}

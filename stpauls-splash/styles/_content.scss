@@ -1,0 +1,32 @@
+/* ============================================================ */
+/*                           Content                            */
+/* ============================================================ */
+
+#content {
+    width: 100%;
+}
+
+#primary {
+    width: 100%;
+}
+
+.sidebar {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 0 0 8%;
+}
+
+/*----BULLETINS----------*/
+#bulletin-columns {
+     -webkit-column-count: 3;
+     -moz-column-count: 3;
+     column-count: 3;
+     border: 1px solid #ccc;
+     border-radius: 5px 30px 5px 30px;
+     padding: 20px;
+     margin: auto;
+     margin-top: 40px;
+     width: 80%;
+     align-content: center;
+	 line-height:30px;
+    }

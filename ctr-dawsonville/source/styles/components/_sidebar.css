@@ -1,0 +1,81 @@
+.sidebar {
+    display: none;
+}
+
+@media screen and (--breakpoint-xl) {
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 350px;
+        background: var(--colorPrimary);
+        padding: 1em;
+        background: var(--colorNeutral);
+        box-shadow: 0 0 3px 1px rgba(30,30,30,.3);
+        max-height: 32.5em;
+
+        & ul {
+            list-style: none;
+        }
+    }
+
+    .sidebar__ {
+        &title {
+            margin: 0 0 1em 0;
+        }
+
+        &parish-news {
+            margin-bottom: 3em;
+        }
+
+        &parish-news_list {
+            padding-left: 1em;
+        }
+
+        &parish-news_list-item + &parish-news_list-item {
+            margin-top: .5em;
+        }
+
+        &parish-news_link {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 1.09em;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &btns-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--colorPrimary);
+            border-radius: 2px;
+            color: var(--colorWhite);
+            box-shadow: 0 0 8px 1px rgba(59, 59, 59, 0.2);
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            font-size: 1.06em;
+            letter-spacing: 0.03em;
+
+            & svg {
+                width: 2rem;
+                height: 2rem;
+                margin-right: 1rem;
+            }
+        }
+
+        &btns-link + &btns-link {
+            margin-top: 1.25em;
+        }
+
+        &btns-link_title {
+            color: var(--colorWhite);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;   
+        }
+    }
+}

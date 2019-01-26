@@ -1,0 +1,71 @@
+/*
+Theme Name: Stpaulsjaxbeach - splash
+Theme URI: http://www.diocesan.com/michigan/
+Author: Josh Arens
+Author URI: https://github.com/j-arens
+Description: A custom Wordpress theme made by Diocesan Publications.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Diocesan-Core-Theme
+Template:
+*/
+
+@import '_reset.scss';
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_content.scss';
+@import '_general.scss';
+@import '_404.scss';
+@import '_forms.scss';
+
+@import '_header.scss';
+@import '_homepage.scss';
+@import '_footer.scss';
+@import '_animations.scss';
+
+@lost gutter 1em;
+@lost flexbox no-flex;
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-smoothing: anti-aliased;
+}
+
+body {
+  background-image: url(/wp-content/themes/stpauls-splash/images/stpaul-church.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  padding: 0 1em;
+  min-height: 100vh;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9d2a35;
+    opacity: 0.9;
+    z-index: -1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 46px 1em 0 1em;
+    margin-top: -46px;
+  }
+}

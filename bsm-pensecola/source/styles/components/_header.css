@@ -1,0 +1,113 @@
+.site-header {
+    background-color: var(--color-white);
+    padding-top: 1.875em;
+}
+
+.site-header__ { 
+    &branding {
+        flex: 0 0 32%;
+        margin-bottom: 3em;
+    }
+
+    &links {
+        flex: 0 0 70%;
+    }
+
+    &logo-link {
+        display: block;
+        margin: 0 auto;
+        max-width: 25.43em;
+        max-height: 8.4375em;
+        width: 100%;
+        height: 100%;
+    }
+
+    &logo-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &quick-links {
+        display: flex;
+        height: 2.1875em;
+        max-width: 18.75em;
+        width: 100%;
+        margin: 0 auto 1.25em auto;
+    }
+
+    &heritage-link {
+        display: inline-block;
+        height: 100%;
+        width: 6.25em;
+        background-image: url('assets/images/nrohp-link-cover.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 1.875em;
+    }
+
+    &social-links {
+        display: flex;
+    }
+
+    &social-link-item + &social-link-item {
+        margin-left: 1.25em;
+    }
+
+    &social-link {
+        display: block;
+        width: 1.562em;
+        height: 1.5625em;
+
+        & .svg-icon {
+            width: 100%;
+            height: 100%;    
+        }
+
+        & .svg-icon__mpa {
+            fill: var(--color-primary);
+        }
+
+        & .svg-icon__search {
+            width: 120%;
+            height: 120%;
+            transform: translateY(-2px);
+            fill: var(--color-font-base);
+        }
+
+        & .svg-icon__facebook {
+            fill: #485a95;
+        }
+
+        & .svg-icon__twitter {
+            width: 125%;
+            height: 125%;
+            transform: translateY(-2px);
+            fill: #5fa9dd;
+        }
+    }
+}
+
+@media screen and (min-width: 87.5em) {
+    /*.site-header {
+        padding: 1.875em 0;
+    }*/
+
+    .site-header__ {
+        &container {
+            display: flex;
+        }
+
+        &branding {
+            margin-bottom: 0;
+        }
+
+        &logo-link {
+            margin: 0;
+        }
+
+        &quick-links {
+            margin: 0 0 1.25em auto;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.quote-slider {
+    visibility: hidden;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: url(assets/images/quote-slider-bg-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+
+    &__list {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-height: calc(100% - 3em);
+        overflow: hidden;
+    }
+
+    &__list-item {
+        width: 100%;
+        padding: 2em;
+
+        &:not(.active) {
+            display: none;
+        }
+    }
+
+    &__list-item.active {
+        animation: .5s ease-in 0s 1 forwards quoteSliderFadeIn;
+    }
+
+    &__quote {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        border: none;
+        color: $color-white;
+    }
+
+    &__quote-content {
+        font-family: $header-font-family;
+        font-size: 24px;
+        margin-bottom: 1.25rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+        overflow: hidden;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    &__quote-author {
+        font-size: 1.31em;
+        font-style: initial;
+        color: $color-accent;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 3em;
+        z-index: 2; 
+    }
+
+    &__nav-button {
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 0;
+        border: 2px solid $color-white;
+    }
+
+    &__nav-button + &__nav-button {
+        margin-left: .5em;
+    }
+
+    &__nav-button.active {
+        background: $color-white;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .quote-slider {
+        visibility: visible;
+        height: auto;
+        padding: 2em;
+    }
+}
+
+@keyframes quoteSliderFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

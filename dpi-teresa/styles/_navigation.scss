@@ -1,0 +1,376 @@
+/**** SITE NAVIGATION ****/
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+a {
+    color: royalblue;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: midnightblue;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+
+//post navigation
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  div[class*="nav-"] {
+    padding: 0 .5em;
+  }
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+
+/* Do not show the outline on the skip link target. */
+
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+.sub-menu {
+    background: $primary;
+}
+
+
+/**** SUB PAGES LIST ****/
+
+.sub-pages {
+    background: white;
+    flex: 0 0 20%;
+    align-self: flex-start;
+    border-radius: 6px;
+    max-width: 25%;
+		margin-bottom: 1em;
+    margin-top: 1em;
+    opacity: 0.8;
+}
+
+.sub-pages-title {
+    display: block;
+    padding: 1em;
+    line-height: 1;
+    color: $primary;
+    font-weight: 600;
+    font-size: 1.5em;
+    &:visited {
+        color: $primary;
+    }
+}
+
+.sub-pages-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0 0 6px 0;
+    li {
+        position: relative;
+        width: 70%;
+        &:last-child {
+            border-radius: 0 0 0 6px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -15px;
+            height: 100%;
+            width: 40px;
+            background: white;
+            transform: rotate(45deg);
+        }
+    }
+    a {
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        color: black;
+        padding: .5em 1.5em;
+    }
+    .page_item:not(.current_page_item):hover {
+        background: lighten($primary, 20%);
+        a {
+            color: white;
+        }
+    }
+    .current_page_item {
+        background: $primary;
+        a {
+            color: white;
+        }
+    }
+}
+
+////////////////////////////////////////////////////////
+
+/* ============================================================ */
+
+
+/*                          Navigation                          */
+
+
+/* ============================================================ */
+
+
+/*responsive menu toggle  */
+
+.toggle-btn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url('http://mtctampa.diocesanweb.com/wp/wp-content/themes/dpi-teresa/images/icons/menu-toggle-open.png');
+  background-size: cover;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.toggle-btn.close {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url('http://mtctampa.diocesanweb.com/wp/wp-content/themes/dpi-teresa/images/icons/close-toggle.png');
+  background-size: cover;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.menu-toggle {
+    width: 100%;
+    height: 100%;
+    padding: .5em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+/*dropdown button*/
+
+.trigger {
+    box-sizing: content-box;
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 3em;
+    top: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    &:hover {
+        cursor: pointer;
+    }
+    &:hover .dropdown-toggle {
+        transform: scale(1.25) rotate(-45deg);
+    }
+}
+
+.dropdown-toggle {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    border-top: none;
+    border-right: none;
+    position: relative;
+    top: -10px;
+    transform: rotate(-45deg);
+    box-shadow: none;
+    padding: 0;
+    line-height: 0;
+    border-radius: 0;
+    &:focus {
+        outline: none;
+        transform: rotate(-45deg);
+    }
+    &:hover {
+      box-shadow: none;
+    }
+}
+
+//mobile nav
+#site-navigation {
+    width: 100%;
+    height: auto;
+    background: $primary;
+    display: flex;
+    flex-direction: column;
+    form {
+        display: flex;
+        justify-content: center;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        list-style: none;
+    }
+    li {
+        position: relative;
+    }
+    a {
+        display: block;
+        width: 100%;
+        background: $primary;
+        padding: .75em 2em;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        &:hover {
+            background: $primary-lt;
+        }
+    }
+    .menu {
+        display: none;
+        padding-top: .5em;
+    }
+    .sub-menu {
+        display: none;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        z-index: 9999;
+        a {
+            font-weight: 400;
+            padding-left: 4em;
+        }
+        .sub-menu {
+            top: 0;
+            left: 0;
+            li a {
+                padding-left: 6em;
+            }
+        }
+    }
+}
+
+
+/*large screen sizes*/
+
+@media screen and (min-width: 1146px) {
+    #site-navigation {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        #menu-primary-menu > li {
+                text-transform: uppercase;
+            }
+        ul {
+            flex-direction: row;
+        }
+        a {
+          padding: 1.25em 2em;
+        }
+        form {
+            display: inline;
+        }
+        .menu {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0;
+        }
+        .menu-item {
+            &:hover > .sub-menu {
+                display: block;
+            }
+        }
+        .sub-menu {
+            display: none;
+            position: absolute;
+            width: 200px;
+            padding: 0;
+            z-index: 9999;
+            a {
+              text-transform: capitalize;
+              padding-left: 1.5em;
+              padding-right: 0;
+            }
+            .sub-menu {
+                left: 100%;
+            }
+        }
+        .menu-toggle,
+        .dropdown-toggle {
+            display: none !important;
+        }
+    }
+}
+
+//make sub-sub-menus display below parent menu so they dont display off the page on smaller widths before switching over to responsive menu
+//@media screen and (max-width: 1650px) and (min-width: 1025px) {
+//    #site-navigation ul.sub-menu ul.sub-menu {
+//        top: 100%;
+//        left: 0;
+//    }
+//}

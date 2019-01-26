@@ -1,0 +1,94 @@
+.page-sidebar {
+    display: none;
+}
+
+@media screen and (min-width: 1100px) {
+    .page-sidebar {
+        display: flex;
+        margin-top: 5em;
+        width: 100%;
+
+        & ul {
+            list-style: none;
+        }
+    }
+
+    .sidebar-mass-times {
+        flex: 1;
+        margin-right: 10%;
+    }
+
+    .sidebar-mass-times--title,
+    .sidebar-calendar--title {
+        font-size: 2.25em;
+        margin: 0 0 3.125rem 0;
+    }
+
+    .sidebar-mass-times--item_day {
+        font-size: 1.125em;
+        margin: 0 0 1.25rem 0;
+    }
+
+    .sidebar-mass-times--item_time {
+        font-size: 1.325em;
+        margin: 0 0 3.125rem 0;
+
+        & br {
+            display: none;
+        }
+    }
+
+    .sidebar-mass-times--item:last-child {
+        & .sidebar-mass-times--item_time {
+            margin: 0;
+        }
+    }
+
+    .sidebar-calendar {
+        flex: 2;
+
+        & .simcal-calendar-grid {
+            border: 1px solid #e6e6e6;
+        }
+
+        & .simcal-current-year,
+        & .simcal-current-month {
+            color: var(--colorBody);
+        }
+    }
+
+    .calendar-placeholder {
+        position: relative;
+        height: calc(100% - 6em);
+        width: 100%;
+        overflow: auto;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .page-sidebar {
+        display: block;
+        max-width: 28.75em;
+        margin-top: 0;
+    }
+
+    .sidebar-mass-times {
+        margin-right: 0;
+        margin-bottom: 5em;
+        text-align: center;
+    }
+
+    .sidebar-mass-times--item_time {
+        & br {
+            display: block;
+        }
+    }
+
+    .sidebar-calendar--title {
+        display: none;
+    }
+
+    .calendar-placeholder {
+        height: 32.18em;
+    }
+}

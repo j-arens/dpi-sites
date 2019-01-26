@@ -1,0 +1,121 @@
+body.home {
+    & .site-header__quicklinks-container {
+        position: initial;
+    }
+}
+
+
+.header-home__ {
+    &slider {
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.35);
+        }
+    }
+
+    &overlay {
+        position: absolute;
+        top: 3.25em;
+        left: 50%;
+        height: calc(100% - 3.25em);
+        transform: translateX(-50%);
+        padding-top: 2.5em;
+    }
+
+    &branding {
+        display: none;
+    }
+
+    &logo-subtitle {
+        display: none;
+    }
+
+    &menu-toggle {
+        position: absolute;
+        bottom: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            width: calc(100% + 2em);
+            height: calc(100% + 1em);
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &slide-toggle {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 62.5em) {
+    .header-home__ {
+        &logo-subtitle {
+            display: block;
+            position: absolute;
+            bottom: -2em;
+            left: 0;
+        }
+
+        &branding {
+            position: relative;
+            display: block;
+            height: 8.125em;
+            width: 18.75em;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        &menu-toggle {
+            bottom: initial;
+            left: initial;
+            top: 2em;
+            right: 1em;
+            transform: translateX(0);
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &slide-toggle {
+            display: flex !important;
+            position: absolute;
+            left: 50%;
+            bottom: 3em;
+            transform: translateX(-50%);
+        }
+    }
+
+    body.home {
+        & .site-header__quicklinks-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 87.5em) {
+    .site-header__ {
+        &menu-toggle {
+            right: 0;
+        }
+    }
+}

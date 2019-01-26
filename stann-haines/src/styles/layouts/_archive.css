@@ -1,0 +1,17 @@
+body.archive {
+    & .content-container {
+        flex-direction: column;
+    }
+
+    & article + article {
+        margin-top: 2em;
+    }
+
+    & .entry-title {
+        margin-bottom: 1rem;
+    }
+
+    & .pagination-nav {
+        margin-top: 2em;
+    }
+}

@@ -1,0 +1,724 @@
+@charset "UTF-8";
+/*
+Theme Name: Stpaulsjaxbeach - splash
+Theme URI: http://www.diocesan.com/michigan/
+Author: Josh Arens
+Author URI: https://github.com/j-arens
+Description: A custom Wordpress theme made by Diocesan Publications.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Diocesan-Core-Theme
+Template:
+*/
+/*!
+ * ress.css • v1.1.1
+ * MIT License
+ * github.com/filipelinhares/ress
+ */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%;
+  /* iOS 8+ */ }
+
+*,
+::before,
+::after {
+  box-sizing: inherit; }
+
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit; }
+
+/* Remove margin, padding of all elements and set background-no-repeat as default */
+* {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements */
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0; }
+
+/* # =================================================================
+   # General elements
+   # ================================================================= */
+/* Add the correct display in iOS 4-7.*/
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */ }
+
+/*
+* Correct `block` display not defined for any HTML5 element in IE 8/9
+* Correct `block` display not defined for `details` or `summary` in IE 10/11
+* and Firefox
+* Correct `block` display not defined for `main` in IE 11
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */ }
+
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */ }
+
+[hidden],
+template {
+  display: none;
+  /* Add the correct display in IE */ }
+
+abbr[title] {
+  border-bottom: 0.0625rem dotted;
+  /* Add a bordered underline effect in all browsers */
+  text-decoration: none;
+  /* Remove text decoration in Firefox 40+ */ }
+
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+  -webkit-text-decoration-skip: objects;
+  /* Remove gaps in links underline in iOS 8+ and Safari 8+ */
+  text-decoration: none; }
+
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */ }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */ }
+
+b,
+strong {
+  font-weight: bolder;
+  /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */ }
+
+dfn {
+  font-style: italic;
+  /* Address styling not present in Safari and Chrome */ }
+
+/* Address styling not present in IE 8/9 */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* # =================================================================
+   # Forms
+   # ================================================================= */
+input {
+  border-radius: 0; }
+
+/* Apply cursor pointer to button elements */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"]
+[role="button"] {
+  cursor: pointer; }
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default; }
+
+[type="number"] {
+  width: auto;
+  /* Firefox 36+ */ }
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Safari 8+ */ }
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Safari 8 */ }
+
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */ }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */ }
+
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule. */ }
+
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */ }
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: 0;
+  padding: 0; }
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  outline: 0.0625rem dotted ButtonText; }
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */ }
+
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */ }
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+  color: inherit; }
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */ }
+
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */ }
+
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */ }
+
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */ }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS and Safari */
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */ }
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -0.125rem;
+  /* Correct the outline style in Safari */ }
+
+/* # =================================================================
+   # Specify media element style
+   # ================================================================= */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */ }
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline; }
+
+svg:not(:root) {
+  overflow: hidden;
+  /* Internet Explorer 11- */ }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* Internet Explorer 11+, Windows Phone 8.1+ */ }
+
+/* # =================================================================
+   # Accessibility
+   # ================================================================= */
+/* Hide content from screens but not screenreaders */
+@media screen {
+  [hidden~="screen"] {
+    display: inherit; }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important; } }
+
+/* Specify the progress cursor of updating elements */
+[aria-busy="true"] {
+  cursor: progress; }
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer; }
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled] {
+  cursor: default; }
+
+/* # =================================================================
+   # Selection
+   # ================================================================= */
+/* Specify text selection background color and omit drop shadow */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none; }
+
+::selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none; }
+
+/**** TYPOGRAPHY ****/
+h1 {
+  font-size: 2.25rem;
+  color: black; }
+
+h2 {
+  display: block;
+  font-size: 1.25rem;
+  color: black;
+  margin-bottom: 1em; }
+
+p {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 1.25em;
+  line-height: 1.2; }
+
+.divider-small {
+  width: 2.8125rem;
+  height: 0.1875rem;
+  background: #9d2a35; }
+  .divider-small::after {
+    content: '';
+    display: block;
+    width: 0.3125rem;
+    height: 0.1875rem;
+    background: white;
+    margin-left: 1.875rem; }
+
+/**** BUTTON STYLES ****/
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #9d2a35;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 1em 2.5em;
+  border: 0.125rem solid transparent;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease; }
+  .btn:hover {
+    background: #ffffff;
+    border-color: #9d2a35;
+    color: #9d2a35; }
+
+/* ============================================================ */
+/*                           Content                            */
+/* ============================================================ */
+#content {
+  width: 100%; }
+
+#primary {
+  width: 100%; }
+
+.sidebar {
+  width: 100%;
+  max-width: 15.625rem;
+  margin: 0 0 0 8%; }
+
+/*----BULLETINS----------*/
+#bulletin-columns {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem 1.875rem 0.3125rem 1.875rem;
+  padding: 1.25rem;
+  margin: auto;
+  margin-top: 2.5rem;
+  width: 80%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  line-height: 1.875rem; }
+
+/* ============================================================ */
+/*                           General                            */
+/* ============================================================ */
+::-moz-selection {
+  background-color: #777;
+  color: #fff; }
+
+::selection {
+  background-color: #777;
+  color: #fff; }
+
+body {
+  color: #333; }
+
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.skip-link {
+  display: none; }
+
+.alignleft {
+  float: left; }
+
+.alignright {
+  float: right; }
+
+.aligncenter {
+  text-align: center; }
+
+img.alignright {
+  float: right;
+  margin-left: 1.25rem; }
+
+img.alignleft {
+  margin-right: 1.25rem; }
+
+img.aligncenter {
+  display: block;
+  margin: 0 auto; }
+
+.screen-reader-text {
+  display: none; }
+
+body.error404 #content {
+  text-align: center;
+  margin: 4em 0; }
+
+/**** FORMS ****/
+.search-form {
+  position: relative;
+  display: inline-block; }
+  .search-form::after {
+    content: '';
+    display: block;
+    background-image: url(./icons/search_icon_white.png);
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    left: .5em;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    z-index: 1; }
+
+.search-field {
+  height: 2.3125rem;
+  margin: 0.1875rem 0;
+  padding-left: .5em;
+  background-color: #fff;
+  border: 0.0625rem solid #333;
+  cursor: text;
+  outline: 0;
+  width: 14.375rem;
+  border-left: 2.5rem solid #9d2a35; }
+
+.search-submit {
+  display: none; }
+
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+.wpcf7 {
+  text-align: left; }
+
+.wpcf7-submit {
+  margin-top: 2em;
+  display: inline-block;
+  border: 0.125rem solid #9d2a35;
+  font-size: 1.25rem;
+  padding: .5em 1.5em;
+  text-shadow: none;
+  text-decoration: none;
+  color: #9d2a35; }
+  .wpcf7-submit:hover {
+    background: #9d2a35;
+    color: #ffffff;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer; }
+
+button,
+input[type="button"],
+input[type="reset"] {
+  border: 0.0625rem solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 0.1875rem;
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: .6em 1em .4em;
+  text-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0.8); }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.1875rem;
+  padding: 0.1875rem; }
+
+select {
+  border: 0.0625rem solid #ccc; }
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111; }
+
+textarea {
+  width: 100%; }
+
+/**** HEADER ****/
+#masthead {
+  width: 100%;
+  text-align: center; }
+  #masthead .site-logo {
+    display: inline-block;
+    margin: 1em auto 0 auto; }
+    #masthead .site-logo img {
+      max-width: 31.25rem;
+      width: 90%; }
+
+/**** HOMEPAGE ****/
+#splash strong {
+  margin-right: 1em;
+  font-size: 1.5em; }
+
+#splash .info {
+  text-align: center;
+  padding: 4em 0; }
+  #splash .info p {
+    padding: .5em 0; }
+
+#splash .link-boxes {
+  text-align: center; }
+
+#splash .link-box {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 2em 4em 2em;
+  position: relative; }
+  #splash .link-box ul {
+    text-align: left;
+    color: white; }
+    #splash .link-box ul li {
+      padding: .25em 0; }
+    #splash .link-box ul img {
+      width: 1.25rem;
+      margin-right: .5em;
+      vertical-align: middle; }
+    #splash .link-box ul a {
+      color: white; }
+      #splash .link-box ul a:hover {
+        color: blue; }
+
+#splash .site-link {
+  display: inline-block;
+  margin-bottom: 1em; }
+  #splash .site-link:hover {
+    -webkit-transform: scale(1.005);
+            transform: scale(1.005); }
+
+#splash .site-link img {
+  max-height: 20rem;
+  max-width: 31.25rem;
+  width: 100%;
+  border: 0.25rem solid white; }
+
+/**** FOOTER ****/
+#colophon {
+  text-align: center;
+  padding-top: 2em; }
+  #colophon p {
+    display: inline-block;
+    margin: 0 3em 1em 3em; }
+  #colophon a {
+    color: white; }
+    #colophon a:hover {
+      color: blue; }
+
+/**** ANIMATIONS ****/
+@media screen and (min-width: 1120px) {
+  .fadeInLeft {
+    opacity: 0;
+    -webkit-animation: .5s ease-in .5s forwards fadeInLeft;
+            animation: .5s ease-in .5s forwards fadeInLeft; }
+  .fadeInRight {
+    opacity: 0;
+    -webkit-animation: .5s ease-in .5s forwards fadeInRight;
+            animation: .5s ease-in .5s forwards fadeInRight; }
+  @-webkit-keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+              transform: translate3d(-100%, 0, 0); }
+    to {
+      opacity: 1; } }
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+              transform: translate3d(-100%, 0, 0); }
+    to {
+      opacity: 1; } }
+  @-webkit-keyframes fadeInRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+              transform: translate3d(100%, 0, 0); }
+    to {
+      opacity: 1; } }
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+              transform: translate3d(100%, 0, 0); }
+    to {
+      opacity: 1; } } }
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-smoothing: anti-aliased; }
+
+body {
+  background-image: url(/wp-content/themes/stpauls-splash/images/stpaul-church.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  padding: 0 1em;
+  min-height: 100vh; }
+  body::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9d2a35;
+    opacity: 0.9;
+    z-index: -1; }
+
+* {
+  box-sizing: border-box; }
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 2.875rem 1em 0 1em;
+    margin-top: -2.875rem; } }
+
+/*# sourceMappingURL=style.css.map */

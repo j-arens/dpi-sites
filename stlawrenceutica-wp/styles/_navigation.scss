@@ -1,0 +1,306 @@
+/**** SITE NAVIGATION ****/
+
+/**
+* -- READ THIS -- When changing the min-width of the navbar media query you must also
+* change the value in the body::before content rule to match the breakpoint!
+* This is so that the js that runs the mobile nav can retrieve the correct breakpoint.
+*/
+body::before {
+    content: '1210';
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+// post navigation
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.nav-previous {
+  margin-right: 2em;
+}
+
+// footer social menu
+
+#menu-social-media-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.facebook-link a {
+  background: url(images/icons/facebook.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+
+/*responsive menu toggle  */
+.toggle-btn {
+    width: 30px;
+    height: 3px;
+    background: white;
+    position: relative;
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: white;
+        transform-origin: center;
+        transition: margin 0.35s ease;
+    }
+    &::before {
+        margin-top: -.5em;
+    }
+    &::after {
+        margin-top: 0.8em;
+    }
+}
+.toggle-btn.close {
+    background: transparent;
+    &::after,
+    &::before {
+        transition: margin 0.25s ease, transform 0.25s 0.25s ease;
+    }
+    &::before {
+        margin: 0;
+        transform: rotate(45deg);
+    }
+    &::after {
+        margin-top: -3px;
+        transform: rotate(-45deg);
+    }
+}
+.menu-toggle {
+    width: 100%;
+    height: 100%;
+    padding: 1.5em 0 1.5em 1.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        cursor: pointer;
+    }
+}
+/*dropdown button*/
+.trigger {
+    box-sizing: content-box;
+    width: auto;
+    height: auto;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    max-height: 40%; // need a better fix for div covering child triggers
+    &:hover {
+        cursor: pointer;
+    }
+}
+.dropdown-toggle {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border-left: none;
+    border-bottom: 2px solid white;
+    border-top: none;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+    box-shadow: none;
+    padding: 0;
+    line-height: 0;
+    border-radius: 0;
+    margin-top: 15px;
+    transform-origin: center;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        box-shadow: none;
+    }
+}
+.dropdown-open {
+    transform: rotate(45deg);
+}
+/**** mobile nav styles ****/
+#site-navigation {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    // background: #eee;
+    ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li {
+        position: relative;
+        margin: 0;
+        padding: 0 0 0 2em;
+    }
+    a {
+        color: white;
+        display: inline-block;
+        padding: 0.5em 22.5px;
+        text-decoration: none;
+        border: 2px solid transparent;
+        text-transform: capitalize;
+    }
+    .menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background: $primary;
+        padding: 0 0 1em;
+        z-index: 9999;
+    }
+    .sub-menu {
+        display: none;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        z-index: 9999;
+        li {
+            padding: 0 1em;
+        }
+    }
+}
+
+@media screen and (min-width: 1210px) {
+    #site-navigation {
+      height: 100%;
+        .trigger {
+            display: none;
+        }
+        .menuarrow {
+          width: 10px;
+          height: 10px;
+          position: absolute;
+        }
+        .down-arrow {
+          border-right: 1.75px solid black;
+          border-bottom: 1.75px solid black;
+          top: 11px;
+          right: 10px;
+          transform: rotate(45deg);
+        }
+        .right-arrow {
+          border-top: 1.75px solid black;
+          border-right: 1.75px solid black;
+          top: 14px;
+          right: 1em;
+          transform: rotate(45deg);
+        }
+        .menu {
+          height: 100%;
+          width: 100%;
+          align-self: flex-end;
+            position: relative;
+            z-index: 998;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            background: none;
+        }
+        #menu-primary-menu {
+          height: 100%;
+          align-items: center;
+            position: relative;
+        }
+        ul {
+            flex-direction: row;
+        }
+        li {
+          height: 100%;
+          display: flex;
+          align-items: center;
+            position: relative;
+            padding: 0;
+            &:hover {
+                background: $white;
+
+                > a {
+                  color: $primary;
+                }
+            }
+        }
+        a {
+            color: white;
+            position: relative;
+            font-weight: 600;
+        }
+        .sub-menu {
+            height: auto;
+            width: 100%;
+            min-width: 300px;
+            display: none;
+            position: absolute;
+            top: 100%;
+            padding: 0;
+            z-index: 9999;
+            background: $white;
+            box-shadow: 10px 10px 10px -5px $nuetral;
+            li {
+                padding: .5em 0;
+
+                &:hover {
+                  background: $primary;
+
+                  > a {
+                    color: $white;
+                  }
+                }
+            }
+            a {
+                color: $primary;
+                text-transform: capitalize;
+                width: 100%;
+            }
+        }
+        // display sub menus on hover
+        .menu-item:hover > .sub-menu {
+            display: block;
+            height: auto;
+            left: 0;
+        }
+        // second sub level menu styles
+        #menu-primary-menu > .menu-item-has-children > .sub-menu li > .sub-menu {
+          left: 100%;
+          top: 0;
+        }
+        .dropdown-toggle,
+        .menu-toggle {
+            display: none;
+        }
+    }
+}
+
+/**** desktop nav styles ****/
+@media screen and (min-width: 1521px) {
+    #site-navigation {
+        .menu {
+          width: 80%;
+        }
+    }
+}

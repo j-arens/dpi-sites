@@ -1,0 +1,41 @@
+.footer-mass {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footer-mass__ {
+    &list:not(:last-of-type) {
+        margin-bottom: 2.125em;
+    }
+
+    &list:last-of-type {
+        margin-bottom: 1em;
+    }
+
+    &list-title,
+    &item {
+        color: var(--color-white);
+    }
+
+    &list-title {
+        font-size: 0.8125em;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    &item {
+        font-size: 0.875em;
+    }
+
+    &item + &item {
+        margin-top: 0.5rem;
+    }
+
+    &link {
+        display: block;
+        margin-top: auto;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,124 @@
+/**** FORMS ****/
+
+.search-form {
+	position: relative;
+	display: inline-block;
+
+	&::after {
+		content: '';
+		display: block;
+		background-image: url(./icons/search_icon_white.png);
+		background-repeat: no-repeat;
+		background-size: 24px 24px;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		left: .5em;
+		top: 50%;
+		transform: translate(0, -50%);
+		z-index: 1;
+	}
+}
+.search-field {
+	height: 37px;
+	margin: 3px 0;
+	padding-left: .5em;
+	background-color: #fff;
+	border: 1px solid #333;
+	cursor: text;
+	outline: 0;
+	width: 230px;
+	border-left: 40px solid $color-primary;
+}
+
+.search-submit {
+  display: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+.wpcf7 {
+	text-align: left;
+}
+
+.wpcf7-submit {
+	margin-top: 2em;
+	display: inline-block;
+	border: 2px solid $color-primary;
+	font-size: 20px;
+	padding: .5em 1.5em;
+  text-shadow: none;
+	text-decoration: none;
+  color: $color-primary;
+
+    &:hover {
+			background: $color-primary;
+			color: $color-white;
+			transition: all .3s ease;
+			cursor: pointer;
+    }
+}
+
+button,
+input[type="button"],
+input[type="reset"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, .8);
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+textarea {
+	width: 100%;
+}

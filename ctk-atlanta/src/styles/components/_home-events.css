@@ -1,0 +1,155 @@
+@import '../variables/_index';
+
+.home-events {
+  background: var(--colorWhite);
+
+  & .container {
+    max-width: 71.87em;
+    width: 100%;
+    margin: 0 auto;
+    padding: 6.25em 0 4.06em 0;
+  }
+
+  & h1 {
+    font-weight: 300;
+    color: var(--colorHeadings);
+    text-align: center;
+    margin: 0 0 1.875rem 0;
+  }
+
+  & .event-empty {
+    text-align: center;
+  }
+
+  & .events {
+    display: flex;
+    justify-content: center;
+
+    & article {
+      width: 33.33%;
+
+      &:not(:last-child) {
+        margin-right: 2.81em;
+      }
+    }
+  }
+
+  & figure {
+    height: 18.125em;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-bottom: 1.43em;
+  }
+
+  & title {
+    display: block;
+    font-weight: 500;
+    font-size: 1.45em;
+    color: var(--colorTextDark);
+  }
+
+  & .date {
+    display: block;
+    margin-bottom: 1.375rem;
+  }
+
+  & a {
+    color: var(--colorText);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  & .article-link {
+    color: var(--colorLink);
+
+    &:hover {
+      color: var(--colorPrimary);
+    }
+  }
+
+  @media screen and (max-width: 1140px) {
+    padding: 2em;
+  }
+
+  @media screen and (max-width: 1000px) {
+    & .events {
+      display: block;
+
+      & article {
+        width: 100%;
+        height: 14.25em;
+
+        &::after {
+          display: table;
+          clear: both;
+        }
+
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+      }
+
+      & article + article {
+        margin-top: 4em;
+      }
+
+      & figure {
+        width: 20em;
+        height: 14.25em;
+        float: left;
+        margin-right: 2em;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    & .events {
+
+      & .event {
+        height: auto;
+        position: relative;
+        padding-top: 5em;
+      }
+
+      & figure {
+        float: none;
+        margin: 0 auto 2em auto;
+      }
+
+      & title,
+      & .date {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+
+      & .date {
+        top: 2em;
+      }
+
+      & .excerpt {
+        max-width: 25em;
+        width: 100%;
+        margin: 0 auto 1em auto;
+      }
+
+      & .article-link {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 370px) {
+    & .events {
+      & figure {
+        width: 95%;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.slider {
+    width: 100%;
+    /*height: 30em;*/
+    overflow: hidden;
+    background: var(--colorNeutral);
+}
+
+.metaslider,
+.flexslider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+    height: 100%;
+}

@@ -1,0 +1,25 @@
+body.archive {
+    & .archive__container {
+        max-width: 90em;
+        margin: 6.25em auto;
+        padding: 0 1em;
+    }
+
+    & .main article {
+        margin: 4em auto;
+    }
+
+    & .main .entry-excerpt img {
+        max-width: 18.75em;
+        max-height: 12.5em;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media screen and (--breakpoint-md) {
+        & .main .entry-excerpt img {
+            float: left;
+            margin: 0 2em 0 0;
+        }
+    }
+}

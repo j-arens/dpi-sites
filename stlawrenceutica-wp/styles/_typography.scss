@@ -1,0 +1,131 @@
+/* ============================================================ */
+/*                         Typography                           */
+/* ============================================================ */
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Patua+One';
+
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Patua One', cursive;
+
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-family: 'Patua One', cursive;
+  font-size: 32px;
+  font-weight: 700;
+  color: $primary;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: italic;
+  color: $primary;
+}
+
+h3 {
+  font-family: 'Patua One', cursive;
+  font-size: 18px;
+  font-weight: 700;
+  color: $primary;
+}
+
+h4 {
+  font-size: 36px;
+  font-weight: 400;
+  color: $secondary;
+}
+
+h5 {
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic;
+  color: $secondary;
+}
+
+h6 {
+  font-size: 24px;
+  font-weight: 700;
+  color: $secondary;
+}
+
+p {
+  font-size: 16px;
+  color: $body-text;
+  line-height: 1.2
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+blockquote {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  color: $body-text;
+  lost-utility: clearfix;
+
+  p {
+    width: 95%;
+    float: right;
+  }
+
+  &::before {
+    content: '"';
+    display: inline-block;
+    transform: rotate(180deg);
+    font-size: 7em;
+    line-height: 0;
+    margin-top: -10px;
+  }
+}
+
+// modifier classes
+
+.heading-thin {
+  font-family: 'open-sans', sans-serif;
+  font-weight: 400;
+}
+
+.heading-italic {
+  font-family: 'open-sans', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.white-text {
+  color: $white;
+}
+
+// .entry-title a {
+//   text-decoration: none;
+// }
+
+.entry-meta {
+  margin-bottom: 1em;
+}
+
+#content.Styles {
+  article ul {
+    margin-left: 3em;
+  }
+}

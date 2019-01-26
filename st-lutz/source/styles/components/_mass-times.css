@@ -1,0 +1,93 @@
+.mass-times {
+    background-color: var(--color-primary);
+    padding: 1em 0;
+    color: var(--color-white);
+
+    & p {
+        margin-bottom: 0;
+    }
+}
+
+.mass-times__ {
+    &ucb {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    &heading {
+        text-align: center;
+        margin-bottom: 1em !important;
+        font-size: 1.3125em;
+
+        & .svg-icon {
+            display: inline-block;
+            width: 2.5rem;
+            height: 2.5rem;
+            vertical-align: middle;
+            fill: var(--color-white);
+            margin-right: 0.5rem;
+        }
+    }
+
+    &item {
+        text-align: center;
+    }
+
+    &item + &item {
+        margin-top: 1em;
+    }
+
+    &item-title {
+        margin-right: 1rem;
+    }
+
+    &item-title,
+    &time {
+        font-size: 1.1em;
+    }
+
+    &time + &time {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .mass-times__ {
+        &heading {
+            margin-bottom: 2em !important;
+        }
+
+        &item {
+            display: inline-block;
+            width: calc(50% - 4px);
+        }
+
+        &item + &item {
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 81.25em) {
+    .mass-times__ {
+        &container,
+        &item {
+            display: flex;
+        }
+
+        &container {
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &heading {
+            text-align: initial;
+            margin-bottom: 0 !important;
+        }
+
+        &item {
+            text-align: initial;
+            width: initial;
+        }
+    }
+}

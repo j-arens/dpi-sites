@@ -1,0 +1,13 @@
+.component-title {
+    text-align: center;
+}
+
+.component-title__ {
+    &heading {
+        font-size: 1.75em;
+        color: var(--color-neutral);
+        font-style: italic;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+}

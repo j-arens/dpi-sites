@@ -1,0 +1,62 @@
+/**** CONTACT PAGE ****/
+
+.page-template-contact-page {
+
+  #primary {
+    flex: 0 0 100%;
+  }
+
+  .entry-content {
+    // text-align: center;
+  }
+
+  .wpcf7 {
+    display: inline-block;
+    width: auto;
+    margin-right: 4em;
+  }
+
+  .map-container {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 4em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .page-template-contact-page {
+
+    .map-container {
+      display: flex;
+      margin-left: 0;
+      width: 90%;
+      margin: 0 auto;
+      width: 300px;
+      height: 300px;
+      position: relative;
+
+      iframe {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .page-template-contact-page {
+    .wpcf7-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .wpcf7-form-control {
+      width: 300px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/* ============================================================ */
+
+
+/*                          Staff Page                          */
+
+
+/* ============================================================ */
+
+.staff_member {
+    display: inline-block;
+    max-width: 275px;
+    min-width: 200px;
+    margin: 0 25px 30px 0;
+}
+
+.staff_member h5.staff_name {
+    color: #2075c4;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 20px 0 5px;
+}
+
+p.staff_position {
+    font-size: 1rem;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+.staff_email {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.staff_phone {
+    display: inline-block;
+}
+
+.staff_email img {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+.staff_phone img {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+img.staff_photo {
+    width: 200px;
+    height: 250px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+}

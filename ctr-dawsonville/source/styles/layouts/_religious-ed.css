@@ -1,0 +1,134 @@
+@import '../variables/_colors';
+
+body:not(.home).page-template-religious-ed {
+  & .main {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.rs-ed-container {
+    display: flex;
+    flex-direction: column;
+
+    & ul {
+        list-style: none;
+    }
+}
+
+.rs-ed__ {
+    &nav {
+        align-self: center;
+        order: 0;
+    }
+
+    &nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 2em;
+    }
+
+    &nav-item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        background: var(--colorNeutral);
+        padding: 0.65rem 0.65rem;
+        cursor: pointer;
+        box-shadow: 0 0 5px 1px rgba(30, 30, 30, 0.2);
+        margin-bottom: 1em;
+        border-radius: 2px;
+
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
+
+        & i {
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2.25rem;
+            height: 2.25rem;
+            margin-right: 1rem;
+            color: var(--colorNeutral);
+            font-size: 1rem;
+            border-radius: 50%;
+            background: var(--colorPrimary);
+        }
+    }
+
+    &nav-item.active {
+        background: var(--colorPrimary);
+        box-shadow: 0 0 10px 1px rgba(30, 30, 30, 0.4);
+
+        & .rs-ed__nav-title {
+            color: var(--colorWhite);
+        }
+
+        & i {
+            color: var(--colorPrimary);
+            background: var(--colorWhite);
+        }
+    }
+
+    &nav-title {
+        pointer-events: none;
+        font-weight: 600;
+        color: var(--colorPrimary);
+        font-size: 1.25em;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &articles {
+        order: 1;
+        position: relative;
+    }
+
+    &articles-item {
+        display: none;
+    }
+
+    &articles-item.active {
+        display: block;
+    }
+
+    &articles-title {
+        text-align: center;
+    }
+}
+
+@media screen and (--breakpoint-lg) {
+    .rs-ed-container {
+        flex-direction: row;
+    }
+
+    .rs-ed__ {
+        &nav {
+            align-self: initial;
+            order: initial;
+            width: 300px;
+        }
+
+        &nav-menu {
+            flex-direction: column;
+        }
+
+        &nav-item {
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+
+        &articles {
+            order: initial;
+            width: calc(100% - 300px);
+            padding-right: 4em;
+        }
+    }
+}

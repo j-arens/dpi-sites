@@ -1,0 +1,23 @@
+body.search-results {
+
+}
+
+body.search-no-results {
+    & .no-posts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 20em;
+
+        & p {
+            font-size: 1.25em;
+        }
+    }
+}
+
+.search-results__container {
+    max-width: 90em;
+    margin: 6.25em auto;
+    padding: 0 1em;
+}

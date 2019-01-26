@@ -1,0 +1,77 @@
+/**** GENERAL ****/
+
+#bulletin-columns {
+   column-count: 3;
+   border: 1px solid #ccc;
+   border-radius: 5px 30px 5px 30px;
+   padding: 20px;
+   margin-top: 40px;
+   width: 60%;
+   align-content: center;
+
+   .dpi_bulletin_cover {
+     width: 100%;
+   }
+}
+
+::-moz-selection {
+	background-color: #777;
+	color: #fff;
+}
+
+::selection {
+	background-color: #777;
+	color: #fff;
+}
+
+body {
+    color: #333;
+}
+
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition:    all 0.2s ease-in-out;
+	-ms-transition:     all 0.2s ease-in-out;
+	-o-transition:      all 0.2s ease-in-out;
+	transition:         all 0.2s ease-in-out;
+}
+
+.skip-link {
+    display:none;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+img.alignright {
+    float: right;
+    margin-left: 20px;
+}
+
+img.alignleft {
+    margin-right: 20px;
+}
+
+img.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
+
+.screen-reader-text {
+  display: none;
+}

@@ -1,0 +1,26 @@
+.box-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cookie', cursive;
+    font-size: 2.25em;
+    padding: 0.5rem;
+    max-width: 18.85rem;
+    width: 100%;
+    margin: 0 auto 1.5rem auto;
+}
+
+.box-title__ {
+    &brown {
+        background: var(--colorPrimary);
+        color: var(--colorWhite);
+    }
+
+    &cursive {
+        font-family: 'Cookie', cursive;
+        font-size: 1.6875em;
+        color: var(--colorSecondaryLt);
+        padding: 0;
+        margin-bottom: 1.25rem;
+    }
+}

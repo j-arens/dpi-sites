@@ -1,0 +1,92 @@
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /*min-height: 11.25em;*/
+    /*padding: 0.5em 0 0 0;*/
+    background-color: #beaf9a;
+    border-bottom: 5px solid #8c0001;
+}
+
+.site-header-- {
+    &banner {
+        height: calc(100% - 1em);
+        margin-bottom: 0.5em;
+    }
+
+    &banner-img {
+        background-color: var(--colorPrimaryLt);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.header-inner-- {
+    &container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 73.75em;
+        margin: 0.25em auto;
+    }
+
+    &logo-link {
+        display: inline-block;
+        max-height: 7.1875em;
+        max-width: 33.125em;
+        width: 100%;
+        height: 100%;
+        /*background-image: url(assets/images/inner-logo-02-01.svg);*/
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-bottom: 2em;
+    }
+
+    &site-logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    &contact-address,
+    &contact-numbers {
+        margin: 0;
+    }
+
+    &contact-address {
+        margin-bottom: 1em;
+    }
+
+    &contact-address__street,
+    &contact-numbers__phone,
+    &contact-numbers__fax,
+    &contact-address__city-state {
+        color: var(--colorPrimaryDk);
+        font-size: 1.25em;
+    }
+
+    &contact-address__street,
+    &contact-numbers__phone,
+    &contact-numbers__fax {
+        font-weight: 500;
+    }
+
+    &contact-numbers__phone {
+        margin-right: 1em;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .header-inner-- {
+        &container {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &logo-link {
+            margin-bottom: 0;
+        }
+    }
+}

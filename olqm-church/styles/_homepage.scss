@@ -1,0 +1,702 @@
+/**** HOMEPAGE ****/
+
+.home {
+
+  section {
+    position: relative;
+    width: 100%;
+    padding: 60px 0;
+    overflow: hidden;
+  }
+
+  .short-section {
+    padding: 2rem 0;
+  }
+
+
+  /**
+  * main links
+  */
+  #main-links {
+    display: flex;
+    padding: 0;
+    overflow-x: hidden;
+
+    .btn-xlg {
+      width: 33.3333%;
+      text-align: center;
+      // border: none;
+
+      &:hover {
+        background: $color-white;
+      }
+
+      &:first-child {
+        background: $color-primary;
+
+        &:hover {
+          background-color: $color-white;
+
+          span,
+          p {
+            color: $color-primary;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        background: $color-primary-dark;
+
+        &:hover {
+          background-color: $color-white;
+
+          span,
+          p {
+            color: $color-primary-dark;
+          }
+        }
+      }
+
+      &:last-child {
+        background: $color-primary-xdark;
+
+        &:hover {
+          background-color: $color-white;
+
+          span,
+          p {
+            color: $color-primary-xdark;
+          }
+        }
+      }
+    }
+
+    p {
+      color: white;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    span {
+      font-size: 26px;
+    }
+
+    @media screen and (max-width: 750px) {
+      display: block;
+
+      .btn-xlg {
+        width: 100%;
+      }
+    }
+  }
+
+ /**
+ * church info
+ */
+  #church-info {
+
+    .church-about,
+    .featured-image {
+      display: inline-block;
+      vertical-align: top;
+      width: calc(50% - 2rem);
+    }
+
+    .church-about {
+      margin-right: 1rem;
+    }
+
+    .featured-image {
+      margin-left: 1rem;
+      height: 430px;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        width: 100%;
+        opacity: 0;
+      }
+
+      .active-img {
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .featured-image {
+        display: none !important;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      .church-about,
+      .featured-image {
+        display: block;
+        width: 100%;
+      }
+
+      .church-about {
+        margin-right: 0;
+      }
+
+      .featured-image {
+        margin-left: 0;
+      }
+    }
+  }
+
+
+  /**
+  * Mass times
+  */
+  #mass-times {
+
+    .bg-img {
+      filter: blur(5px);
+    }
+
+    .bg-overlay {
+      background: whitesmoke;
+      opacity: 0.8;
+    }
+
+    .time-slot {
+      display: inline-block;
+      vertical-align: top;
+      width: calc(25% - 2rem);
+      margin: 0 1rem;
+      text-align: center;
+
+      &:first-child {
+        margin-left: 0;
+        text-align: left;
+
+        h1 {
+          margin-bottom: 1.5em;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      hr {
+        width: 20px;
+        height: 3px;
+        background: $color-primary;
+        margin: 1rem auto;
+        border: none;
+      }
+
+      span,
+      p {
+        color: black;
+      }
+
+      span {
+        font-size: 22px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .time-slot {
+        width: calc(50% - 2rem);
+        margin: 0 0 2rem 0;
+
+        &:first-child {
+          text-align: center;
+
+          h1 {
+            display: block;
+
+            &::before {
+              width: 1.25rem;
+              left: 50%;
+              transform: translate(-50%, 0);
+            }
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+
+        &:nth-child(3),
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      .time-slot {
+        display: block;
+        width: 100% !important;
+
+        &:nth-child(3) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+
+  /**
+  * Prayer section
+  */
+  #prayer-section {
+
+    .prayer-info {
+      margin-bottom: 4rem;
+
+      h1,
+      p {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      h1 {
+        margin-right: 4rem;
+      }
+
+      p {
+        margin-left: 4rem;
+        width: 75%;
+      }
+    }
+
+    .prayer-item {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 1rem;
+      width: calc(25% - 2rem);
+      text-align: center;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .prayer-title {
+        display: inline-block;
+        margin: 1rem 0;
+        font-weight: 600;
+        color: $color-primary;
+      }
+
+      .prayer-excerpt {
+        text-align: left;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .image-container {
+      height: 190px;
+    }
+
+    .message-overlay span {
+      font-size: 25px;
+    }
+
+    .moretag {
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .prayer-info {
+        text-align: center;
+
+        p {
+          width: 100%;
+          display: block;
+          margin-left: 0;
+        }
+      }
+
+      .prayer-item {
+        width: 100% !important;
+        margin-left: 0;
+        margin-right: 0;
+
+        &:nth-child(3) {
+          margin-bottom: 4rem !important;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .prayer-item {
+        width: calc(50% - 2rem);
+        text-align: center;
+        margin-bottom: 4rem;
+
+        &:nth-child(2) {
+          margin-right: 0;
+        }
+
+        &:nth-child(3) {
+          margin-left: 0;
+          margin-bottom: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .prayer-excerpt {
+          width: 70%;
+          margin: 0 auto 2rem auto;
+        }
+      }
+
+      .image-container {
+        width: 250px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+
+/**
+* Church events
+*/
+  #church-events {
+
+  .events-container {
+    background: $color-white;
+    padding: 1rem 0;
+
+    .content h3 {
+      color: $color-primary;
+    }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+        padding-bottom: 1rem;
+        color: black;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+    }
+  }
+
+  .events-title {
+    display: block;
+  }
+
+  .featured-container,
+  .upcoming-container {
+    margin: 0 .5rem;
+    width: calc(50% - 1rem);
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .featured-container {
+    border-bottom: 2px solid $color-neutral;
+    margin-left: 0;
+
+    .image-container {
+      height: 345px;
+    }
+  }
+
+  .upcoming-container {
+    margin-right: 0;
+  }
+
+  .date-block {
+    display: inline-block;
+    width: 50px;
+    background: $color-primary;
+    text-align: center;
+    color: white;
+    padding: .25rem 0;
+    margin-right: 1rem;
+
+    span {
+      display: block;
+    }
+
+    .date-day {
+      font-size: 22px;
+    }
+
+    hr {
+      margin: .25rem 0;
+    }
+
+    .date-month {
+      font-size: 18px;
+    }
+  }
+
+  .featured {
+
+    .message-overlay span {
+      font-size: 55px;
+    }
+
+    .featured-post-summary {
+      padding: .25rem 0;
+    }
+
+    .content {
+      display: inline-block;
+      vertical-align: top;
+      width: calc(100% - (105px + 1rem));
+    }
+  }
+
+  .upcoming {
+
+    .message-overlay span {
+      font-size: 14px;
+    }
+
+    .post {
+      margin: 1rem 0;
+      height: 33.3333%;
+      padding-bottom: .25rem;
+      border-bottom: 2px solid $color-neutral;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .image-container,
+    .content {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .image-container {
+      width: 145px;
+      height: 94px;
+    }
+
+    .content {
+      // width: calc(100% - (305px + 1rem));
+      width: calc(100% - 220px);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .date-block {
+      display: none;
+    }
+
+    .upcoming .image-container {
+      margin-right: .5rem;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .featured-container,
+    .upcoming-container {
+      width: 100% !important;
+    }
+
+    .upcoming {
+
+      .image-container {
+        display: block;
+        margin: 0 auto 1rem auto !important;
+      }
+
+      .content {
+        width: 100% !important;
+        text-align: center;
+      }
+    }
+
+    .featured {
+
+      .content {
+        width: 100% !important;
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    .featured-container,
+    .upcoming-container {
+      width: calc(90% - 1rem) !important;
+    }
+
+    .featured .content {
+      width: calc(100% - (55px + 1rem));
+    }
+
+    .upcoming .content {
+      width: calc(100% - (205px + 1rem));
+    }
+  }
+
+  @media screen and (max-width: 1305px) {
+    .featured-container,
+    .upcoming-container {
+      width: calc(70% - 1rem);
+      display: block;
+      margin: 0 auto;
+    }
+
+    .featured-container {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+
+  /**
+  * Daily verse
+  */
+  #daily-verse {
+
+    .bg-overlay {
+      background: $color-black;
+      opacity: 0.4;
+    }
+
+    p,
+    span {
+      color: white;
+      font-size: 25px;
+    }
+
+    .hungryfeed_feed_title,
+    .hungryfeed_feed_description {
+      display: none;
+    }
+  }
+
+
+  /**
+  * Bulletins
+  */
+  #home-bulletins {
+
+    .about-bulletins,
+    .bulletin-list {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .about-bulletins {
+      width: calc(33.3333% - 2rem);
+      margin-right: 1rem;
+    }
+
+    .bulletin-list {
+      // width: calc(66.6666% - 2rem);
+      // margin-left: 1rem;
+    }
+
+    .bulletin {
+      display: inline-block;
+      vertical-align: top;
+      // margin: 0 1rem;
+      height: 225px;
+      width: 400px;
+      max-width: 350px;
+      overflow: hidden;
+      position: relative;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .image-container {
+        position: relative;
+        width: 290px;
+        height: 190px;
+      }
+    }
+
+    .message-overlay {
+      opacity: 0.6;
+
+      span {
+        width: 100%;
+      }
+
+      p {
+        color: white;
+        margin-bottom: 0;
+        font-size: 22px;
+      }
+
+    }
+
+    .bulletin-title,
+    .bulletin-date {
+      margin-bottom: 0;
+    }
+
+    .bulletin-title {
+      font-size: 22px;
+      color: $color-white;
+    }
+
+    .bulletin-date {
+      color: $color-neutral;
+    }
+  }
+
+  @media screen and (max-width: 1095px) {
+    #home-bulletins {
+      .about-bulletins {
+        width: 100%;
+        text-align: center;
+      }
+      .bulletin-list {
+        width: 100%;
+        text-align: center;
+        margin-top: 2em;
+      }
+    }
+  }
+}

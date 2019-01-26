@@ -1,0 +1,72 @@
+/* ============================================================ */
+/*                           General                            */
+/* ============================================================ */
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+::-moz-selection {
+	background-color: #777;
+	color: #fff;
+}
+
+::selection {
+	background-color: #777;
+	color: #fff;
+}
+
+body {
+    color: #333;
+}
+
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition:    all 0.2s ease-in-out;
+	-ms-transition:     all 0.2s ease-in-out;
+	-o-transition:      all 0.2s ease-in-out;
+	transition:         all 0.2s ease-in-out;
+}
+
+.skip-link {
+    display:none;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+img.alignright {
+    float: right;
+    margin: 1em 0 1em 1em;
+}
+
+img.alignleft {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+
+img.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
+
+.screen-reader-text {
+	display: none;
+}

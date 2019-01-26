@@ -1,0 +1,29 @@
+/**** BUTTON STYLES ****/
+
+.btn {
+  display: table;
+  margin: 0 auto;
+  background: $color-primary;
+  color: $color-secondary;
+  text-decoration: none;
+  padding: .75em 1.5em;
+  border: 2px solid $color-primary;
+  transition: all .3s ease;
+
+  &:hover {
+    background: $color-white;
+    color: $color-primary;
+  }
+}
+
+.btn-center {
+  display: table;
+  margin: 0 auto;
+}
+
+.btn-bottom {
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

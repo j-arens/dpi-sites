@@ -1,0 +1,188 @@
+/**** HEADER ****/
+
+#wp-admin-bar-top-secondary {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+}
+
+#masthead {
+  background-image: url(/wp-content/themes/dpi-theme-v4/images/stained-glass.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background: $color-primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // background: rgba(0, 0, 0, 0.7);
+    background: rgba($color-primary, 0.9);
+  }
+
+  #give-btn {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 5px 1em;
+    border-left: none;
+    border-top: none;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  .featured-links {
+    position: absolute;
+    right: 0;
+    font-size: 0.9rem;
+    z-index: 1;
+
+    .helpers {
+      lost-utility: clearfix;
+
+      li {
+        lost-column: 1/2 2;
+      }
+
+      .btn {
+        border-top: 2px solid $color-white;
+      }
+    }
+  }
+
+  .featured-links .search-form {
+    .search-field {
+      height: 33px;
+    }
+
+    input {
+      margin: 0;
+      width: 100%;
+      border: none;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .featured-links ul {
+    margin-bottom: 1em;
+  }
+
+  .featured-links li {
+    display: inline-block;
+    margin-left: -6px;
+
+    &:last-child .btn {
+      border-right: none;
+    }
+
+    .btn {
+      margin: 0;
+      border-top: none;
+    }
+  }
+
+  .featured-links p {
+    display: block;
+    margin-bottom: 1em;
+    color: white;
+  }
+
+  .featured-links a {
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .featured-links .phone,
+  .featured-links .email {
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+
+  .featured-links .phone {
+    margin-right: 1em;
+  }
+
+  .featured-links img {
+    max-width: 1.25rem;
+    vertical-align: -5px;
+    margin-right: .5em;
+  }
+
+  .featured-links .btn {
+    border-color: white;
+    padding: 5px 1em;
+    width: 100%;
+    text-align: center;
+    margin-top: .5em;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  .site-logo {
+    // max-width: 20em;
+    max-width: 30em;
+    margin: 1em 0;
+    z-index: 1;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #masthead {
+    .featured-links {
+      position: relative;
+      order: 1;
+      margin: auto auto;
+      padding: 1em 0;
+      right: auto;
+
+      li {
+
+        .btn {
+          border-top: 1px solid white;
+        }
+
+        &:last-child {
+          .btn {
+            border-right: 1px solid white;
+          }
+        }
+      }
+    }
+
+    .site-logo {
+      order: 0;
+    }
+
+    #site-navigation {
+      order: 3;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+/*
+Theme Name: Diocesan-Core-Theme
+Theme URI: http://www.diocesan.com/michigan/
+Author: Josh Arens
+Author URI: https://github.com/j-arens
+Description: A custom Wordpress theme made by Diocesan Publications.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Diocesan-Core-Theme
+Template:
+*/
+
+@import '_reset.scss';
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_button-styles.scss';
+@import '_content.scss';
+@import '_forms.scss';
+@import '_general.scss';
+@import '_responsive.scss';
+@import '_staff-page.scss';
+@import '_events-archive-template.scss';
+
+@import '_header.scss';
+@import '_navigation.scss';
+@import '_sidebar.scss';
+@import '_homepage.scss';
+@import '_contact.scss';
+@import '_footer.scss';
+
+@lost gutter 1em;
+@lost flexbox no-flex;
+
+html,
+body {
+  // width: 100%;
+  // height: 100%;
+  font-smoothing: anti-aliased;
+  font-size: 16px;
+  // overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
+
+
+/**
+* Namespace
+*/
+@custom-selector :--namespace .dpi-forms__;
+
+
+
+/**
+* Vars
+*/
+:root {
+
+    /**
+    * General Colors
+    */
+    --colorRootBg: #eff3f6;
+    --colorBodyText: #333;
+    --colorWrapperBg: #fff;
+    --colorBorder: #ced0da;
+    --colorInputActive: #2ea2f8;
+    --colorBorderInvalid: #db161e;
+    --colorBgInvalid: rgba(255, 0, 0, 0.1);
+
+    /**
+    * Default button
+    */
+    --colorBtnBgDefault: #fcfdfd;
+    --colorBtnTextDefault: #354052;
+    --colorBtnBgDefaultHover: #eff1f6;
+    --colorBtnBgDefaultActive: #e4e8ec;
+    --colorBtnIconFill: #354052;
+
+    /**
+    * Primary button
+    */
+    --colorBtnPrimaryBg: #279cf4;
+    --colorBtnPrimaryBorder: #1585d8;
+    --colorBtnPrimaryText: #fff;
+    --colorBtnPrimaryIconFill: #fff;
+    --colorBtnPrimaryBg-Hover: #1784d5;
+    --colorBtnPrimaryBorder-Hover: #1578c2;
+    --colorBtnPrimaryBg-Active: #0e73be;
+    --colorBtnPrimaryBorder-Active: #1468a7;
+
+    /**
+    * Danger button
+    */
+    --colorBtnDangerBorder: #db161e;
+    --colorBtnDangerText: #fff;
+    --colorBtnDangerBg: #f2464d;
+    --colorBtnDangerIconFill: #fff;
+    --colorBtnDangerBorder-Hover: #d0121a;
+    --colorBtnDangerBg-Hover: #dd2c32;
+    --colorBtnDangerBorder-Active: #d01119; 
+    --colorBtnDangerBg-Active: #bf0e16;
+
+    /**
+    * Success button
+    */
+    --colorBtnSuccessBorder: #249533;
+    --colorBtnSuccessText: #fff;
+    --colorBtnSuccessBg: #39b449;
+    --colorBtnSuccessIconFill: #fff;
+    --colorBtnSuccessBg-Hover: #1e9c0a;
+    --colorBtnSuccesBorder-Hover: #1f872d;
+    --colorBtnSuccessBg-Active: #197909;
+    --colorBtnSuccesBorder-Active: #13661e;
+
+    /**
+    * Modal Control
+    */
+    --colorModalCtrlDanger: #f2464d;
+    --colorModalCtrlDanger-Hover: #dd2c32;
+    --colorModalCtrlDanger-Active: #bf0e16;
+
+    /**
+    * User Alert Message
+    */
+    --colorUserMsgBg: rgba(255, 255, 255, 0.8);
+    --colorUserMsgContentBg: #1991eb;
+    --colorUserMsgContentText: rgba(255, 255, 255, 0.9); 
+    --colorUserMsgCtrlIcon: rgba(255, 255, 255, 0.7); 
+    --colorUserMsgDangerBg: #ed1c24;
+    --colorUserMsgSuccessBg: #36af47;
+
+    /**
+    * Borders
+    */
+    --defaultRadius: 2px;
+    --defaultBorder: 1px solid var(--colorBorder);
+
+    /**
+    * Typography
+    */
+    --fontFamily: 'Raleway', sans-serif;
+    --rootFontSize: 16px;
+    --lineHeight: 1.4;
+    --letterSpacing: 0.02rem;
+    --wordSpacing: 0.1rem;
+}
+
+/**
+* Root
+*/
+#dpi-forms__root {
+    font-family: var(--fontFamily);
+    line-height: var(--lineHeight);
+    letter-spacing: var(--letterSpacing);
+    font-size: var(--rootFontSize);
+    word-spacing: var(--wordSpacing);
+    background: var(--colorRootBg);
+    color: var(--colorBodyText);
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+
+    & * {
+        box-sizing: inherit;
+
+        &::before,
+        &::after {
+            box-sizing: inherit;
+        }
+    }
+}

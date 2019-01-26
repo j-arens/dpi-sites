@@ -1,0 +1,120 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-family;
+  line-height: $header-line-height;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: $h1-font-size;
+    color: $color-h1;
+}
+
+h2 {
+    font-size: $h2-font-size;
+    color: $color-h2;
+}
+
+h3 {
+    font-size: $h3-font-size;
+    color: $color-h3;
+}
+
+h4 {
+    font-size: $h4-font-size;
+    color: $color-h4;
+}
+
+h5 {
+    font-size: $h5-font-size;
+    color: $color-h5;
+}
+
+h6 {
+    font-size: $h6-font-size;
+    color: $color-h6;
+}
+
+p {
+    margin: 0 0 $base-spacing / 2;
+}
+
+a {
+    color: $color-link-base;
+    text-decoration: none;
+    transition: color 0.1s linear;
+
+    &:hover {
+        color: $color-link-hover;
+    }
+
+    &:focus {
+        color: $color-link-hover;
+        outline: none;
+    }
+}
+
+hr {
+    border-bottom: $base-border;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: $base-spacing 0;
+}
+
+blockquote {
+    border-left: 2px solid $color-border-base;
+    color: lighten($color-font-base, 10%);
+    margin: $base-spacing 0;
+    padding-left: $base-spacing / 2;
+}
+
+cite {
+    color: lighten($color-font-base, 25%);
+    font-style: italic;
+
+    &::before {
+        content: "\2014 \00A0";
+    }
+}
+
+strong {
+    font-weight: bold;
+}
+
+.font-os {
+    font-family: 'Open Sans', sans-serif;
+}
+ 
+ .font-li {
+    font-weight: 300;
+    font-style: italic;
+}
+ 
+ .font-accent {
+    color: $color-accent;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-black {
+    font-weight: 900;
+}

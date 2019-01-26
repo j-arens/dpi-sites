@@ -1,0 +1,172 @@
+@import '../base/_typography';
+
+.home-intro {
+    height: 60em;
+
+    & .row {
+        height: 100%;
+    }
+    
+}
+
+.parish-reveal-container {
+    height: auto;
+    list-style: none;
+    position: relative;
+}
+
+.reveal-tab {
+    visibility: hidden;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--colorWhite);
+}
+
+.reveal-tab.active {
+    visibility: visible;
+    pointer-events: all;
+}
+
+.reveal-tab-content {
+    margin: 7.8em 0;
+
+    & article {
+        height: 100%;
+    }
+
+    & h1 {
+        font-size: 4.5em;
+        color: var(--colorBody);
+    }
+
+    & p {
+        font-size: 1.25em;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.reveal-tab-img {
+    display: none;
+    height: 100%;
+    background-position: right top;
+    background-size: cover;
+    background-color: var(--colorWhite);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.reveal-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.1em;
+
+    & ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    & button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4em;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    & svg {
+        fill: var(--colorBody);
+        width: 100%;
+        pointer-events: none;
+    }
+}
+
+.btn-slide[data-direction="left"] svg path {
+    transform: translateX(-8px);
+}
+
+.btn-slide[data-direction="right"] svg path {
+    transform: translateX(8px);
+}
+
+.reveal-nav-link {
+    display: none;
+    color: var(--colorPrimary);
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0;
+}
+
+@for $i from 1 to 4 {
+    .reveal-tab:nth-child($i) .reveal-nav-link:nth-child($i) {
+        display: block;
+    }
+}
+
+@media screen and (--breakpoint-sm) {
+    .home-intro {
+        height: 46em;
+    }
+}
+
+@media screen and (--breakpoint-md) {
+    .home-intro {
+        height: 41em;
+    }
+
+    .reveal-nav {
+        & ul {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+
+            & li {
+                display: block;
+            }
+        }
+
+        & button {
+            display: none;
+        }
+    }
+
+    .reveal-nav-link {
+        padding: 0 1em;
+        cursor: pointer;
+    }
+
+    .reveal-nav-link.active {
+        color: var(--colorSecondary);
+    }
+}
+
+@media screen and (--breakpoint-xl) {
+    .home-intro {
+        padding: 7.8em 0;
+        height: auto;
+    }
+    
+    .parish-reveal-container {
+        height: 31em;
+    }
+
+    .reveal-tab {
+        padding-right: 1.5em;
+    }
+
+    .reveal-tab-content {
+        margin: 0;
+    }
+
+    .reveal-tab-img {
+        display: block;
+    }
+}

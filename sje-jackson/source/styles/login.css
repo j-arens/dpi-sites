@@ -1,0 +1,55 @@
+@import 'settings/_colors';
+
+body.login {
+    background-color: var(--color-white);
+
+    & div#login h1 a {
+        background-image: url(wp-content/themes/dpi-spine/assets/images/sje-logo.png);
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        height: 8em;
+        width: 14em;
+    }
+
+    & div#login form#loginform {
+        background-color: var(--color-secondary);
+
+        & p label {
+            color: var(--color-font-base);
+            font-weight: 700;
+        }
+
+        & p.forgetmenot {
+
+        }
+
+        & input#user_login,
+        & input#user_pass {
+            font-weight: 400;
+        }
+
+        & input#user_login:focus,
+        & input#user_pass:focus,
+        & input#rememberme:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 2px rgba(0, 42, 92, 0.8);
+        }
+
+        & p.submit input#wp-submit {
+            border-color: var(--color-primary);
+            background: var(--color-primary);
+            box-shadow: 0 0 5px 1px rgba(30, 30, 30, 0.2);
+            text-shadow: none;
+        }
+    }
+
+    & div#login p#nav a {
+        color: var(--color-primary);
+    }
+
+    & div#login p#backtoblog a {
+        color: var(--color-primary);
+    }
+}

@@ -1,0 +1,6 @@
+body:not(.home).page-template-welcome {
+    & .main > article {
+        max-width: initial;
+        padding-bottom: 0;
+    }
+}

@@ -1,0 +1,44 @@
+.footer-bulletin {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    & .dpi_bulletin_cover_wrapper {
+        display: flex;
+        margin-bottom: 0.875em;
+
+        & a {
+            display: block;
+            width: 100%;
+            max-width: 15em;
+            height: 19.6875em;
+        }
+        
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    & .dpi_bulletin_cover_date {
+        display: none;
+    }
+}
+
+.footer-bulletin__ {
+    &bulletins-link {
+        display: block;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (min-width: 78.125em) {
+    .footer-bulletin {
+        & .dpi_bulletin_cover_wrapper {
+            & a {
+                width: 90%;
+                max-width: initial;
+            }
+        }
+    }
+}

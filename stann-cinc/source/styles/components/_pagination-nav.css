@@ -1,0 +1,8 @@
+.pagination-nav,
+.posts-navigation {
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    margin: 32px auto;
+    padding: 0 16px;
+}

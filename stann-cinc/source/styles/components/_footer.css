@@ -1,0 +1,185 @@
+.site-footer {
+    background-color: #373737;
+    color: var(--color-white);
+
+    & .svg-icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 25px;
+        height: 25px;
+        margin-right: 20px;
+    }
+}
+
+.site-footer__ {
+    &container {
+        padding: 50px 16px;
+        text-align: center;
+    }
+
+    &title {
+        font-size: 23px;
+        margin: 0 0 15px 0;
+    }
+
+    &title-center {
+        text-align: center;
+    }
+
+    &contact,
+    &connect,
+    &links,
+    &gallery {
+        margin-bottom: 48px;
+    }
+
+    &contact-wrap {
+        text-align: center;
+    }
+
+    &contact-item + &contact-item {
+        margin-top: 20px;
+    }
+
+    &location {
+        margin-bottom: 16px;
+    }
+
+    &church-name,
+    &address {
+        display: inline;
+    }
+
+    &connect {
+        text-align: center;
+    }
+
+    &connect-item + &connect-item {
+        margin-top: 20px;
+    }
+
+    &connect-link {
+        color: var(--color-white);
+    }
+
+    &links {
+        & .site-footer__links-btn:first-of-type {
+            margin-bottom: 20px;
+        }
+    }
+
+    &links-content {
+        margin-bottom: 8px;
+    }
+
+    &links-btn {
+        display: inline-block;
+        color: var(--color-white);
+        background-color: var(--color-secondary);
+        padding: 10px 16px;
+
+        &:hover {
+            color: var(--color-white);
+            background-color: var(--color-accent);
+        }
+    }
+
+    &gallery-wrap {
+        max-width: 325px;
+        margin: 0 auto 22px auto;
+    }
+}
+
+.site-info {
+    text-align: center;
+    background-color: var(--color-white);
+    padding: 20px 0;
+    color: var(--color-font-base);
+
+    & p {
+        margin: 0;
+
+        &:last-of-type {
+            margin-left: 22px;
+        }
+    }
+
+    & a {
+        color: var(--color-font-base);
+    }
+}
+
+@media screen and (min-width: 620px) {
+    .site-info {
+        @apply --flex-center;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .site-footer__ {
+        &container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &contact,
+        &connect,
+        &links,
+        &gallery {
+            flex: 0 0 40%;
+            margin-bottom: 0;
+        }
+
+        &contact,
+        &connect {
+            margin-bottom: 48px;
+        }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .site-footer__ {
+        &container {
+            justify-content: space-between;
+            text-align: intial;
+        }
+
+        &contact,
+        &connect {
+            margin-bottom: 0;
+        }
+
+        &contact {
+            flex: 0 0 450px;
+        }
+
+        &contact-wrap {
+            display: flex;
+            justify-content: space-between;
+            text-align: initial;
+        }
+
+        &location {
+            margin-bottom: 0;
+        }
+
+        &church-name,
+        &address {
+            display: block;
+        }
+
+        &connect {
+            flex: 0 0 175px;
+            text-align: left;
+        }
+
+        &links {
+            flex: 0 0 180px;
+        }
+
+        &gallery {
+            flex: 0 0 255px;
+        }
+    }
+}

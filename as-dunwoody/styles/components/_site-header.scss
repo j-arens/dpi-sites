@@ -1,0 +1,139 @@
+.site-header {
+    padding-top: 25px;
+    background-color: $color-primary;
+}
+
+.site-header__ {
+    &container {
+        padding-bottom: 25px;
+    }
+
+    &branding {
+        display: block;
+        margin: 0 auto 32px auto;
+        max-width: 400px;
+        max-height: 105px;
+        width: 100%;
+        height: 100%;
+    }
+
+    &logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    &quick-links {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &quick-link {
+        color: $color-white;
+    }
+
+    &search-container {
+        max-width: 345px;
+        width: 100%;
+        margin: 0 auto;
+
+        form {
+            position: relative;
+        }
+
+        input[type="search"] {
+            border-radius: 0;
+            background-color: $color-primary;
+            border: 1px solid $color-white;
+            padding: 10px 7px;
+            color: $color-white;
+
+            &::placeholder {
+                color: $color-white;
+            }
+        }
+
+        input[type="submit"] {
+            position: absolute;
+            min-width: 40px;
+            top: 0;
+            right: 10px;
+            text-indent: -9999px;
+            background-color: transparent;
+            background-image: url(assets/icons/search.svg);
+            background-size: 60%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.4);
+        background-color: $color-secondary;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .site-header {
+        &__quick-links {
+            text-align: initial;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__quick-link-item:not(:last-of-type) {
+            margin-right: 10px;
+        }
+
+        &__quick-link-item + &__quick-link-item {
+            border-left: 1px solid $color-white;
+            padding-left: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .site-header {
+        &__container {
+            display: flex;
+        }
+
+        &__half {
+            flex: 0 0 50%;
+            display: flex;
+            width: 50%;
+
+            &:first-of-type {
+                justify-content: flex-start;
+            }
+
+            &:last-of-type {
+                align-items: flex-end;
+                flex-direction: column;
+            }
+        }
+
+        &__branding {
+            margin: 0;
+        }
+
+        &__quick-links {
+            justify-content: initial;
+        }
+
+        &__search-container {
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .site-header {
+        &__nav-container {
+            display: block;
+        }
+    }
+}

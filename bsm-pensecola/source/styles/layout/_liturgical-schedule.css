@@ -1,0 +1,16 @@
+body.page-id-206 {
+    & p {
+        margin: 0 !important;
+    }
+
+    & article img {
+        margin-top: 0;
+        margin-bottom: 18px;
+    }
+
+    & .col--3:nth-of-type(2) {
+        & h4:last-of-type {
+            margin-top: 26px;
+        }
+    }
+}

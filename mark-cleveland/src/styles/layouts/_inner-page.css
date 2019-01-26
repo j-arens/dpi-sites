@@ -1,0 +1,65 @@
+body.page,
+body.single,
+body.archive {
+
+  & .main {
+    padding: 5em 1em;
+  }
+
+  & .page-header h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2.75em;
+    margin-bottom: 2em;
+  }
+
+  & .main > article {
+    max-width: 77.8em;
+    margin: 0 auto;
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    & *[class*="su-"] {
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    & .su-column {
+      margin: 0 0 2em 0;
+    }
+
+    & li,
+    & a,
+    & p {
+      font-weight: 400;
+    }
+
+    & ul,
+    & dl,
+    & ol {
+      padding-left: 2rem;
+      margin-bottom: 1em;
+
+      & ul,
+      & ol {
+        list-style: lower-alpha;
+      }
+
+      & li,
+      & dt,
+      & dd {
+        margin-bottom: initial;
+      }
+    }
+  }
+
+  @media screen and (--breakpoint-md) {
+    & .main {
+      padding: 8.3em 1em;
+    }
+  }
+}

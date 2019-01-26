@@ -1,0 +1,226 @@
+.site-footer {
+    position: relative;
+    background: url(assets/images/site-footer-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 4em 0 2em 0;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.95;
+    }
+
+    .row {
+        margin: 0 auto;
+        padding: 0 1em;
+
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+
+    &__col {
+        position: relative;
+    }
+
+    &__col + &__col {
+        margin-top: 2em;
+    }
+
+    &__links {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    &__link-logo {
+        max-width: 20em;
+        width: 100%;
+        height: 110px;
+        display: block;
+        margin: 0 auto 1.25em auto;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &__links-social {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__links-social-item + &__links-social-item {
+        margin-left: 0.625em;
+    }
+
+    &__links-social-link {
+        display: inline-block;
+        width: 1.5625em;
+        height: 1.5625em;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: $color-white;
+            transition: all .2s ease;
+        }
+
+        &:hover {
+            svg {
+                fill: $color-accent;
+            }
+        }
+    }
+
+    &__widget {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1em;
+
+        svg {
+            width: 2.5em;
+            height: 2.5em;
+            margin-bottom: 1.875em;
+        }
+    }
+
+    &__widget-title,
+    &__contact-link {
+        color: $color-white;
+        font-size: 1.1875em;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__contact-link {
+        &:hover {
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+
+    &__widget-title {
+        margin: 0;
+    }
+}
+
+.site-info {
+    width: 100%;
+    max-width: 75rem;
+    margin: 2.5rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    color: $color-white;
+    font-size: 0.8125em;
+    padding: 0 1rem;
+
+    p {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.site-info__diocesan-link {
+    color: $color-white;
+
+    &:hover {
+        color: $color-primary-lt;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .site-footer {
+        &__col + &__col {
+            margin-top: 0;
+        }
+        
+        &__col {
+            width: 50%;
+            float: left;
+
+            &:nth-of-type(n+4) {
+                margin-top: 2em;
+            }
+        }
+
+        &__links {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .site-footer {
+        &__widget {
+            display: inline-flex;
+        }
+    }
+
+    .site-info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .site-footer {
+        &__link-logo {
+            margin: 0 auto 1.25em auto;
+        }
+
+        &__widget {
+            display: flex;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .site-footer {
+        &__col {
+            width: 20%;
+
+            &:nth-of-type(n+4) {
+                margin-top: 0;
+            }
+        }
+
+        &__links {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .site-footer {
+        .row {
+            display: block;
+            padding: 0;
+        }
+    }
+}

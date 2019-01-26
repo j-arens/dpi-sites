@@ -1,0 +1,91 @@
+/**** FOOTER ****/
+
+#colophon {
+  background: $color-primary;
+  padding-top: 4em;
+
+  strong,
+  p,
+  a {
+    color: white;
+  }
+
+  strong,
+  hr {
+    margin-bottom: .5em;
+  }
+
+  hr {
+    border: none;
+    width: 100%;
+    height: 2px;
+    background: $color-white;
+    display: inline-block;
+  }
+
+  ul {
+    lost-utility: clearfix;
+    margin-bottom: 4em;
+  }
+
+  li {
+    lost-column: 1/3 3;
+    list-style: none;
+
+    svg {
+      max-width: 1.5em;
+      fill: $color-white;
+      vertical-align: -.5em;
+      margin-right: .5em;
+    }
+
+    a {
+      display: block;
+      margin: .5em 0;
+    }
+
+    p {
+      margin: .5em 0;
+    }
+  }
+
+  .site-info {
+    background: $color-white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 20em;
+
+    p,
+    a {
+      color: $color-black;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #colophon {
+    .site-info {
+      flex-direction: column;
+      padding: 1em 0;
+
+      p:first-child {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #colophon {
+    li {
+      lost-column: 1/1 1;
+      margin-bottom: 2em;
+    }
+  }
+}

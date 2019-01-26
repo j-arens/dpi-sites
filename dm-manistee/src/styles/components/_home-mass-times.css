@@ -1,0 +1,87 @@
+@import '../variables/_colors';
+
+.home-mass-times {
+    padding: 4.375em 0 3.75em 0;
+    background-image: url(assets/images/mass-times-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: var(--colorPrimary);
+        opacity: 0.9;
+    }
+
+    & ul {
+        position: relative;
+        z-index: 2;
+        list-style: none;
+    }
+
+    & P {
+        line-height: 1;
+    }
+}
+
+.mass-time-slot {
+    text-align: center;
+
+    &:not(:last-child) {
+        margin-bottom: 6em;
+    }
+}
+
+.mass-title,
+.mass-day {
+    font-weight: 300;
+    margin: 0 0 1.25rem 0;
+}
+
+.mass-title {
+    font-size: 3em;
+}
+
+.mass-day {
+    font-size: 1.875em;
+}
+
+.mass-time {
+    margin: 0;
+    font-size: 2.62em;
+    max-width: 15rem;
+    margin: 0 auto;
+}
+
+.mass-title,
+.mass-day,
+.mass-time {
+    color: var(--colorWhite);
+}
+
+@media screen and (--breakpoint-md) {
+    .mass-time-slot {
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+    
+    .mass-time-slot:first-child,
+    .mass-time-slot:nth-child(2) {
+        margin-bottom: 6em;
+    }
+}
+
+@media screen and (--breakpoint-xl) {
+    .mass-time-slot:first-child,
+    .mass-time-slot:nth-child(2) {
+        margin-bottom: 0;
+    }
+}

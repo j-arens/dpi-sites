@@ -1,0 +1,230 @@
+.featured-links {
+    background-color: $color-white;
+
+    &__container {
+        padding: 60px 1em;
+    }
+
+    &__root {
+        border: 3px solid $color-primary-lt;
+    }
+
+    &__header {
+        background-color: $color-primary-lt;
+        padding: 25px 16px 25px 30px;
+    }
+
+    &__heading {
+        font-size: 36px;
+        line-height: 1;
+        margin: 0;
+        color: $color-accent-tertiary;
+    }
+
+    &__portals,
+    &__content-container {
+        position: relative;
+    }
+
+    &__content-container {
+        height: 630px;
+    }
+
+    &__portal {
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color-primary-lt, 0.8);
+        }
+
+        &:last-of-type {
+            border-bottom: 3px solid $color-primary-lt;
+        }
+
+        &--active {
+            &::after {
+                background-color: rgba($color-accent-tertiary-dk, 0.7);
+            }
+
+            .featured-links__portal-title {
+                color: $color-primary-lt;
+            }
+        }
+    }
+
+    &__portal + &__portal {
+        border-top: 3px solid $color-primary-lt;
+    }
+
+    &__portal-title {
+        position: relative;
+        z-index: 1;
+        font-size: 36px;
+        margin: 0;
+        color: $color-accent-tertiary;
+    }
+    
+
+    &__portal-card {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-accent-tertiary-lt;
+        padding: 70px 16px;
+
+        &--active {
+            z-index: 1;
+        }
+    }
+
+    &__portal-content {
+        max-height: 260px;
+        height: 100%;
+        margin-bottom: 30px;
+        overflow-y: auto;
+
+        ul,
+        dl,
+        ol {
+            padding-left: 2rem;
+            margin-bottom: 1em;
+
+            li + li {
+                margin-top: 1em;
+            }
+        }
+
+        ul {
+            list-style: disc;
+
+            ul {
+                list-style: square;
+            }
+        }
+
+        ol {
+            list-style: upper-roman;
+
+            ol {
+                list-style: lower-alpha;
+            }
+        }
+
+        li,
+        dt,
+        dd {
+            margin-bottom: initial;
+        }
+    }
+
+    &__portal-card-title {
+        display: block;
+        line-height: 1;
+        color: $color-primary;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__portal-link {
+        display: block;
+    }
+
+    &__portal-link + &__portal-link {
+        margin-top: 16px;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .featured-links {
+        &__content-container {
+            height: 500px;
+        }
+
+        &__portals {
+            display: flex;
+            flex-wrap: wrap;
+            height: 320px;
+        }
+
+        &__portal + &__portal {
+            border-top: none;
+        }
+
+        &__portal {
+            flex: 0 0 50%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:nth-of-type(even) {
+                border-left: 3px solid $color-primary-lt;
+            }
+
+            &:nth-of-type(3),
+            &:last-of-type {
+                border-top: 3px solid $color-primary-lt;
+            }
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+
+        &__portal-card {
+            padding: 70px 70px 60px 70px;
+        }
+
+        &__portal-links {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__portal-link {
+            display: inline-block;
+        }
+
+        &__portal-link + &__portal-link {
+            margin-left: 25px;
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .featured-links {
+        &__flex-container {
+            display: flex;
+            height: 530px;
+        }
+
+        &__portals,
+        &__content-container {
+            flex: 0 0 50%;
+        }
+
+        &__content-container,
+        &__portals {
+            height: initial;
+        }
+
+        &__portals {
+            border-right: 3px solid $color-primary-lt;
+        }
+    }
+}

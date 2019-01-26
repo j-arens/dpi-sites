@@ -1,0 +1,36 @@
+/* ============================================================ */
+/*                           Homepage                           */
+/* ============================================================ */
+
+.featured-area{
+	display:flex;
+	justify-content:center;
+	max-width:1200px;
+	margin:40px auto 0px auto;
+
+}
+.feature{
+	text-align:center;
+	min-height:200px;
+	width:33%;
+	margin:0px 20px;
+	padding-bottom:60px;
+	border-bottom: 2px solid black;
+}
+.feature h3{
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+	margin-top:0;
+	margin-bottom:50px;
+	padding:5px 0px;
+}
+.field-wrapper{
+	min-height:150px;
+}
+.wp-image-50{width:100%;max-width:840px;}
+@media (max-width: 720px) {
+	.featured-area{display:block;width:100%;}
+	.feature{width:100%;margin:0;}
+	.feature-one{border-bottom:none;}
+	.feature-two{border-bottom:none;}
+}

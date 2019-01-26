@@ -1,0 +1,82 @@
+/*
+Theme Name: Twenty Sixteen
+Description: Global Styles for older IE versions (previous to IE10).
+*/
+
+ #site-navigation {
+        border-top: 1px solid #777;
+        border-bottom: 1px solid #777;
+    }
+    
+    #site-navigation .nav-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+    
+    #menu-primary li {
+        display: inline-block;
+    }
+
+    #menu-primary li .sub-menu li {
+        display: block;
+    }
+    
+    ul.primary-menu {
+        list-style-type: none;
+    }
+
+    ul.primary-menu a {
+        text-decoration: none;
+        display: block;
+        padding: 14px;
+        color: #333;
+    }
+
+    ul.sub-menu {
+        display: none;
+        position: absolute;
+        list-style-type: none;
+        border: 1px solid #333;
+        border-top: none;
+        background: #fff;
+        z-index: 9999;
+    }
+
+    ul.primary-menu li:hover a {
+        background: #333;
+        color: #fff;
+    }
+
+    ul.primary-menu li:hover li a {
+        color: #fff;
+    }
+
+    ul.primary-menu li:hover li a:hover {
+        background: #fff;
+        color: #333;
+    }
+
+    ul.primary-menu li:hover ul.sub-menu {
+        display: block;
+    }
+
+    #menu-toggle, .dropdown-toggle {
+        display: none;
+    }
+
+    ul.sub-menu a {
+        display: block;
+        text-align: left;
+        width: 160px;
+    }
+
+#site-navigation .search-form {
+    float: right;
+}
+
+.header-social {
+    float: right;
+}

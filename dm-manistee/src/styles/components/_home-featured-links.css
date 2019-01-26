@@ -1,0 +1,75 @@
+@import '../variables/_colors';
+
+.home-featured-links {
+    padding: 0;
+
+    & .row {
+        height: 100%;
+        margin: 0;
+    }
+
+    & .featured-link {
+        height: 6.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:first-of-type {
+            background: var(--colorPrimary);
+
+            & .slide-bg-fx {
+                background: var(--colorSecondary);
+            }
+        }
+
+        &:nth-of-type(2) {
+            background: var(--colorPrimaryLt);
+
+            & .slide-bg-fx {
+                background: var(--colorSecondaryLt);
+            }
+        }
+
+        &:last-of-type {
+            background: var(--colorPrimaryXlt);
+
+            & .slide-bg-fx {
+                background: var(--colorSecondaryXlt);
+            }
+        }
+
+        & .featured-link-icon {
+            display: inline-block;
+            background-position: center center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-right: 1em;
+            width: 3.75em;
+            height: 100%;
+        }
+
+        & p,
+        & svg,
+        & .featured-link-icon {
+            position: relative;
+            z-index: 1;
+        }
+
+        & p {
+            color: var(--colorWhite);
+            font-size: 2.25em;
+            margin: 0;
+        }
+
+        & svg {
+            fill: var(--colorWhite);
+            width: 3.75em;
+            margin-right: 1em;
+        }
+    }
+}

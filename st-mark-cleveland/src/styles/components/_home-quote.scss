@@ -1,0 +1,21 @@
+.quote {
+  background: $color-secondary;
+  text-align: center;
+  padding: 1.09em 0;
+
+  p {
+    display: inline-block;
+    color: $color-white;
+    position: relative;
+    font-size: 1.125em;
+    font-weight: 500;
+  }
+
+  .meta {
+    font-size: .8em;
+    font-weight: 300;
+    position: absolute;
+    right: 0;
+    bottom: -100%;
+  }
+}

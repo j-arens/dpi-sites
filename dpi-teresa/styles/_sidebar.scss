@@ -1,0 +1,113 @@
+/**** SIDEBAR ****/
+
+#secondary {
+    flex: 0 0 20%;
+    align-self: flex-start;
+    background: white;
+    border-radius: 6px;
+    max-width: 25%;
+    padding: 0 0 1em 1.5em;
+    border: none;
+    margin-top: 1em;
+    opacity: 0.8;
+    overflow: hidden;
+    a {
+        color: black;
+        text-decoration: none;
+        &:visited {
+            color: black;
+        }
+    }
+    .widget {
+        margin: 0;
+    }
+    .widget-title {
+        color: $primary;
+        margin-bottom: 0;
+    }
+    section {
+        margin-left: 1em;
+    }
+
+    .event-posts {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          position: relative;
+          width: 70%;
+          padding-left: 1em;
+          margin-left: -1em;
+          border-radius: 6px;
+
+          &:hover {
+            background: $primary;
+
+            a {
+              color: white !important;
+            }
+          }
+
+          &::after {
+            content:'';
+            position: absolute;
+            top: 0;
+            right: -15px;
+            height: 100%;
+            width: 40px;
+            background: white;
+            transform: rotate(45deg);
+          }
+        }
+        a {
+            display: inline-block;
+            width: 100%;
+            padding: .5em 0;
+            text-decoration: none;
+            color: black;
+            &:hover {
+                color: $primary;
+            }
+            &:visited {
+                color: black;
+            }
+        }
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        display: none;
+      }
+
+      a {
+        padding: .5em 0 .5em 1em;
+        border-radius: 6px;
+        position: relative;
+        width: 93%;
+
+        &:hover {
+          background: $primary;
+          color: white;
+        }
+
+        &::after {
+          content:'';
+          position: absolute;
+          top: 0;
+          right: -15px;
+          height: 100%;
+          width: 40px;
+          background: white;
+          transform: rotate(45deg);
+        }
+      }
+    }
+}
+
+.textwidget p {
+    margin: 0;
+}

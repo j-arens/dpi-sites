@@ -1,0 +1,93 @@
+/**** LAYOUT ****/
+
+.container {
+  padding: 0 1rem;
+  height: 100%;
+  max-width: calc(1300px + 1rem);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.image-container {
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: $color-primary;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.cta {
+  background: $color-primary;
+  padding: 1rem 0 !important;
+  text-align: center;
+
+  p {
+    display: inline;
+    color: white;
+    font-size: 20px;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .cta {
+
+    p {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.single #content,
+.error404 #content,
+.page #content,
+.archive #content,
+.search #content {
+  display: flex;
+  height: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+#content {
+  overflow: hidden;
+}
+
+#primary {
+  flex: 0 0 calc(70% - 2rem);
+  margin-right: 1rem;
+  padding: 2rem 1rem;
+    // width: 100%;
+}
+
+#main article {
+  padding-top: 2em;
+}
+
+article img {
+  margin-bottom: 1em;
+}
+
+.entry-content {
+  // padding-top: 2em;
+}
+
+.archive .entry-title {
+  color: $color-primary;
+}
+
+@media screen and (max-width: 950px) {
+  #primary {
+    flex: 0 0 100%;
+  }
+}

@@ -1,0 +1,5 @@
+body.contact {
+    & #dpi-maps-root {
+        height: 34em !important;
+    }
+}

@@ -1,0 +1,24 @@
+/* colors */
+$color-primary: #8b1d1e;
+$color-primary-dk: #620505;
+$color-primary-lt: #B54444;
+
+$color-theme-gray: #e3e3e3;
+
+$color-secondary: #f4c141;
+$color-secondary-dk: #E2A814;
+$color-secondary-lt: #FFD466;
+
+$color-neutral: #efefef;
+$color-neutral-md: darken($color-neutral, 50%);
+$color-neutral-dk: #222;
+
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-text: #333333;
+$color-link: $color-primary;
+
+$primary-gradient: radial-gradient(ellipse at center, $color-primary 0%, $color-primary 44%,#6d0019 100%);
+$secondary-gradient: radial-gradient(ellipse at center, $color-secondary 0%, $color-secondary 44%,#c5900a 100%);

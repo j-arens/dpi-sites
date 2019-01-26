@@ -1,0 +1,79 @@
+.site-footer {
+    background-color: var(--color-primary);
+}
+
+.site-footer__ {
+    &container {
+        display: flex;    
+    }
+    
+    &widget {
+        flex: 0 0 calc(33.3333% + 2em);
+        min-height: 17.1875em;
+        padding: 2.5em 1em;
+        color: var(--color-white);
+    }
+    
+    &logo-link {
+        display: block;
+        width: 18.75em;
+        height: 100%;
+        background-image: url(assets/images/logo-white.svg);
+        background-size: cover;
+        background-position-x: -11px;
+        background-repeat: no-repeat;
+    }
+    
+    &title {
+        font-size: 1.75em;
+        font-weight: 700;
+        margin-bottom: 1.5625rem;
+    }
+    
+    &street,
+    &csz,
+    &phone {
+        line-height: 1;
+        margin: 0 0 0.2em 0;
+    }
+    
+    &phone {
+        margin-top: 1em;
+    }
+    
+    &link {
+        display: block;
+        color: var(--color-white);
+        
+        &:hover,
+        &:active {
+            color: var(--color-secondary);
+        }
+    }
+    
+    &link + &link {
+        margin-top: 1em;
+    }
+}
+
+.site-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-primary-dk);
+    color: var(--color-white);
+    font-size: 0.875em;
+    
+    & p {
+        margin: 0;
+    }
+    
+    & a {
+        color: var(--color-white);
+        
+        &:hover {
+            color: var(--color-secondary);
+        }
+    }
+}

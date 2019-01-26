@@ -1,0 +1,180 @@
+@import '../variables/_index';
+
+body.page-template-template-contact-page {
+  & .wrap {
+    min-height: 50vh;
+    gg: columns(100%);
+  }
+
+  & .main {
+    padding-top: 5.625em;
+    padding-left: 0;
+    max-width: 75vw;
+    width: 100%;
+    margin: 0 auto !important;
+
+    & > article {
+      max-width: none;
+    }
+
+    & .info::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    & .contact-info,
+    & .contact-form {
+      width: 50%;
+      float: left;
+    }
+
+    & .contact-info li {
+      list-style: none;
+      margin-bottom: 1em;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        margin-right: 1em;
+        background-color: var(--colorPrimary);
+        background-size: 50%;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    & .email::before {
+      background-image: url(assets/icons/email.svg);
+    }
+
+    & .phone::before {
+      background-image: url(assets/icons/smartphone.svg);
+    }
+
+    & .staff-dir::before {
+      background-image: url(assets/icons/info.svg);
+    }
+
+    & .address {
+      &::before {
+        vertical-align: top !important;
+        background-image: url(assets/icons/map-marker.svg);
+      }
+
+      & div {
+        display: inline-block;
+      }
+
+      & p {
+        margin-bottom: .5em;
+      }
+    }
+
+    & .map {
+      height: 25em;
+    }
+
+    & .iframe-container,
+    & iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    & .wpcf7 {
+      margin-bottom: 4em;
+    }
+
+    & input:not([type="submit"]),
+    & textarea {
+      width: 100%;
+      border: 1px solid var(--colorNeutral);
+      padding: .5rem 0 .5rem 0.9375rem;
+
+      &::placeholder {
+        font-style: italic;
+        opacity: 0.7;
+      }
+    }
+
+    & input:not([type="submit"]):not([type="tel"]) {
+      margin-bottom: 1rem;
+    }
+
+    & textarea {
+      height: 15em;
+      margin-bottom: 0.8rem;
+    }
+
+    & input[type="submit"] {
+      border: 2px solid transparent;
+      background: var(--colorPrimary);
+      color: var(--colorWhite);
+      transition: all .2s ease;
+      padding: 0.625rem 2.5rem;
+      width: 100%;
+
+      &:hover {
+        border-color: var(--colorPrimary);
+        background: var(--colorWhite);
+        color: var(--colorPrimary);
+      }
+    }
+
+    // invalid styles
+    & .wpcf7-not-valid-tip {
+      display: none;
+    }
+
+    & .wpcf7-not-valid {
+      box-shadow: 0 0 0 2px #de8888;
+    }
+
+    & .wpcf7-validation-errors {
+      position: absolute;
+      top: -2em;
+      left: 0;
+      padding: .25em;
+      color: #fff;
+      background: $color-error;
+    }
+
+    & .your-email input.wpcf7-not-valid {
+
+      &::before {
+        content: 'Not a valid email address';
+        display: block;
+      }
+    }
+
+    // valid styles
+    & .wpcf7-mail-sent-ok {
+      position: absolute;
+      top: -2em;
+      left: 0;
+      padding: .25em;
+      color: #fff;
+      background: $color-success;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    & .main {
+      & .contact-info {
+        margin-bottom: 4em;
+      }
+
+      & .contact-info,
+      & .contact-form {
+        float: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

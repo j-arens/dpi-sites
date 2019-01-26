@@ -1,0 +1,79 @@
+/**** HOMEPAGE ****/
+
+#splash {
+
+	strong {
+		margin-right: 1em;
+		font-size: 1.5em;
+	}
+
+	.info {
+		text-align: center;
+		padding: 4em 0;
+
+		p {
+			padding: .5em 0;
+		}
+	}
+
+	.link-boxes {
+		text-align: center;
+	}
+
+	.link-box {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 2em 4em 2em;
+		position: relative;
+
+		ul {
+			text-align: left;
+			color: white;
+
+			li {
+				padding: .25em 0;
+			}
+
+			img {
+				width: 20px;
+				margin-right: .5em;
+				vertical-align: middle;
+			}
+
+			a {
+				color: white;
+
+				&:hover {
+					color: blue;
+				}
+			}
+		}
+	}
+
+	.site-link {
+		display: inline-block;
+		margin-bottom: 1em;
+
+		&:hover {
+			transform: scale(1.005);
+		}
+	}
+
+	.site-link img {
+		max-height: 320px;
+		max-width: 500px;
+		width: 100%;
+		border: 4px solid white;
+	}
+}
+
+@media screen and (max-width: 1118px) {
+	#splash {
+
+		.link-box {
+			// margin-left: 0;
+			// margin-right: 0;
+			// margin-bottom: 4em;
+		}
+	}
+}

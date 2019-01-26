@@ -1,0 +1,20 @@
+.parish-info {
+
+  li,
+  a {
+    font-size: 1.125em;
+  }
+
+  li {
+    list-style: none;
+    color: $color-secondary;
+  }
+
+  ul:first-of-type li:first-child {
+    margin-bottom: .25em;
+  }
+
+  ul + ul {
+    margin-top: 2.18em;
+  }
+}

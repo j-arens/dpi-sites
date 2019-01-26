@@ -1,0 +1,26 @@
+/* ============================================================ */
+/*                            Header                            */
+/* ============================================================ */
+
+#masthead .header-wrap {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header-social {
+    display: flex;
+    justify-content: center;
+}
+
+.header-social a {
+    margin: 5px;
+}
+
+.header-social img {
+    max-width: 32px;
+    max-height: 32px;
+}

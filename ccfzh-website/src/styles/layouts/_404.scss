@@ -1,0 +1,51 @@
+.error404 {
+
+  main {
+
+    .bg {
+      background-image: url('assets/images/404_bg_logo.svg');
+      background-repeat: no-repeat;
+      background-position: 95%;
+      background-size: 35%;
+      min-height: 50vh;
+      padding-top: 7.5em;
+    }
+
+    p {
+      font-size: 2em;
+      font-family: 'Droid Serif', serif;
+      color: $color-main-heading;
+    }
+
+    input {
+      font-family: 'Droid Serif', serif;
+      font-size: 1.125em;
+    }
+
+    input:not([type="submit"]) {
+      min-width: 20vw;
+      border: 1px solid $input-border;
+      color: $color-text-gray;
+      padding: 0.625rem 0 0.625rem 0.9375rem;
+
+      &::placeholder {
+        font-style: italic;
+        opacity: 0.7;
+      }
+    }
+
+    input[type="submit"] {
+      border: 1px solid transparent;
+      background: $color-primary;
+      color: $color-white;
+      transition: all .2s ease;
+      padding: 0.625rem 2.5rem;
+
+      &:hover {
+        border-color: $color-primary;
+        background: $color-white;
+        color: $color-primary;
+      }
+    }
+  }
+}

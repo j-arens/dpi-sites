@@ -1,0 +1,17 @@
+@mixin btn-base() {
+    display: inline-block;
+    border: 1px solid $color-accent-secondary;
+    background-color: $color-accent-tertiary;
+    color: $color-accent-secondary;
+    padding: 10px 35px;
+}
+
+.btn {
+    @include btn-base();
+
+    &--center {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

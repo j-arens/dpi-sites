@@ -1,0 +1,27 @@
+/**** COLORS ****/
+
+// primary
+
+$color-primary: #443b31;
+$color-primary-lt: #80705F;
+$color-primary-dk: #41311F;
+// $color-primary-dk: darken($color-primary, 20%);
+// $color-primary-lt: lighten($color-primary, 20%);
+
+// secondary
+
+$color-secondary: #23252F;
+$color-secondary-lt: #444758;
+$color-secondary-dk: #181B2C;
+// $color-secondary-dk: darken($color-secondary, 20%);
+// $color-secondary-lt: darken($color);
+
+// neutrals
+
+$color-neutral: #efefef;
+$color-neutral-md: darken($color-neutral, 50%);
+$color-neutral-dk: #222;
+$color-white: #fff;
+
+// lighter black for body text - per kevin
+$color-black: lighten(black, 30%);

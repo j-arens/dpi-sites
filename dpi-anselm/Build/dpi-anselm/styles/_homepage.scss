@@ -1,0 +1,124 @@
+/* ============================================================ */
+
+
+/*                           Homepage                           */
+
+
+/* ============================================================ */
+
+
+/*links grid*/
+
+.featured-links {
+    width: calc(100% + 5em);
+    height: auto;
+    max-width: calc(1400px + 5em);
+    padding-left: 2.5em;
+    margin: 1em auto 2em auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.link-container {
+    height: 200px;
+    flex: 1 1 300px;
+    margin: 2.5em 2.5em 0 0;
+}
+
+.link-container:first-child {
+    background: url('images/links/pray-link.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.link-container:nth-child(2) {
+    background: url('images/links/serve-link.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.link-container:nth-child(3) {
+    background: url('images/links/learn-link.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.link-container:nth-child(4) {
+    background: url('images/links/give-link.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.link-container:nth-child(5) {
+    background: url('images/links/register-link.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.link-container:nth-child(6) {
+    background: url('images/links/bulletins-link.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.link-container:nth-child(7) {
+    background: url('images/links/homilies-link.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.link-container:last-child {
+    background: url('images/links/contact-link.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    background: rgba(101, 49, 42, 0.9);
+    transition: all .3s ease-out;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.link a:hover {
+    height: 100%;
+}
+
+
+/*makes link grid repsonsive*/
+
+@media screen and (max-width: 1480px) {
+    .featured-links {
+        max-width: 1400px;
+        width: 100%;
+    }
+    .link-container {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .link a {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 563px) {
+    .link-container {
+        max-width: 80%;
+    }
+    .slider {
+        display: none;
+    }
+}

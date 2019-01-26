@@ -1,0 +1,36 @@
+body.archive .main {
+    padding: 0 1em;
+    
+    & article:first-of-type {
+        margin-top: 2em;
+    }
+
+    & article {
+        max-width: 50.125em;
+        padding: 2em;
+        background-color: var(--color-neutral);
+
+        & img {
+            margin: 1em 0;
+        }
+    }
+
+    & article + article {
+        margin-top: 2em;
+    }
+
+    & article:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    & .entry-title {
+        margin-bottom: 0.5rem;
+    }
+
+    & .entry-time {
+        display: block;
+        font-size: 1.25em;
+        margin-bottom: 0.75rem;
+        color: var(--color-primary);
+    }
+}

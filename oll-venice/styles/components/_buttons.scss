@@ -1,0 +1,79 @@
+@mixin btn() {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    padding: 20px 40px;
+    line-height: 1;
+    transition: all .2s ease;
+}
+
+.btn {
+    @include btn();
+    border: 3px solid $color-primary;
+    color: $color-secondary;
+
+    &:hover {
+        background-color: $color-secondary;
+        color: $color-white;
+    }
+}
+
+.btn-inverse {
+    @include btn();
+    border: 3px solid $color-white;
+    color: $color-accent;
+
+    &:hover {
+        background-color: $color-secondary;
+        color: $color-white;
+    }
+}
+
+.btn-gscale {
+    @include btn();
+    border: 3px solid $color-white;
+    color: $color-white;
+    padding: 10px 20px;
+
+    &:hover {
+        background-color: $color-secondary;
+        color: $color-white;
+    }
+}
+
+@mixin pulse-btn() {
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: center center;
+        height: 250%;
+        width: 100%;
+        border-radius: 50%;
+        opacity: 0;
+    }
+    &:hover {
+        &::after {
+            animation: pulse 0.8s 1;
+        }
+    }
+}
+
+.pulse-btn-lt {
+    @include pulse-btn();
+    &::after {
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+
+.pulse-btn-dk {
+    @include pulse-btn();
+    &::after {
+        background: rgba(0, 0, 0, 0.1);
+    }
+}

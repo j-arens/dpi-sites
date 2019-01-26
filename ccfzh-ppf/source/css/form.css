@@ -1,0 +1,490 @@
+@import '_base';
+
+/**
+* Form
+*/
+:--namespace\ {
+
+    /**
+    * General layout
+    */
+    &wrapper {
+        max-width: 60em;
+        width: 100%;
+        margin: 4em auto;
+        padding: 2em;
+        border-radius: var(--defaultRadius);
+        background: var(--colorWrapperBg);
+    }
+
+    &form-header {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2em;
+        border-bottom: var(--defaultBorder);
+    }
+
+    &form-header_logo {
+        margin: 0 auto 2em auto;
+        max-width: 10em;
+        height: 10em;
+        width: 100%;
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &form-header_content {
+        font-size: 1.25em;
+    }
+
+    &fields,
+    &dynamic-modals {
+        border-bottom: var(--defaultBorder);
+    }
+
+    &fields-heading,
+    &dynamic-modals_heading {
+        display: block;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    &fields-heading {
+        margin: 3rem 0;
+    }
+
+    &dynamic-modals_heading {
+        margin: 3rem 0 0 0;
+    }
+
+    &fields-wrapper,
+    &dynamic-modal_wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &fields-wrapper {
+        justify-content: center;
+    }
+
+    &dynamic-modal_wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 24em;
+        max-height: 33.5em;
+        border: var(--defaultBorder);
+        border-radius: 2px;
+        margin-bottom: 3em;
+        padding: 1em 1em 0 1em;
+
+        & :--namespace\label-full_width {
+            margin: 1.5em 0;
+        }
+
+        & :--namespace\label-full_width + :--namespace\label-full_width {
+            margin-top: 0;
+        }
+    }
+
+    /**
+    * Form elements
+    */
+    &label {
+        font-size: 1.1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.5em;
+    }
+
+    &label-full_width {
+        margin: 3em 0;
+    }
+
+    &label-full_width + &label-full_width {
+        margin-top: 0;
+    }
+
+    &label-checkbox {
+        display: block;
+
+        & :--namespace\checkbox,
+        & :--namespace\label-title {
+            display: inline;
+            vertical-align: middle;
+        }
+
+        &:last-of-type {
+            margin-bottom: 1.5em;
+        }
+    }
+
+    &label-title {
+        margin-bottom: .5em;
+    }
+
+    &input {
+        border: var(--defaultBorder);
+        line-height: 2;
+        font-size: 1em;
+        padding-left: .5em;
+        border-radius: 2px;
+        color: var(--colorBodyText);
+        max-width: 350px;
+        width: 100%;
+
+        &:focus {
+            outline: 0;
+            border-color: var(--colorInputActive);
+        }
+        
+        &::placeholder {
+            font-style: italic;
+            font-size: 1rem;
+        }
+    }
+
+    &input-currency {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgZmlsbD0iIzFiYjkzNCIgc3Ryb2tlPSIjMWJiOTM0IiBzdHJva2Utd2lkdGg9IjEiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTExLjggMTAuOWMtMi4yNy0uNTktMy0xLjItMy0yLjE1IDAtMS4wOSAxLjAxLTEuODUgMi43LTEuODUgMS43OCAwIDIuNDQuODUgMi41IDIuMWgyLjIxYy0uMDctMS43Mi0xLjEyLTMuMy0zLjIxLTMuODFWM2gtM3YyLjE2Yy0xLjk0LjQyLTMuNSAxLjY4LTMuNSAzLjYxIDAgMi4zMSAxLjkxIDMuNDYgNC43IDQuMTMgMi41LjYgMyAxLjQ4IDMgMi40MSAwIC42OS0uNDkgMS43OS0yLjcgMS43OS0yLjA2IDAtMi44Ny0uOTItMi45OC0yLjFoLTIuMmMuMTIgMi4xOSAxLjc2IDMuNDIgMy42OCAzLjgzVjIxaDN2LTIuMTVjMS45NS0uMzcgMy41LTEuNSAzLjUtMy41NSAwLTIuODQtMi40My0zLjgxLTQuNy00LjR6Ii8+PC9zdmc+);
+            background-position: left .5em;
+        background-repeat: no-repeat;
+        padding-left: .9em;
+    }
+
+    &select {
+        height: 2.4375rem;
+
+        & option[disabled] {
+            display: none;
+        }
+    }
+
+    &checkbox {
+        width: 1.5em;
+        height: 1.5em;
+        margin-right: 1em;
+
+        & ~ :--namespace\label-title {
+            margin-bottom: 0;
+        }
+    }
+
+    &invalid-field {
+        border-color: var(--colorBorderInvalid);
+        background-color: var(--colorBgInvalid);
+    }
+
+    /**
+    * Buttons
+    */
+    &field-btn {
+        line-height: 2;
+        padding: 0 1rem;
+        border: var(--defaultBorder);
+        border-radius: var(--defaultRadius);
+        background: var(--colorBtnBgDefault);
+        color: var(--colorBtnTextDefault);
+        font-size: 1.1em;
+        cursor: pointer;
+        min-width: 6em;
+        min-height: 2.3125rem;
+        margin: 0 auto;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:hover {
+            background: var(--colorBtnBgDefaultHover);
+        }
+        
+        &:active {
+            background: var(--colorBtnBgDefaultActive);
+        }
+    }
+
+    &btn-icon {
+        max-width: 1em;
+        max-height: 1em;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        fill: var(--colorBtnIconFill);
+    }
+
+    &submit {
+        margin-bottom: 1.5em;
+    }
+
+    &field-btn_primary {
+        border-color: var(--colorBtnPrimaryBorder);
+        color: var(--colorBtnPrimaryText);
+        background: var(--colorBtnPrimaryBg);
+
+        & :--namespace\btn-icon {
+            fill: var(--colorBtnPrimaryIconFill);
+        }
+
+        &:hover {
+            background: var(--colorBtnPrimaryBg-Hover);
+            border-color: var(--colorBtnPrimaryBorder-Hover);
+        }
+        
+        &:active {
+            background: var(--colorBtnPrimaryBg-Active); 
+            border-color: var(--colorBtnPrimaryBorder-Active);
+        }
+    }
+
+    &field-btn_danger {
+        border-color: var(--colorBtnDangerBorder);
+        backgrouund: var(--colorBtnDangerBg);
+        color: var(--colorBtnDangerText);
+
+        & :--namespace\btn-icon {
+            fill: var(--colorBtnDangerIconFill);
+        }
+
+        &:hover {
+            background: var(--colorBtnDangerBg-Hover);
+            border-color: var(--colorBtnDangerBorder-Hover);
+        }
+        
+        &:active {
+            background: var(--colorBtnDangerBg-Active);
+            border-color: var(--colorBtnDangerBorder-Active);
+        }
+    }
+
+    &field-btn_success {
+        border-color: var(--colorBtnSuccessBorder);
+        color: var(--colorBtnSuccessText);
+        background: var(--colorBtnSuccessBg);
+
+        & :--namespace\btn-icon {
+            fill: var(--colorBtnSuccessIconFill);
+        }
+
+        &:hover {
+            background: var(--colorBtnSuccessBg-Hover);
+            border-color: var(--colorBtnSuccesBorder-Hover);
+        }
+        
+        &:active {
+            background: var(--colorBtnSuccessBg-Active);
+            border-color: var(--colorBtnSuccesBorder-Active);  
+        }
+    }
+
+    /**
+    * Dynamic modals
+    */ 
+    &dynamic-modals :--namespace\fields-wrapper {
+        align-items: center;
+    }
+
+    &dynamic-modal_control {
+        position: absolute;
+        right: .5em;
+        top: .5em;
+        width: 2em;
+        height: 2em;
+        padding: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    &dynamic-modal_control-icon {
+        pointer-events: none;
+        max-width: 1.25em;
+        max-height: 1.25em;
+        width: 100%;
+        height: 100%;
+    }
+
+    &dynamic-modal_control-danger {
+        & :--namespace\dynamic-modal_control-icon {
+            fill: var(--colorModalCtrlDanger);
+        }
+
+        &:hover {
+            & :--namespace\dynamic-modal_control-icon {
+                fill: var(--colorModalCtrlDanger-Hover);
+            }
+        }
+
+        &:active {
+            & :--namespace\dynamic-modal_control-icon {
+                fill: var(--colorModalCtrlDanger-Active);
+            }
+        }
+    }
+
+    /**
+    * User message
+    */
+    &user-message {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--colorUserMsgBg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &user-message_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--colorUserMsgContentBg);
+        color: var(--colorUserMsgContentText);
+        padding: 1em 3em;
+        font-size: 1.1em;
+        font-family: sans-serif;
+        letter-spacing: 0.03em;
+        border-radius: 2px;
+        position: relative;
+        text-align: center;
+
+        &::before {
+            content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTEgMTVoLTJ2LTZoMnY2em0wLThoLTJWN2gydjJ6Ii8+PC9zdmc+);
+            display: block;
+            opacity: 0.7;
+            width: 1.75em;
+            height: 1.75em;
+            margin-bottom: 1em;
+        }
+    }
+
+    &user-message_text {
+        margin-bottom: 1em;
+    }
+
+    &user-message_control {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background: none;
+        padding: 0;
+        width: 4em;
+        height: 2em;
+        cursor: pointer;
+    }
+
+    &user-message_control-icon {
+        pointer-events: none;
+        max-width: .75rem;
+        max-height: .75rem;
+        width: 100%;
+        height: 100%;
+        fill: var(--colorUserMsgCtrlIcon);
+    }
+
+    &user-message_danger {
+        background: var(--colorUserMsgDangerBg);
+        
+        &::before {
+            content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTEgMTVoLTJ2LTJoMnYyem0wLTRoLTJWN2gydjZ6Ii8+PC9zdmc+);
+        }
+    }
+
+    &user-message_success {
+        background: var(--colorUserMsgSuccessBg);
+        
+        &::before {
+            content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bS0yIDE1bC01LTUgMS40MS0xLjQxTDEwIDE0LjE3bDcuNTktNy41OUwxOSA4bC05IDl6Ii8+PC9zdmc+);
+        }
+    }
+
+    /**
+    * Paypal btn
+    */
+    &paypal-submit {
+        display: none;
+    }
+}
+
+/**
+* Desktop
+*/
+@media screen and (min-width: 59.375em) {
+    :--namespace\ {
+        &form-header {
+            height: 7em;
+            flex-direction: row;
+        }
+
+        &form-header_logo {
+            max-width: 5em;
+            height: 5em;
+            margin: 0 2em 0 0; 
+        }
+
+        &fields-wrapper {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &label-half_width {
+            flex: 1 1 50%;
+            max-width: 50%;
+        }
+
+        &label-full_width,
+        &notify-label-full_width {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+
+        &input {
+            max-width: initial;
+            width: initial;
+            min-width: 22em;
+        }
+
+        &checkbox {
+            min-width: 0;
+        }
+
+        &dynamic-modal_wrapper {
+            flex: 1 1 48%;
+            max-width: 48%;
+            
+            &:nth-of-type(even) {
+                margin-left: 4%;
+            }
+        }
+
+        &user-message_content {
+            display: block;
+        
+            &::before {
+                position: absolute;
+                left: .5em;
+                top: 50%;
+                transform: translateY(-50%);
+                margin-bottom: 0;
+            }
+        }
+
+        &user-message_text {
+            margin: 0 3em 0 .5em;
+        }
+
+        &user-message_control {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-left: 1em;
+            height: 100%;
+        }
+    }
+}

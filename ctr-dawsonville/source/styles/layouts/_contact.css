@@ -1,0 +1,178 @@
+@import '../variables/_colors';
+
+body:not(.home).page-template-contact {
+  & .main {
+    padding: 0;
+    width: 100%;
+  }
+
+  & ul {
+      list-style: none;
+  }
+}
+
+.contact__ {
+    &details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4em;
+    }
+
+    &info,
+    &form {
+        width: 100%;
+    }
+
+    &info {
+        margin-bottom: 4em;
+    }
+
+    &info-title {
+        margin: 0 0 1rem 0;
+    }
+
+    &info-road,
+    &info-address,
+    &info-text,
+    &info-link {
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+
+    &info-list {
+        margin-top: 2em;
+    }
+
+    &info-list-item {
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 2em;
+            height: 2em;
+            vertical-align: middle;
+            margin-right: 0.5em;
+        }
+    }
+
+    &info-list-item + &info-list-item {
+        margin-top: 2em;
+    }
+
+    &info-phone {
+        &::before {
+            background-image: url(assets/icons/phone-circle-blue.svg);
+        }
+    }
+
+    &info-emergency {
+        &::before {
+            background-image: url(assets/icons/emergency-circle-blue.svg);
+            width: 2.35em;
+            height: 2.35em;
+            margin-left: -.15em;
+        }
+    }
+
+    &info-email {
+        &::before {
+            background-image: url(assets/icons/email-circle-blue.svg);
+        }
+    }
+
+    &map-container {
+        width: 100%;
+        margin: 0 auto;
+        height: 25em;
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    &form {
+        & input,
+        & textarea {
+            position: relative;
+            border-radius: 2px;
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        & input:not([type="submit"]),
+        & textarea {
+            border: 1px solid var(--colorSecondary);
+        }
+
+        & .your-name,
+        & .your-email {
+            display: block;
+            margin-bottom: 1.5em;
+
+            & input {
+                min-width: 0;
+                width: 100%;
+            }
+        }
+
+        & textarea {
+            margin: 0 0 2em 0;
+            width: 100%;
+        }
+
+        & input[type="submit"] {
+            background: var(--colorNeutral);
+            color: var(--colorPrimary);
+            font-size: 1.5em;
+            padding: .25em 1.25em;
+            box-shadow: 0 0 5px 1px rgba(30, 30, 30, 0.2);
+
+            &:hover {
+                background: var(--colorPrimary);
+                color: var(--colorWhite);
+            }
+        }
+
+        & .wpcf7-not-valid-tip {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+@media screen and (--breakpoint-sm) {
+    .contact__ {
+        &info,
+        &form {
+            width: 90%;
+        }
+
+        &map-container {
+            width: 90%;
+        } 
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .contact__ {
+        &details-container {
+            align-items: initial;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &info,
+        &form {
+            width: 50%;
+        }
+
+        &info {
+            margin-bottom: 0;
+        }
+
+        &map-container {
+            width: 100%;
+        }
+    }
+}

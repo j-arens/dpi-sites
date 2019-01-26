@@ -1,0 +1,41 @@
+.home-events {
+    position: relative;
+    border-top: 4px solid var(--color-secondary);
+    border-bottom: 4px solid var(--color-secondary);
+    background-image: url(assets/images/home-events-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 2.8125em 1em;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 42, 92, 0.9);
+    }
+}
+
+.home-events__ {
+    &title,
+    &slider-container {
+        position: relative;
+    }
+
+    &title {
+        color: var(--color-white);
+        text-align: center;
+        font-family: var(--header-font-family);
+        font-size: 1.75em;
+        text-transform: uppercase;
+        margin-bottom: 1.75rem;
+    }
+
+    &slider-container {
+        border: 10px solid var(--color-white);
+    }
+}

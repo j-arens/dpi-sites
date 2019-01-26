@@ -1,0 +1,196 @@
+@import '../variables/_colors';
+
+.footer-wave__down {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 11px;
+        width: 100%;
+        background-image: url(assets/images/wave-border-down.png);
+        background-repeat: repeat;
+    }
+}
+
+.site-footer {
+
+    &.container {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    & .row {
+        margin: 0;
+    }
+
+    & ul {
+        list-style: none;
+    }
+}
+
+
+.site-footer__right {
+    height: 19.375em;
+}
+
+.site-footer__left {
+    background: var(--colorPrimaryLt);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em 1em;
+}
+
+.site-footer__right {
+    background: var(--colorPrimary);
+    min-height: 100%;
+    padding: 0;
+}
+
+.site-footer__contact-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    display: block;
+    width: 100%;
+    max-width: 24.68em;
+    margin-bottom: 2em;
+}
+
+.site-footer__address,
+.site-footer__contact {
+    padding: 0 2.5em;
+}
+
+.site-footer__address {
+    margin-bottom: 2em;
+}
+
+.site-footer__address-heading,
+.site-footer__contact-heading {
+    color: var(--colorPrimary);
+    font-size: 2.125em;
+    margin-bottom: .5rem;
+    line-height: initial;
+}
+
+.site-footer__address-item,
+.site-footer__contact-item,
+.site-footer__contact-link {
+    color: var(--colorWhite);
+    font-size: 1.1rem;
+    margin-bottom: .1rem;
+}
+
+.site-footer__contact-item_social {
+    display: flex;
+}
+
+.site-footer__contact-social {
+    width: 1.875rem;
+    margin-top: 1.25em;
+
+    & svg {
+        width: 100%;
+        fill: var(--colorPrimary);
+    }
+
+    &:hover {
+        & svg {
+            fill: var(--colorSecondary);
+        }
+    }
+}
+
+.site-footer__contact-social + .site-footer__contact-social {
+    margin-left: 1em;
+}
+
+.site-footer__map-container {
+    height: 100%;
+}
+
+.site-info {
+    background: var(--colorPrimary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.site-info__parish,
+.site-info__diocesan {
+    margin: 0;
+    line-height: initial;
+    color: var(--colorPrimaryXlt);
+    text-align: center;
+}
+
+.site-info__diocesan {
+    margin-top: 1em;
+}
+
+.site-info__diocesan-heart {
+    color: var(--colorWhite);
+}
+
+.site-info__diocesan-link {
+    color: var(--colorPrimaryXlt);
+
+    &:hover {
+        color: var(--colorSecondary);
+    }
+}
+
+@media screen and (--breakpoint-sm) {
+    .site-footer__contact-container {
+        flex-direction: row;
+    }
+
+    .site-footer__address {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (--breakpoint-lg) {
+    .site-footer__left {
+        padding: 0;
+        height: 19.375em;
+    }
+
+    .site-info {
+        flex-direction: row;
+    }
+
+    .site-info__diocesan {
+        margin-top: 0;
+    }
+
+    .footer-logo {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (--breakpoint-xw) {
+    .site-footer__left {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-top: 6.25em;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .footer-logo {
+        margin-right: 3em;
+    }
+}

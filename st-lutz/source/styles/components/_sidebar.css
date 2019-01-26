@@ -1,0 +1,72 @@
+.sidebar {
+    display: none;
+}
+
+@media screen and (min-width: 71.875em) {
+    .sidebar {
+        display: block;
+        max-width: 16.25em;
+        width: 100%;
+    }
+
+    .sidebar__ {
+        &title {
+            color: var(--color-primary);
+            font-size: 1.4375em;
+            line-height: 1;
+            margin: 0 0 1.5rem 0;
+        }
+
+        &links {
+            margin-bottom: 3.125em;
+        }
+
+        &link-item {        
+            background-color: var(--color-secondary);
+
+            & .svg-icon {
+                width: 2.5rem;
+                height: 2.1875rem;
+                fill: var(--color-white);
+                margin-right: 1.875rem;
+            }
+
+            &:hover {
+                background-color: var(--color-primary);
+            }
+        }
+
+        &link-item + &link-item {
+            margin-top: 1.875em;
+        }
+
+        &link {
+            display: flex;
+            align-items: center;
+            padding: 1.25rem 1.875rem;
+            color: var(--color-white);
+
+            &:hover {
+                color: var(--color-white);
+            }
+        }
+
+        &link-title {
+            font-size: 1.5rem;
+        }
+
+        &events {
+            margin-bottom: 1.5rem;
+        }
+
+        &event-link {
+            color: var(--color-font-base);
+        }
+
+        &events-link {
+            color: var(--color-secondary);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    }
+}

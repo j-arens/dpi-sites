@@ -1,0 +1,19 @@
+body.archive {
+    & article::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    & article + article {
+        margin-top: 4rem;
+        border-top: 1px solid #ccc;
+        padding-top: 2em;
+    }
+
+
+    & .post-thumbnail {
+        margin: 0 2em 2em 0;
+        float: left;
+    }
+}

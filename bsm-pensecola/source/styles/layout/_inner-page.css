@@ -1,0 +1,35 @@
+body:not(.home).page,
+body.single,
+body.archive {
+
+  & .main {
+      padding-bottom: 4em;
+  }
+
+  & .main article {
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    
+    & ul,
+    & dl,
+    & ol {
+      padding-left: 2rem;
+      margin-bottom: 1em;
+      list-style: initial;
+
+      & ul,
+      & ol {
+        list-style: circle;
+      }
+
+      & li,
+      & dt,
+      & dd {
+        margin-bottom: initial;
+      }
+    }
+  }
+}

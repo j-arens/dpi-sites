@@ -1,0 +1,41 @@
+.cat-filter {
+    display: flex;
+    flex-direction: column;
+    max-width: 54em;
+    margin: 0 auto;
+    padding: 2em 2em 0 2em;
+}
+
+.cat-filter__ {
+    &title,
+    &dropdown {
+        margin: 0;
+    }
+
+    &title {
+        font-size: 1.25em;
+        margin-bottom: .5rem;
+    }
+
+    &dropdown {
+        height: 2.5em;
+    }
+}
+
+@media screen and (min-width: 55.625em) {
+    .cat-filter {
+        flex-direction: row;
+    }
+
+    .cat-filter__ {
+        &title {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        &dropdown {
+            flex: 3;
+            height: initial;
+        }
+    }
+}

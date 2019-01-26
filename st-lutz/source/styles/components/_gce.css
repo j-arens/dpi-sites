@@ -1,0 +1,118 @@
+.gce__ {
+    &list {
+        margin-bottom: 1.875em;
+
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+
+    &event {
+        position: relative;
+        margin-bottom: 1em;
+        border: 3px solid var(--color-primary);
+
+        &:hover {
+            border-top-color: var(--color-secondary);
+
+            & .gce__date {
+                background-color: var(--color-neutral);
+                color: var(--color-white);
+                border-right-color: var(--color-white);
+            }
+
+            & .gce__content {
+                background-color: var(--color-primary);
+            }
+
+            & .gce__title,
+            & .gce__time {
+                color: var(--color-white);
+            }
+        }
+    }
+
+    &event-link {
+        display: flex;
+    }
+
+    &date,
+    &content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.5rem;
+    }
+
+    &date {
+        align-items: center;
+        width: 25%;
+        border-right: 3px solid var(--color-primary);
+        color: var(--color-neutral);
+    }
+
+    &content {
+        width: 75%;
+        padding-left: 1em;
+    }
+
+    &month,
+    &day,
+    &title,
+    &time {
+        margin: 0;
+    }
+
+    &month,
+    &day,
+    &title {
+        font-weight: 700;
+    }
+
+    &month {
+        font-size: 1.43em;
+    }
+
+    &day {
+        font-size: 1.5em;
+    }
+
+    &title {
+        font-size: 1.25em;
+        color: var(--color-primary);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &time {
+        color: var(--color-neutral-dk);
+    }
+
+    &full-link {
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color-secondary);
+        color: var(--color-white);
+        text-decoration: none;
+        font-size: 1.43em;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media screen and (min-width: 37.5em) {
+    .gce__ {
+        &event {
+            float: left;
+            width: calc(50% - 0.625em);
+
+            &:nth-of-type(odd) {
+                margin-right: 1em;
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@import '../variables/_colors';
+
+.home-icon-boxes {
+  background: var(--colorPrimary);
+  padding: 3.4em 0;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 22.5em;
+  padding: 0 2em;
+
+  & .icon {
+    width: 5.3em;
+    height: 5.3em;
+    /*background-color: var(--colorSecondary);*/
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+  }
+
+  & h3 {
+    margin-bottom: 2.1rem;
+  }
+
+  & h3,
+  & p {
+    color: var(--colorSecondary);
+  }
+
+  & p {
+    max-width: 30em;
+  }
+
+  & .button {
+    margin-top: auto;
+  }
+}
+
+.icon-box + .icon-box {
+  margin-top: 4em;
+}
+
+.upcoming-events .icon {
+  background-image: url(assets/icons/calendar-icon.svg);
+}
+
+.sacraments .icon {
+  background-image: url(assets/icons/sacrament-icon-01.svg);
+  background-size: 50%;
+  border: 3px solid var(--colorSecondary);
+  border-radius: 50%;
+}
+
+.school .icon {
+  background-image: url(assets/icons/house-icon-01.svg);
+  background-size: 90%;
+}
+
+@media screen and (--breakpoint-xl) {
+  .icon-box p {
+    max-width: 30em;
+  }
+
+  .icon-box + .icon-box {
+    margin-top: 0;
+  }
+}
+
+@media screen and (--breakpoint-xw) {
+  .icon-box {
+    padding: 0;
+  }
+}

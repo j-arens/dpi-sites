@@ -1,0 +1,48 @@
+/*
+Theme Name: dpi-teresa
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dpi-teresa
+Tags:
+
+dpi-teresa is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+@import '_normalize.scss';
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_elements.scss';
+@import '_utilities.scss';
+@import '_content.scss';
+@import '_forms.scss';
+@import '_full-width-page.scss';
+
+
+@import '_header.scss';
+@import '_navigation.scss';
+@import '_homepage.scss';
+@import '_sidebar.scss';
+@import '_staff-page.scss';
+@import '_contact.scss';
+@import '_footer.scss';
+
+//@import '_font-awesome.min.scss';
+
+@lost gutter 1em;
+@lost flexbox no-flex;
+
+// @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  // font-family: 'Open Sans', sans-serif;
+  font-smoothing: anti-aliased;
+}

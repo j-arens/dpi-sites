@@ -1,0 +1,67 @@
+/**** TYPOGRAPHY ****/
+
+body {
+  // font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  // font-family: 'Cormorant Garamond', serif;
+  // color: $color-primary;
+  // font-weight: 600;
+  letter-spacing: .102em;
+  margin-bottom: 1em;
+}
+
+h1 {
+  // font-size: 36px;
+  // font-weight: 700;
+  margin-bottom: 1.25em;
+}
+
+h2 {
+  // font-size: 22px;
+}
+
+h3 {
+  // font-size: 18px;
+}
+
+h4 {
+  // font-size: 16px;
+}
+
+p,
+a {
+  font-size: 14px;
+  // line-height: 125%;
+}
+
+p {
+  margin-bottom: 2em;
+  color: $color-black;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.no-margin {
+  margin: 0;
+}
+
+
+.moretag {
+  font-weight: 600;
+}

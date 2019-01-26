@@ -1,0 +1,108 @@
+.big-links {
+    position: relative;
+
+    &__container {
+        flex: 1;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 12em;
+        height: 100px;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 2.125em;
+        background: $color-secondary;
+        padding: 1.25rem 1.875rem;
+        border-radius: 2px;
+        color: $color-white;
+        box-shadow: 0 0 8px 1px rgba(59, 59, 59, 0.6);
+
+        &:hover {
+            text-decoration: none;
+            color: $color-white;
+        }
+
+        p {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        svg {
+            display: none;
+        }
+    }
+
+    &__btn + &__btn {
+        margin-top: 2rem;
+    }
+
+    &__btn-text {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .big-links {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    .big-links {
+        padding: 0 1em;
+
+        &__container {
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            top: -5.25em;
+            left: 0;
+            width: 100%;
+        }
+
+        &__btn {
+            flex: 1;
+            max-width: 19.5rem;
+        }
+
+        &__btn + &__btn {
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .big-links {
+
+        &__container {
+            justify-content: space-between;
+            top: -5.75em;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+
+        &__btn {
+            flex-direction: row;
+            max-width: 22.5rem;
+
+            svg {
+                display: block;
+                width: 3.75rem;
+                height: 3.75rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .big-links {
+        padding: 0;
+    }
+}

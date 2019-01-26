@@ -1,0 +1,90 @@
+/* ============================================================ */
+
+
+/*                           General                            */
+
+
+/* ============================================================ */
+
+::-moz-selection {
+    background-color: #777;
+    color: #fff;
+}
+
+::selection {
+    background-color: #777;
+    color: #fff;
+}
+
+body {
+    font-family: 'Cuprum', Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.button,
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.skip-link {
+    display: none;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+img.alignright {
+    float: right;
+    margin-left: 20px;
+}
+
+img.alignleft {
+    margin-right: 20px;
+}
+
+img.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
+
+//sticky footer
+.page-wrap {
+    min-height: calc(100vh - 120px);
+}
+
+//dpi cols
+.dpi-column-75 {
+    width: 75%;
+    float: right;
+}
+
+.dpi-column-50 {
+    width: 25%;
+}
+
+.dpi-column-25 {
+    width: 25%;
+}
+
+
+
+
+
+
+

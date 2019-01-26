@@ -1,0 +1,133 @@
+.mass-times {
+    position: relative;
+    background: var(--colorWhite);
+}
+
+.mass-times--container {
+    padding: 0 1em;
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+.mass-times--item_placard,
+.mass-times--list_item {
+    padding: 3em 0;
+}
+
+.mass-times--item_placard {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.mass-times--item_placard-title {
+    font-size: 3em;
+    line-height: initial;
+    margin-bottom: 1rem;
+    color: var(--colorPrimary);
+}
+
+.mass-times--item-placard_link {
+    color: var(--colorPrimaryLt);
+    font-size: 1.1em;
+}
+
+.mass-times--list {
+    list-style: none;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 94.375em;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.mass-times--list_item {
+    flex: 1;
+    height: 100%;
+}
+
+.mass-times--item_title,
+.mass-times--item_time {
+    text-align: center;
+}
+
+.mass-times--item_title {
+    font-size: 2em;
+    line-height: initial;
+    margin: 0 0 1.875rem 0;
+    color: var(--colorPrimary);
+}
+
+.mass-times--item_time {
+    display: block;
+}
+
+.mass-times--item_time + .mass-times--item_time {
+    margin-top: 1em;
+}
+
+.mass-times--item_time-day {
+    font-size: 1.18em;
+    display: block;
+    color: var(--colorPrimary);
+}
+
+.mass-times--item_time-hour {
+    font-size: 1.75em;
+    color: var(--colorPrimaryLt);
+}
+
+@media screen and (min-width: 800px) {
+    .mass-times--container  {
+        display: flex;
+    }
+
+    .mass-times--item_placard {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 40%;
+    }
+
+    .mass-times--list {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 60%;
+    }
+
+    .mass-times--item_placard,
+    .mass-times--list_item {
+        padding: 5em 0;
+    }
+}
+
+@media screen and (--breakpoint-xl) {
+    .mass-times--container {
+        max-width: 90em;
+    }
+
+    .mass-times--item_placard {
+        flex: 1 1 0%;
+    }
+
+    .mass-times--item_placard-title,
+    .mass-times--item-placard_link {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .mass-times--list {
+        flex: 2 1 0%;
+        flex-direction: row;
+    }
+
+    .mass-times--list_item + .mass-times--list_item {
+        margin-left: 2em;
+    }
+
+    .mass-times--item_title,
+    .mass-times--item_time {
+        text-align: left;
+    }
+}

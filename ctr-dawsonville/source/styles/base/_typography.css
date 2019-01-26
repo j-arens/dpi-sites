@@ -1,0 +1,100 @@
+@import '../variables/_index';
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Raleway:400,600');
+
+:root {
+  --colorHeadings: #3b3b3b;
+  --colorBody: #3b3b3b;
+  --colorLink: var(--colorSecondary);
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--colorBody);
+}
+
+article p {
+  letter-spacing: 0.03em;
+  margin-bottom: 1.3em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--colorLink);
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--colorPrimary);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cinzel', serif;
+  margin: 1.414em 0 0.5em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--colorPrimary);
+}
+
+h4,
+h5,
+h6 {
+  color: var(--colorSecondary);
+}
+
+h1,
+h4 {
+  margin-top: 0;
+  font-size: 2.074em;
+}
+
+h2,
+h5 {
+  font-size: 1.728em;
+}
+
+h3,
+h6 {
+  font-size: 1.44em;
+}
+
+blockquote {
+  padding-left: 1.75em;
+  width: 100%;
+  margin: 2em 0;
+  margin-left: 4px;
+  border-left: 5px solid var(--colorPrimary);
+
+  & p:first-child::before,
+  & p:last-child::after {
+   content: '"';
+ }
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+small,
+.font_small {
+  font-size: 0.8em;
+}
+
+.entry-title {
+  margin-bottom: 1em;
+}

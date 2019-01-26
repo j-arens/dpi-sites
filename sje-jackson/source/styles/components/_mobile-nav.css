@@ -1,0 +1,14 @@
+.mobile-nav {
+    width: calc(100% + 2em);
+}
+
+.dl-trigger {
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 68.75em) {
+    .mobile-nav {
+        display: none;
+    }
+}

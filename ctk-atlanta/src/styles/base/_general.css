@@ -1,0 +1,85 @@
+/**
+* Change box sizing to border box on everything
+*/
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 782px) {
+  :root {
+    margin-top: 0 !important;
+  }
+
+  #wpadminbar {
+    display: none;
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+}
+
+/**
+* hide autoplay videos that aren't muted
+*/
+video[autoplay]:not([muted]) {
+  display: none;
+}
+
+/**
+* Style broken images
+*/
+img {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  height: auto;
+  line-height: 2;
+  position: relative;
+  text-align: center;
+}
+
+img:before {
+  content: "We're sorry, the image below is broken :(";
+  display: block;
+  margin-bottom: 10px;
+}
+
+img:after {
+  content: "(url: " attr(src) ")";
+  display: block;
+  font-size: 12px;
+}
+
+/**
+* Display links href if no text value is given
+*/
+ /*a[href^="http"]:empty::before {
+   content: attr(href);
+}*/
+
+/**
+* Hide srt's
+*/
+.screen-reader-response {
+    position: absolute;
+    left: -9999%;
+    visibility: hidden;
+  }

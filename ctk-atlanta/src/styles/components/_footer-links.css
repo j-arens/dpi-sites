@@ -1,0 +1,28 @@
+@import '../variables/_index';
+
+.footer-links {
+
+  & .logo {
+    display: block;
+    background-image: url(assets/images/ctk-logo-white-01.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 10.75em;
+    width: 16.25em;
+    margin-bottom: 2.81em;
+  }
+
+  & li {
+    list-style: none;
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: .25em;
+    }
+  }
+
+  & svg {
+    width: 2em;
+    fill: var(--colorWhite);
+  }
+}

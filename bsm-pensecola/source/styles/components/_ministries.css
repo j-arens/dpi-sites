@@ -1,0 +1,6 @@
+.ministries__ {
+    &content {
+        font-size: 16px;
+        margin: 0 0 calc(var(--base-spacing) / 2);
+    }
+}

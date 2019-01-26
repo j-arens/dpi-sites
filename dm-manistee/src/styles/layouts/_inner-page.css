@@ -1,0 +1,103 @@
+body.page,
+body.single,
+body.archive,
+body.search-no-results,
+body.search-results {
+
+  & .wrap {
+    min-height: calc(100vh - 502px);
+    background: var(--colorWhite);
+  }
+
+  & .main {
+    position: relative;
+    padding: 16.25em 2em 4em 2em;
+  }
+
+  & .page-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12.5em;
+    background-color: var(--colorSecondaryLt);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    & .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    & h1 {
+      position: relative;
+      z-index: 1;
+      color: var(--colorWhite);
+      font-size: 2.5em;
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+  }
+
+  & .main > article {
+    max-width: 91.25rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2em;
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    & ul,
+    & dl,
+    & ol {
+      padding-left: 2rem;
+      margin-bottom: 1em;
+
+      & ul,
+      & ol {
+        list-style: lower-alpha;
+      }
+
+      & li,
+      & dt,
+      & dd {
+        margin-bottom: initial;
+      }
+    }
+  }
+
+  & .pagination-nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    max-width: 91.25rem;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem 0;
+  }
+
+  @media screen and (--breakpoint-md) {
+    & .page-header h1 {
+      font-size: 3.5em;
+    }
+  }
+
+  @media screen and (--breakpoint-lg) {
+    & .page-header h1 {
+      font-size: 4.5em;
+    }
+  }
+}

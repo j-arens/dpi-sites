@@ -1,0 +1,4 @@
+<svg class="svg-icon svg-icon__calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183.77 151.89">
+    <path d="M125.07,16.42V0H112.75V16.42H71V0H58.7V16.42H10.81V43.11H173V16.42Zm0,0" style="fill:#fff"/>
+    <path d="M10.81,151.89H173V55.42H10.81Zm107.76-77h20.53V95.45H118.57Zm0,36.95h20.53v20.53H118.57ZM81.62,74.92h20.53V95.45H81.62Zm0,36.95h20.53v20.53H81.62ZM44.67,74.92H65.2V95.45H44.67Zm0,36.95H65.2v20.53H44.67Zm0,0" style="fill:#fff"/>
+</svg>

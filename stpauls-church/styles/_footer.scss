@@ -1,0 +1,103 @@
+/**** FOOTER ****/
+
+#colophon {
+  width: 100%;
+  background: $color-primary;
+  padding-top: 1em;
+
+  ul {
+    list-style: none;
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1em;
+    width: calc(25% - 1.7em);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  h1,
+  p,
+  a {
+    display: block;
+    color: $color-white;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: .5em;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .site-info {
+    background: white;
+    text-align: center;
+    padding: 1em 0;
+
+    p {
+      display: inline-block;
+      color: black;
+      margin: 0 5%;
+    }
+
+    a {
+      display: inline;
+      color: $color-primary;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #colophon {
+    padding-top: 2em;
+
+    li {
+      width: calc(50% - 1.7em);
+      margin-bottom: 2em;
+
+      &:nth-child(3),
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #colophon {
+
+    li {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+
+      &:nth-child(3),
+      &:last-child {
+        margin-bottom: 2em;
+      }
+    }
+  }
+}

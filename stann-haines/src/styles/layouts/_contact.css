@@ -1,0 +1,187 @@
+@import '../base/_typography';
+@import '../variables/_colors';
+
+body.page-template-template_contact {
+    & ul {
+        list-style: none;
+    }
+
+    & .contact-content {
+        margin-bottom: 6.25em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    & .contact-info,
+    & .contact-form-wrapper {
+        flex-basis: 50%;
+    }
+
+    & .contact-info {
+        margin-bottom: 1em;
+    }
+
+    & .contact-info-item {
+        text-align: center;
+        margin-bottom: 3.75em;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4em;
+            margin-bottom: 1em;
+            vertical-align: top;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 2em;
+        }
+    }
+
+    & .contact--address::before {
+        background-image: url(assets/icons/pin-01.svg);
+    }
+
+    & .contact--phone::before {
+        background-image: url(assets/icons/phone-01.svg);
+    }
+
+    & .contact--email::before {
+        background-image: url(assets/icons/email-01.svg);
+    }
+
+    & .contact-info-item--wrapper {
+        display: inline-block;
+    }
+
+    & .contact-info-item--title,
+    & .contact-info-item--meta {
+        margin: 0;
+        line-height: 1;
+    }
+
+    & .contact-info-item--title {
+        font-size: 1.875em;
+        margin-bottom: .8rem;
+    }
+
+    & .contact-info-item--meta {
+        font-size: 1.25em;
+        color: var(--colorBody);
+    }
+
+    & .contact-form-wrapper {
+        padding: 0;
+
+        &::after {
+            display: table;
+            clear: both;
+        }
+
+        & span {
+            display: inline-block;
+        }
+
+        & input:focus {
+            outline: 0;
+        }
+
+        & input:not([type="submit"]),
+        & textarea {
+            min-width: 0;
+            border-color: transparent;
+            width: 100%;
+            border-bottom: 2px solid var(--colorBody);
+            margin-bottom: 2.5em;
+        }
+
+        & .first-name,
+        & .last-name {
+            width: 100%;
+        }
+
+        & .your-email,
+        & .your-message {
+            width: 100%;
+        }
+
+        & input[type="submit"] {
+            background: var(--colorPrimaryLt);
+            padding: 0 2em;
+            font-weight: 300;
+            line-height: 2;
+            border: 1px solid var(--colorPrimaryLt);
+            color: var(--colorWhite);
+            transition: all .2s ease;
+
+            &:hover {
+                background: var(--colorWhite);
+                color: var(--colorPrimaryLt);
+            }
+        }
+    }
+
+    & .contact-map {
+        width: 100%;
+        height: 35em;
+        border: 3px solid var(--colorPrimaryLt);
+    }
+}
+
+@media screen and (--breakpoint-md) {
+    body.page-template-template_contact {
+        & .contact-info-item {
+            text-align: left;
+
+            &::before {
+                display: inline-block;
+                width: 4em;
+                margin-right: 2em;
+                margin-bottom: 0;
+            }
+        }
+
+        & .contact--address::before {
+            background-size: 65%;
+        }
+
+        & .contact--phone::before {
+            background-size: 90%;
+        }
+
+        & .contact--email::before {
+            background-size: 100%;
+        }
+
+        & .contact-form-wrapper { 
+            & .first-name,
+            & .last-name {
+                width: calc(50% - 2em);
+            }
+
+            & .last-name {
+                margin-left: 3.75em;
+            }
+        }
+    }
+}
+
+@media screen and (--breakpoint-xl) {
+    body.page-template-template_contact {
+        & .contact-content {
+            flex-direction: row;
+        }
+
+        & .contact-info {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    body.page-template-template_contact {
+        & .page-article {
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.bulletin-tab {
+    &__link {
+        display: block;
+
+        .svg-icon {
+            display: inline-block;
+            vertical-align: middle;
+            fill: currentColor;
+            width: 1.5em;
+            height: 1.5em;
+            margin-right: .5em;
+        }
+    }
+
+    &__link + &__link {
+        margin-top: .5em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .bulletin-tab {
+        display: flex;
+        justify-content: space-between;
+
+        &__links,
+        &__cover {
+            flex: 0 0 45%;
+        }
+
+        &__links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}

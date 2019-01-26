@@ -1,0 +1,113 @@
+.gce {
+
+    .home-feeds__title {
+        display: flex;
+    }
+
+    &__full-link {
+        font-size: 16px;
+        font-family: $font-family-base;
+        color: $color-secondary;
+        margin-left: auto;
+        align-self: flex-end;
+    }
+
+    &__list {
+        width: 21.875em;
+        margin-bottom: 1.5em;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid $color-primary;
+    }
+
+    &__item + &__item {
+        margin-top: 1.25em;
+    }
+
+    &__date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        height: 5.3125em;
+        width: 5em;
+        margin-bottom: 1em;
+    }
+
+    &__day,
+    &__month {
+        position: relative;
+        margin: 0;
+        color: darken($color-neutral, 20%);
+        line-height: 1;
+        font-weight: 700;
+    }
+
+    &__day {
+        font-size: 1.5em;
+    }
+
+    &__month {
+        font-size: 1.1em;
+        margin-bottom: 4px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex: 0 0 calc(100% - 5em);
+        text-align: center;
+    }
+
+    &__event {
+        color: $color-primary;
+        font-weight: bold;
+    }
+
+    &__page-link {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .gce {
+        &__item {
+            flex-direction: row;
+            align-items: initial;
+
+            &:hover {
+                border-top-color: $color-secondary;
+
+                .gce__content {
+                    background-color: $color-primary;
+                }
+
+                .gce__date {
+                    background-color: #d4dbe0;
+                }
+
+                .gce__event,
+                .gce__time {
+                    color: $color-white;
+                }
+            }
+        }
+
+        &__date {
+            margin-bottom: 0;
+            border-right: 2px solid $color-primary;
+        }
+
+        &__content {
+            padding-left: 20px;
+            text-align: left;
+        }
+    }
+}

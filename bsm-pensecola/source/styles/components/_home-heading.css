@@ -1,0 +1,48 @@
+.home-heading {
+    margin-bottom: 1.875em;
+}
+
+.home-heading__ {
+    &title {
+        font-size: 1.4375em;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0 0 .3em 0;
+        color: var(--color-primary);
+    }
+
+    &rule {
+        height: 2px;
+        flex: 1;
+        margin: .5em 0;
+        border: none;
+        background-color: var(--color-secondary);
+    }
+
+    &link {
+        font-weight: bold;
+        font-size: 1.125em;
+    }
+}
+
+@media screen and (min-width: 31.25em) {
+    .home-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .home-heading__ {
+        &title {
+            margin: 0;
+        }
+
+        &rule {
+            margin: 0 0 0 3em;
+        }
+
+        &link {
+            margin-left: 3em;
+        }
+    }
+}

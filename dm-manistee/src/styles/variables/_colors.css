@@ -1,0 +1,30 @@
+/* original colors
+:root {
+  --colorPrimary: #2c3093;
+  --colorPrimaryLt: #635eba;
+  --colorPrimaryXlt: #9695d1;
+  --colorSecondary: #990100;
+  --colorSecondaryLt: #be1d01;
+  --colorSecondaryXlt: #e84828;
+  --colorWhite: #fff;
+  --colorBlack: #000;
+  --colorNeutral: #e6e6e6;
+  --colorNeutralMd: #cacaca;
+  --colorNeutralLt: #f2f2f2;
+}
+*/
+
+:root {
+  --colorPrimary: #00257a;
+  --colorPrimaryLt: #405b9b;
+  --colorPrimaryXlt: #7f91bc;
+  --colorSecondary: #981e32;
+  --colorSecondaryLt: #b25665;
+  --colorSecondaryXlt: #cb8e98;
+  --colorWhite: #fff;
+  --colorBlack: #000;
+  --colorNeutral: #e6e6e6;
+  --colorNeutralMd: #cacaca;
+  --colorNeutralLt: #f2f2f2;
+}
+

@@ -1,0 +1,10 @@
+body.single-news {
+    & a.back-to-news {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    & .entry-content img:first-of-type {
+        margin-top: 0;
+    }
+}
